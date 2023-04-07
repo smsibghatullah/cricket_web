@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Item;
 
+use App\Models\Player;
+
 
 class HomeController extends Controller
 
@@ -30,16 +32,6 @@ class HomeController extends Controller
     }
 
 
-    /**
-
-     * Show the application dashboard.
-
-     *
-
-     * @return \Illuminate\Http\Response
-
-     */
-
     public function home()
 
     {
@@ -52,14 +44,32 @@ class HomeController extends Controller
 
     {
 
-        return view('search_player');
+        // return view('search_player');
+        $result = [];
+        return view('search_player',compact('result'));
 
     }
 
-    public function store(Request $request)
+    public function searchplayer_form_submit(Request $request)
     {
 
-        
+        $player = Player::query();
+
+        $term = $request;
+        if(!empty($term->fullname)){
+            $player->where('fullname','=',$term['fullname']);
+        }
+        if(!empty($term['sex'])){
+            $player->where('sex','=',$term['sex']);
+        }
+        if(!empty($term['radius'])){
+            $player->where('radius','=',$term['radius']);
+        }
+
+        $result = $player->orderBy('id')->get();
+
+        // dd($result);
+        return view('search_player',compact('result'));
     }
 
 

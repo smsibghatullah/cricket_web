@@ -32,7 +32,7 @@
                             </div>
                             <div class="col-lg-7">
                                 <div class="form-in">
-                                   <input type="text" id="firstName" name="firstName" class="form-control" style="width:100%;" value=""
+                                   <input type="text" id="firstName" name="fullname" class="form-control" style="width:100%;" value=""
                                    
 									onblur="if(this.value==='%')this.value='';"
 									
@@ -435,7 +435,63 @@
                
             </div>
             </form>
+            <div class="about-table table-responsive" id="tab1default">
+                <div id="playersData_wrapper" class="dataTables_wrapper no-footer"><div class="dt-buttons">          <button class="dt-button buttons-copy buttons-html5" tabindex="0" aria-controls="playersData" type="button"><span>Copy</span></button> <button class="dt-button buttons-csv buttons-html5" tabindex="0" aria-controls="playersData" type="button"><span>CSV</span></button> <button class="dt-button buttons-excel buttons-html5" tabindex="0" aria-controls="playersData" type="button"><span>Excel</span></button> <button class="dt-button buttons-pdf buttons-html5" tabindex="0" aria-controls="playersData" type="button"><span>PDF</span></button> <button class="dt-button buttons-print" tabindex="0" aria-controls="playersData" type="button"><span>Print</span></button> </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <table class="table sortable table-striped dataTable no-footer" id="playersData" role="grid"> 
+                    <thead> 
+                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="playersData" rowspan="1" colspan="1" aria-sort="ascending" aria-label="No : activate to sort column descending" style="width: 65px;"><a href="#" class="sortheader" onclick="ts_resortTable(this, 0);return false;">No <span class="sortarrow">&nbsp;<img src="/utilsv2/images/arrow-none.gif" alt="↓"></span></a></th><th style="text-align: left !important; width: 470px;" class="sorting" tabindex="0" aria-controls="playersData" rowspan="1" colspan="1" aria-label="Player Name : activate to sort column ascending"><a href="#" class="sortheader" onclick="ts_resortTable(this, 1);return false;">Player Name <span class="sortarrow">&nbsp;<img src="/utilsv2/images/arrow-none.gif" alt="↓"></span></a></th><th style="text-align: left !important; width: 174px;" class="sorting" tabindex="0" aria-controls="playersData" rowspan="1" colspan="1" aria-label="Player Role : activate to sort column ascending"><a href="#" class="sortheader" onclick="ts_resortTable(this, 2);return false;">Player Role <span class="sortarrow">&nbsp;<img src="/utilsv2/images/arrow-none.gif" alt="↓"></span></a></th><th style="text-align: left !important; width: 356px;" class="spa sorting" tabindex="0" aria-controls="playersData" rowspan="1" colspan="1" aria-label="Team   : activate to sort column ascending"><a href="#" class="sortheader" onclick="ts_resortTable(this, 3);return false;">Team <span class="sortarrow">&nbsp;<img src="/utilsv2/images/arrow-none.gif" alt="↓"></span></a></th></tr> 
+                    </thead> 
+                    <tbody>  
+@php
+    if(count($result) > 0){
+@endphp
+                         @foreach($result as $player)
+
+
+                        <tr role="row" class="even"> 
+                            <th class="sorting_1">1</th> 
+                            <th style="text-align:left!important"><a href="/MississaugaCricketLeague/viewPlayer.do?playerId=2659121&amp;clubId=2565"> {{$player['fullname']}} </a> <img alt="Verified" title="Verified" src="/utilsv2/images/ok.png" style="width: 16px;height: 16px;margin: 0px;">
+                                </th>
+                                <th style="text-align:left!important">All Rounder</th>
+                                    <th><table>
+                        <tbody><tr class="even">
+                            <td>
+                            <img src="https://cricclubs.com/documentsRep/teamLogos/24166e99-e7a3-42ec-9078-33110d9b82cb.jpeg" class="img-responsive img-circle" style="width: 20px; height: 20px;">
+                                    </td>
+                                        <td style="text-align:left!important">&nbsp;Mississauga Shaheens</td>
+                                    </tr>
+                                </tbody></table></th>
+                        </tr>
+
+                            @endforeach
+
+                            @php
+                    }
+                    @endphp
+
+                            </tbody>
+                </table></div>
+            </div>
             	         	</div>
+
         </div>
     </div>
   

@@ -25,5 +25,5 @@ Route::get('home',[HomeController::class,'home']);
 Route::get('search_player',[HomeController::class,'search_player']);
 
 
-Route::post('searchplayer-form-submit',[HomeController::class,'searchplayer-form-submit']);
+Route::post('searchplayer-form-submit',[HomeController::class,'searchplayer_form_submit']);
 
