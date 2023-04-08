@@ -36,10 +36,15 @@
  <link href="https://mottie.github.io/tablesorter/css/theme.default.css" rel="stylesheet">
 
 <style>
+
 #mobile-header{
   display: flex;
   align-items: center;
 }
+/* .header1{
+    margin-right: -15px !important;
+    margin-left: -121px !important;
+} */
 .add-phone{
 display: none;
 }
@@ -62,9 +67,10 @@ display: none;
 #mobile-header{
   display: inherit!important;
   align-items: center;
+  width:100% !important
 }
 .header-top-all .logo-name{
-    width: 210px;
+    width: 100% !important;
     display: inline-block;
 }
 .web{
@@ -161,10 +167,9 @@ table.btn-earth{
 	</head>
 
     <body>
+<!-- Header start -->
   <header>
-   
-    	
-    	<div class="header-top-all" >
+    	<div class="header-top-all header1" >
     	
             <div class="header-top-bottom" style="padding-top:0px!important;">
             	<div class="container">
@@ -173,9 +178,9 @@ table.btn-earth{
                         	<div class="logo">
 								<table>
 									<tr>
-										<td style="padding: 0px; width:60px; height:60px;"  style='width:100px;height:100px;' ><a
+										<td   style='width:100px;height:100px;' ><a
 											href="MississaugaCricketLeague.html"><img
-												src="https://cricclubs.com/documentsRep/logos/e0190050-f4f7-4083-b1ca-8771d60a6698.jpg"
+												src="http://www.eoscl.com/img/eoscl-logo.png"
 												border="0"  style='width:100px;height:100px;' 
 												class="img-responsive center-block img-circle"/></a>
 												
@@ -185,38 +190,38 @@ table.btn-earth{
 											<a
 											href="MississaugaCricketLeague.html"
 											style="text-decoration: none; display: inline-block;"><font class="logo-name" size="5"
-												style="color: white; font-size: 2rem;">Mississauga Cricket League</font></a></td>
+												style="color: white; font-size: 2rem;">Event Ontario Softball Circket</font></a></td>
 										</tr>
 								</table>
 							</div>
                         </div>
                         
-                         <div class="col-sm-8 hidden-phone">
+                         <div class="col-sm-8 hidden-phone slider">
                             	<div class="slick-carousel-header"style="display:flex;" >
                             	
                             	<div  style="margin-left:15px;margin-right:15px;/* display:flex; */">
                                 		<div class="spon-image hvr-grow" > 
-                                			<a href='https://yashisports.com/' style='text-decoration: none;' target='_blank'><table class='thinBorder'><tr><td class='thinBorder' title='Yashi Sports' style='padding:0px;height:90px;'><img style='border-style:none;' src='https://cricclubs.com/documentsRep/sponsors/2565-0e3d4558-82e9-40e0-bc38-160bdf935551-sponsor.jpg' /></td></tr></table></a></div>
+                                			<a href='#' style='text-decoration: none;' target='_blank'><table class='thinBorder'><tr><td class='thinBorder' title='Yashi Sports' style='padding:0px;height:90px;'><img style='border-style:none;' src='https://i.pinimg.com/236x/d3/46/22/d346225f6ec523b78adea8d19dc6530b.jpg' /></td></tr></table></a></div>
                                 	</div>
                                 <div  style="margin-left:15px;margin-right:15px;/* display:flex; */">
                                 		<div class="spon-image hvr-grow" > 
-                                			<a href='https://www.sbsexpedited.com/' style='text-decoration: none;' target='_blank'><table class='thinBorder'><tr><td class='thinBorder' title='SBS Expedite Services Ltd.' style='padding:0px;height:90px;'><img style='border-style:none;' src='https://cricclubs.com/documentsRep/sponsors/2565-576e021e-899c-4d43-ac08-272ddcfb767b-sponsor.png' /></td></tr></table></a></div>
+                                			<a href='#' style='text-decoration: none;' target='_blank'><table class='thinBorder'><tr><td class='thinBorder' title='SBS Expedite Services Ltd.' style='padding:0px;height:90px;'><img style='border-style:none;' src='https://i.pinimg.com/236x/25/ba/8f/25ba8f754498178d1421d334d1ac6642.jpg' /></td></tr></table></a></div>
                                 	</div>
                                 <div  style="margin-left:15px;margin-right:15px;/* display:flex; */">
                                 		<div class="spon-image hvr-grow" > 
-                                			<a href='http://fusionlounge.ca/' style='text-decoration: none;' target='_blank'><table class='thinBorder'><tr><td class='thinBorder' title='Fusion Launge' style='padding:0px;height:90px;'><img style='border-style:none;' src='https://cricclubs.com/documentsRep/sponsors/2565-b0485042-6d8d-4524-9407-7015145dd0ed-sponsor.png' /></td></tr></table></a></div>
+                                			<a href='#' style='text-decoration: none;' target='_blank'><table class='thinBorder'><tr><td class='thinBorder' title='Fusion Launge' style='padding:0px;height:90px;'><img style='border-style:none;' src='https://i.pinimg.com/236x/c1/b8/48/c1b84805903406ee7c2fc0f4086ecf84.jpg' /></td></tr></table></a></div>
                                 	</div>
                                 <div  style="margin-left:15px;margin-right:15px;/* display:flex; */">
                                 		<div class="spon-image hvr-grow" > 
-                                			<a href='http://www.rgillcorporation.com/' style='text-decoration: none;' target='_blank'><table class='thinBorder'><tr><td class='thinBorder' title='R Gill Corporation' style='padding:0px;height:90px;'><img style='border-style:none;' src='https://cricclubs.com/documentsRep/sponsors/2565-b96a102a-9add-4af8-998d-d2885daa015a-sponsor.JPG' /></td></tr></table></a></div>
+                                			<a href='#' style='text-decoration: none;' target='_blank'><table class='thinBorder'><tr><td class='thinBorder' title='R Gill Corporation' style='padding:0px;height:90px;'><img style='border-style:none;' src='https://i.pinimg.com/236x/42/32/34/423234fab5acc499402f87720d0ee28f.jpg' /></td></tr></table></a></div>
                                 	</div>
                                 <div  style="margin-left:15px;margin-right:15px;/* display:flex; */">
                                 		<div class="spon-image hvr-grow" > 
-                                			<a href='http://www.paradisechicken.ca/' style='text-decoration: none;' target='_blank'><table class='thinBorder'><tr><td class='thinBorder' title='Paradise Chicken' style='padding:0px;height:90px;'><img style='border-style:none;' src='https://cricclubs.com/documentsRep/sponsors/2565-a46fc71c-6349-403e-9af2-11b678ac34a2-sponsor.jpg' /></td></tr></table></a></div>
+                                			<a href='#' style='text-decoration: none;' target='_blank'><table class='thinBorder'><tr><td class='thinBorder' title='Paradise Chicken' style='padding:0px;height:90px;'><img style='border-style:none;' src='https://i.pinimg.com/236x/ae/dc/74/aedc74a6e105564289b2f9facd2be1e6.jpg' /></td></tr></table></a></div>
                                 	</div>
                                 <div  style="margin-left:15px;margin-right:15px;/* display:flex; */">
                                 		<div class="spon-image hvr-grow" > 
-                                			<a href='https://khailsport.com/' style='text-decoration: none;' target='_blank'><table class='thinBorder'><tr><td class='thinBorder' title='Khail Sport' style='padding:0px;height:90px;'><img style='border-style:none;' src='https://cricclubs.com/documentsRep/sponsors/2565-7abf2b89-5715-4fca-8f80-d1bb3202403e-sponsor.jpg' /></td></tr></table></a></div>
+                                			<a href='#' style='text-decoration: none;' target='_blank'><table class='thinBorder'><tr><td class='thinBorder' title='Khail Sport' style='padding:0px;height:90px;'><img style='border-style:none;' src='https://i.pinimg.com/236x/9b/94/95/9b94956448cae26b98d8f711b20f0440.jpg' /></td></tr></table></a></div>
                                 	</div>
                                 <div  style="margin-left:15px;margin-right:15px;/* display:flex; */">
                                 		<div class="spon-image hvr-grow" > 
@@ -229,6 +234,26 @@ table.btn-earth{
                 </div>
             </div>
         </div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("slider").filter(i=>i.getElementsByTagName("img"));
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 4;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+
+</script>
+
         <div class="col-sm-12">
              <div class="col-sm-12 add-phone">
                             	
@@ -348,6 +373,13 @@ table.btn-earth{
             </div>
         </div>
         </header>
+
+<!-- Header end -->
+
+<!--------------------------------------------------------------------------------------------------------------------->
+
+<!-- Javascript start -->
+
     			<script type="text/javascript"
 	src="utilsv2/fancybox/jquery.fancybox.js%3Fv=2.1.5"></script>
 
@@ -439,6 +471,12 @@ $('.panel-group').on('shown.bs.collapse', toggleIcon);
 	};
 
 </script>
+
+<!-- Javascript End -->
+
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<!-- Css Start -->
 <style>
 .banner-content .carousel-indicators{
    bottom: -50px;
@@ -512,3 +550,5 @@ align-items: center;
     object-fit: contain;
  }
 </style>
+
+<!-- Css End -->
