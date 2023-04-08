@@ -14,16 +14,16 @@
 								<div class="carousel-inner">
 									<div class="item active">
 										<iframe width="100%" height="347"
-										src="https://www.youtube.com/embed/TeiYu22dcT8" frameborder="0"
+											src="https://www.youtube.com/embed/pS-jNGG0Gkg?rel=0" frameborder="0"
 											allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 											allowfullscreen> </iframe>
 										<div class="carousel-content ">
 											<div class="container">
 												<div class="carousel-content-panels">
-													<h3>EOSCL Junior Cricket Academy & League</h3>
+													<h3>MCL Junior Cricket Academy & League</h3>
 												</div>
 												<div class="carousel-content-panel content-sp" style="width: 100%">
-												<p>EOSCL is Launching Junior Cricket Academy and League, inauguration in Mid March, all junior clubs and kids are invited to meet and greet with EOSCL executives and Coach Rizwan Cheema. Stay Tune for details ----<a
+												<p>MCL is Launching Junior Cricket Academy and League, inauguration in Mid March, all junior clubs and kids are invited to meet and greet with MCL executives and Coach Rizwan Cheema. Stay Tune for detai[...]<a
 															href="MississaugaCricketLeague/viewNews.do%3FnewsId=17&amp;clubId=2565.html"
 															class="btn btn-ban pull-right">Read more <i
 															class="fa fa-arrow-circle-o-right"></i></a><br>
@@ -38,16 +38,16 @@
 									<div class="item ">
 										<a
 												href="MississaugaCricketLeague/viewNews.do%3FnewsId=8&amp;clubId=2565.html"><img
-												src="http://www.eoscl.com/AdminPanel/App_Upload/TeamGroupPhotos/636995903787196807.jpg" width="100%"  alt=".. ."
+												src="https://cricclubs.com/documentsRep/news/2565-83fe8c62-196a-4d39-bc68-0898dbaf354b-news.jpg" width="100%"  alt=".. ."
 												class="box">
 											</a>
 										<div class="carousel-content ">
 											<div class="container">
 												<div class="carousel-content-panels">
-													<h3>EOSCL Cricket League is a Registered Community Group of Canada</h3>
+													<h3>Mississauga Cricket League is a Registered Community Group of city of Mississauga</h3>
 												</div>
 												<div class="carousel-content-panel content-sp" style="width: 100%">
-												<p>EOSCL is Registered Community Group of Canada<a
+												<p>MCL is Registered Community Group of city of Mississauga<a
 															href="MississaugaCricketLeague/viewNews.do%3FnewsId=8&amp;clubId=2565.html"
 															class="btn btn-ban pull-right">Read more <i
 															class="fa fa-arrow-circle-o-right"></i></a><br>
@@ -83,11 +83,13 @@
 
 					<div id="parentHorizontalTab">
 							<ul class="resp-tabs-list hor_1 common__slider">
-										<li>2022 - EOSCL50 SUPER 7</li>
-														<li>2022 EOSCLT20</li>
-														<li>2022 EOSCL100 - Super 8</li>
-														<li>2022 EOSCLT25</li>
-														</ul>
+								@foreach($tournament as $tour_name)
+
+								<li>{{$tour_name['name']}}</li>
+								 @endforeach
+								 
+
+							</ul>
 									
 						<div class="resp-tabs-container hor_1">
 							<div class="about-player-all"
@@ -164,7 +166,7 @@ $('.common__slider').slick({
 				</div>
 			</div>
 			
-			<!-- start ponit  -->
+			
 			<div class="col-sm-5 p-sm-0">
 			<div id="resultsDiv">
 					<div class="complete-list">
@@ -192,8 +194,6 @@ $('.common__slider').slick({
 												list</a>
 										</div>
 									</div>
-
-                                 <!-- Results Start -->
 									<div class="tab-pane fade in active"
 										id="tab2default">
 										<div class="team-vs-team">
@@ -222,30 +222,28 @@ $('.common__slider').slick({
 															<a class="list-score" style="color: inherit;"
 																href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3311&amp;clubId=2565.html">L:
 																Royal Tigers - vs - GTA United</a>
-
 															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
-																	margin-right: 10px;
-																	margin-top: -3px; cursor: pointer;
-																	"
+    margin-right: 10px;
+    margin-top: -3px; cursor: pointer;
+     "
 																src="utilsv2/theme2-static/images/cric-ball.png" width="15px" height="15px"/>
-
 															</h4>
 														<h5>
 															<a class="list-score" 
 																href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3311&amp;clubId=2565.html">
 																GTA United won by 8 Wkt(s)</a>
 														<a style="float: right;font-size: 0.85rem;background: #2098d1;
-																	padding: 4px 9px;
-																	border-radius: 5px;
-																	color: #fff;
-																	margin-right: 1rem;" href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3311&amp;clubId=2565.html"> Scorecard</a>
+    padding: 4px 9px;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 1rem;" href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3311&amp;clubId=2565.html"> Scorecard</a>
 														</h5>
+														
+														
 													</div>
 												</div>
 											</div>
 										</div>
-
-<!-- ---------------------------------------------------------------------------------------------------------------- -->
 										<div class="team-vs-team">
 											<div class="row list-slign">
 												<div class="col-sm-4 col-xs-4">
@@ -273,26 +271,27 @@ $('.common__slider').slick({
 																href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3310&amp;clubId=2565.html">L:
 																Toronto Jaguars - vs - 820 CC</a>
 															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
-																			margin-right: 10px;
-																			margin-top: -3px; cursor: pointer;
-																			"
+    margin-right: 10px;
+    margin-top: -3px; cursor: pointer;
+     "
 																src="utilsv2/theme2-static/images/cric-ball.png" width="15px" height="15px"/>
 															</h4>
 														<h5>
 															<a class="list-score" 
 																href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3310&amp;clubId=2565.html">
 																Toronto Jaguars won by 6 Run(s)</a>
-																																<a style="float: right;font-size: 0.85rem;background: #2098d1;
-																			padding: 4px 9px;
-																			border-radius: 5px;
-																			color: #fff;
-																			margin-right: 1rem;" href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3310&amp;clubId=2565.html"> Scorecard</a>
+														<a style="float: right;font-size: 0.85rem;background: #2098d1;
+    padding: 4px 9px;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 1rem;" href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3310&amp;clubId=2565.html"> Scorecard</a>
 														</h5>
+														
+														
 													</div>
 												</div>
 											</div>
 										</div>
-<!------------------------------------------------------------------------------------ ----------------------------- -->
 										<div class="team-vs-team">
 											<div class="row list-slign">
 												<div class="col-sm-4 col-xs-4">
@@ -320,9 +319,9 @@ $('.common__slider').slick({
 																href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3309&amp;clubId=2565.html">L:
 																Kitchener Bulls - vs - Mississauga Cricket Club</a>
 															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
-																		margin-right: 10px;
-																		margin-top: -3px; cursor: pointer;
-																		"
+    margin-right: 10px;
+    margin-top: -3px; cursor: pointer;
+     "
 																src="utilsv2/theme2-static/images/cric-ball.png" width="15px" height="15px"/>
 															</h4>
 														<h5>
@@ -330,16 +329,17 @@ $('.common__slider').slick({
 																href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3309&amp;clubId=2565.html">
 																Kitchener Bulls won by 60 Run(s)</a>
 														<a style="float: right;font-size: 0.85rem;background: #2098d1;
-																		padding: 4px 9px;
-																		border-radius: 5px;
-																		color: #fff;
-																		margin-right: 1rem;" href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3309&amp;clubId=2565.html"> Scorecard</a>
+    padding: 4px 9px;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 1rem;" href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3309&amp;clubId=2565.html"> Scorecard</a>
 														</h5>
+														
+														
 													</div>
 												</div>
 											</div>
 										</div>
-<!-----------------------------------------------------------------------------------------------------------------  -->
 										<div class="team-vs-team">
 											<div class="row list-slign">
 												<div class="col-sm-4 col-xs-4">
@@ -367,9 +367,9 @@ $('.common__slider').slick({
 																href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3308&amp;clubId=2565.html">L:
 																820 CC - vs - Toronto Metro Cricket Club</a>
 															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
-																			margin-right: 10px;
-																			margin-top: -3px; cursor: pointer;
-																			"
+    margin-right: 10px;
+    margin-top: -3px; cursor: pointer;
+     "
 																src="utilsv2/theme2-static/images/cric-ball.png" width="15px" height="15px"/>
 															</h4>
 														<h5>
@@ -377,10 +377,10 @@ $('.common__slider').slick({
 																href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3308&amp;clubId=2565.html">
 																820 CC won by 8 Run(s)</a>
 														<a style="float: right;font-size: 0.85rem;background: #2098d1;
-																			padding: 4px 9px;
-																			border-radius: 5px;
-																			color: #fff;
-																			margin-right: 1rem;" href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3308&amp;clubId=2565.html"> Scorecard</a>
+    padding: 4px 9px;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 1rem;" href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3308&amp;clubId=2565.html"> Scorecard</a>
 														</h5>
 														
 														
@@ -388,7 +388,6 @@ $('.common__slider').slick({
 												</div>
 											</div>
 										</div>
-<!-- --------------------------------------------------------------------------------------------------------------- -->
 										<div class="team-vs-team">
 											<div class="row list-slign">
 												<div class="col-sm-4 col-xs-4">
@@ -416,9 +415,9 @@ $('.common__slider').slick({
 																href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3307&amp;clubId=2565.html">L:
 																Titans - vs - Asian Hawks</a>
 															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
-																			margin-right: 10px;
-																			margin-top: -3px; cursor: pointer;
-																			"
+    margin-right: 10px;
+    margin-top: -3px; cursor: pointer;
+     "
 																src="utilsv2/theme2-static/images/cric-ball.png" width="15px" height="15px"/>
 															</h4>
 														<h5>
@@ -426,10 +425,10 @@ $('.common__slider').slick({
 																href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3307&amp;clubId=2565.html">
 																Titans won by 5 Run(s)</a>
 														<a style="float: right;font-size: 0.85rem;background: #2098d1;
-																			padding: 4px 9px;
-																			border-radius: 5px;
-																			color: #fff;
-																			margin-right: 1rem;" href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3307&amp;clubId=2565.html"> Scorecard</a>
+    padding: 4px 9px;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 1rem;" href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3307&amp;clubId=2565.html"> Scorecard</a>
 														</h5>
 														
 														
@@ -437,7 +436,6 @@ $('.common__slider').slick({
 												</div>
 											</div>
 										</div>
-<!-- --------------------------------------------------------------------------------------------------------------- -->
 										<div class="team-vs-team">
 											<div class="row list-slign">
 												<div class="col-sm-4 col-xs-4">
@@ -464,30 +462,28 @@ $('.common__slider').slick({
 															<a class="list-score" style="color: inherit;"
 																href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3306&amp;clubId=2565.html">L:
 																Toronto Jaguars - vs - Whitby ASCA</a>
-																																		<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
-																				margin-right: 10px;
-																				margin-top: -3px; cursor: pointer;
-																				"
+															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
+    margin-right: 10px;
+    margin-top: -3px; cursor: pointer;
+     "
 																src="utilsv2/theme2-static/images/cric-ball.png" width="15px" height="15px"/>
 															</h4>
 														<h5>
 															<a class="list-score" 
 																href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3306&amp;clubId=2565.html">
 																Whitby ASCA won by 7 Wkt(s)</a>
-																<a style="float: right;font-size: 0.85rem;background: #2098d1;
-																				padding: 4px 9px;
-																				border-radius: 5px;
-																				color: #fff;
-																				margin-right: 1rem;" href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3306&amp;clubId=2565.html"> Scorecard</a>
+														<a style="float: right;font-size: 0.85rem;background: #2098d1;
+    padding: 4px 9px;
+    border-radius: 5px;
+    color: #fff;
+    margin-right: 1rem;" href="MississaugaCricketLeague/viewScorecard.do%3FmatchId=3306&amp;clubId=2565.html"> Scorecard</a>
 														</h5>
+														
+														
 													</div>
 												</div>
 											</div>
 										</div>
-
-
-
-										<!-- start Shedule -->
 										<div class="complete text-center">
 											<a
 												href="MississaugaCricketLeague/listMatches.do%3FclubId=2565.html">Complete
@@ -692,7 +688,45 @@ $('.common__slider').slick({
 												</div>
 											</div>
 										</div>
-										
+										<div class="team-vs-team">
+											<div class="row list-slign">
+												<div class="col-sm-4 col-xs-4">
+													<div class="vsteam-image">
+														<ul class="list-inline">
+															<li><img
+																src="https://cricclubs.com/documentsRep/teamLogos/a2530a09-334e-4d16-9206-1dfb63857ac8.jpg"
+																class="img-responsive img-circle"
+																style="width: 40px; height: 40px;" /></li>
+															<li><img
+																src="https://cricclubs.com/documentsRep/teamLogos/28ad19bf-4cad-4325-a8e6-d15b9d46f533.jpg"
+																class="img-responsive img-circle"
+																style="width: 40px; height: 40px;" /></li>
+														</ul>
+													</div>
+												</div>
+												<div class="col-sm-8 col-xs-8">
+													<div class="vsteam-text">
+														<h4>L:
+															<a
+																href="MississaugaCricketLeague/viewTeam.do%3FteamId=1075&amp;clubId=2565.html">
+																Toronto Metro Cricket Club</a>
+															
+															- vs -
+															<a
+																href="MississaugaCricketLeague/viewTeam.do%3FteamId=1086&amp;clubId=2565.html">
+																Mississauga Cricket Club</a>
+															</h4>
+														<h5>
+															
+															at <a
+																href="MississaugaCricketLeague/viewGround.do%3FgroundId=45&amp;clubId=2565.html"
+																target="_new">WnW Pitch 3</a>
+															<span><i class="fa fa-clock-o"></i> 04/02/2023 8:30 PM</span>
+														</h5>
+													</div>
+												</div>
+											</div>
+										</div>
 										<div class="complete text-center">
 											<a
 												href="MississaugaCricketLeague/fixtures.do%3FclubId=2565.html">Complete
@@ -733,11 +767,11 @@ $('.common__slider').slick({
 						<div class="row">
 							<div class="col-sm-6 sp">
 								<div class="gallery-image-all">
-									<a title="EOSCL AWARDS 2018"
+									<a title="MCL AWARDS 2018"
 										href="MississaugaCricketLeague/viewAlbum.do%3FalbumId=1&amp;clubId=2565.html">
 										<div class="gallery-image">
 											<img
-												src='http://www.eoscl.com/AdminPanel/App_Upload/TeamGroupPhotos/636995904247192654.jpg'
+												src='https://cricclubs.com/documentsRep/photos/2565-1-3.JPG'
 												class="img-responsive center-block" />
 										</div>
 										
@@ -745,7 +779,7 @@ $('.common__slider').slick({
 									<div class="gallery-text">
 
 											<!-- <i class="fa fa-camera-retro" style="font-size: 14px;"></i> --> <b
-												style="font-size: 14px;">EOSCL AWARDS 2018</b>
+												style="font-size: 14px;">MCL AWARDS 2018</b>
 
 											
 										</div>
@@ -786,14 +820,14 @@ $('.common__slider').slick({
 					<div class="border-heading sp">
 						<h5>Facebook</h5>
 					</div>
-					<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0eygQEQpnoB26DBA78KYVjY7y4R4npUAegqAr6Hy9vBdGmjyqWKDmDh1uJ29KJh2Bl%26id%3D100088146272946&show_text=true&width=500" target="_top" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmississaugacricketleague%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=745734118815722" target="_top" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 				</div>
 				<div class="facebook">
 					<div class="border-heading sp">
 						<h5>Twitter</h5>
 					</div>
 					<div style=" overflow-y: scroll; max-height: 500px; ">
-					<a class="twitter-timeline" href="https://twitter.com/EEoscl?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1003005776129150976%7Ctwgr%5E2eef71c9b1181f3aed0a5fb71c24b561abaad9b9%7Ctwcon%5Es1_&ref_url=http%3A%2F%2Fwww.eoscl.com%2FDefault.aspx">Tweets by MissCricLeague</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+					<a class="twitter-timeline" href="https://twitter.com/MissCricLeague?ref_src=twsrc%5Etfw">Tweets by MissCricLeague</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 				</div>
 				</div>
 		
@@ -804,9 +838,9 @@ $('.common__slider').slick({
 
 	<a id="example7"
 		href="https://cricclubs.com/documentsRep/startup/2565-startup.JPG"
-		title="Welcome to EOSCL"></a>
+		title="Welcome to MCL"></a>
 	<div id="inline1" style="width: 500px; height: 300px; overflow: auto;">
-		Welcome to EOSCL</div>
+		Welcome to MCL</div>
 
 </div>
 

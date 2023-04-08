@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Item;
 
 use App\Models\Player;
+use App\Models\Tournament;
 
 
 class HomeController extends Controller
@@ -33,15 +34,13 @@ class HomeController extends Controller
 
 
     public function home()
-
     {
-
-        return view('home');
-
+        $tournament = Tournament::query();
+        $tournament = $tournament->orderBy('id')->get();
+        return view('home',compact('tournament'));
     }
 
     public function search_player()
-
     {
 
         // return view('search_player');
