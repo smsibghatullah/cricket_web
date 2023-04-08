@@ -439,22 +439,6 @@
                 <div id="playersData_wrapper" class="dataTables_wrapper no-footer"><div class="dt-buttons">          <button class="dt-button buttons-copy buttons-html5" tabindex="0" aria-controls="playersData" type="button"><span>Copy</span></button> <button class="dt-button buttons-csv buttons-html5" tabindex="0" aria-controls="playersData" type="button"><span>CSV</span></button> <button class="dt-button buttons-excel buttons-html5" tabindex="0" aria-controls="playersData" type="button"><span>Excel</span></button> <button class="dt-button buttons-pdf buttons-html5" tabindex="0" aria-controls="playersData" type="button"><span>PDF</span></button> <button class="dt-button buttons-print" tabindex="0" aria-controls="playersData" type="button"><span>Print</span></button> </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <table class="table sortable table-striped dataTable no-footer" id="playersData" role="grid"> 
                     <thead> 
                         <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="playersData" rowspan="1" colspan="1" aria-sort="ascending" aria-label="No : activate to sort column descending" style="width: 65px;"><a href="#" class="sortheader" onclick="ts_resortTable(this, 0);return false;">No <span class="sortarrow">&nbsp;<img src="/utilsv2/images/arrow-none.gif" alt="↓"></span></a></th><th style="text-align: left !important; width: 470px;" class="sorting" tabindex="0" aria-controls="playersData" rowspan="1" colspan="1" aria-label="Player Name : activate to sort column ascending"><a href="#" class="sortheader" onclick="ts_resortTable(this, 1);return false;">Player Name <span class="sortarrow">&nbsp;<img src="/utilsv2/images/arrow-none.gif" alt="↓"></span></a></th><th style="text-align: left !important; width: 174px;" class="sorting" tabindex="0" aria-controls="playersData" rowspan="1" colspan="1" aria-label="Player Role : activate to sort column ascending"><a href="#" class="sortheader" onclick="ts_resortTable(this, 2);return false;">Player Role <span class="sortarrow">&nbsp;<img src="/utilsv2/images/arrow-none.gif" alt="↓"></span></a></th><th style="text-align: left !important; width: 356px;" class="spa sorting" tabindex="0" aria-controls="playersData" rowspan="1" colspan="1" aria-label="Team   : activate to sort column ascending"><a href="#" class="sortheader" onclick="ts_resortTable(this, 3);return false;">Team <span class="sortarrow">&nbsp;<img src="/utilsv2/images/arrow-none.gif" alt="↓"></span></a></th></tr> 
@@ -526,38 +510,8 @@
         $('.buttons-print').click();
     });
 </script>
-<style >
-				.footer-bottom{
-					width: 100%;
-   			  position: fixed;
-   			  bottom: 0;
-				}
-			</style>
-    <footer>
-    	<div class="container">
-        	<div class="row footer-list">
-            	<div class="col-sm-6 col-xs-12">
-                	<div class="copy">
-                	<p>© Copyright <script>document.write(new Date().getFullYear());</script> CricClubs.com. All Rights Reserved. </p>
-                    	</div>
-                </div>
-                <div class="col-sm-6 col-xs-12 text-lg-right text-center">
-                	<div class="social">
-                    	<ul class="list-inline">
-                    	<li><a href="https://www.facebook.com/mississaugacricketleague/" target="_new"><img src="../utilsv2/img/icons/share-1.png" class="img-responsive"/></a></li>
-                            <li><a href="https://twitter.com/MissCricLeague" target="_new"><img src="../utilsv2/img/icons/share-2.png" class="img-responsive"/></a></li>
-                         
-                    	</ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script>
-        	function hideMergeModal(){
-        		$("#displayMessage").remove();
-        	}
-        </script>
-     </footer>
+
+  
 			<div id="dialog-confirm-TnC" title="Mississauga Cricket League - Terms and Conditions" style="display: none;">
 								  </div>
 							<div id="open-app-confirm" title="Install App?" style="display: none;">
