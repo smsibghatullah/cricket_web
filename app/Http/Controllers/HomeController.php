@@ -13,6 +13,7 @@ use App\Models\FixtureScore;
 use App\Models\Team;
 use App\Models\Ground;
 
+
 class HomeController extends Controller
 
 {
@@ -65,13 +66,19 @@ class HomeController extends Controller
 
     public function fullScorecard(int $id)
     {
-
+        $match_results = Fixture::query();
+        $match_results->where('running_inning','=',3);
+        $match_results = $match_results->orderBy('id')->get();
         $result = [];
         $teams = Team::query()->get()->pluck(
           'name',
           'id'
         );
-
+        $player = Player::query()->get()->pluck(
+            'fullname',
+            'id'
+          );
+        
         $player_runs =FixtureScore::Where('fixture_id','=',$id)
                 ->selectRaw("sum(runs) as total_runs")
                 ->selectRaw("count(isfour) as total_fours")
@@ -93,7 +100,7 @@ class HomeController extends Controller
                 ->get()->pluck('balls','playerId');;
 
 
-        return view('score_card',compact('player_runs', 'player_balls'));
+        return view('score_card',compact('player_runs', 'player_balls','match_results','teams','player'));
 
     }
 
