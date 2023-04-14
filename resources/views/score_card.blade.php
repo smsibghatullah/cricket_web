@@ -65,14 +65,14 @@
                                                                         <th style="text-align: center;">SR</th>
                                                                         </tr> 
                                                                     </thead> 
-                                                                    @foreach($result as $item)
+                                                                    @foreach($player_runs as $item)
                                                                     <tbody> 
                                                                     <tr> 
                                                                    <th>
                                                                    
                                                                         	<img src="https://cricclubs.com/documentsRep/profilePics/b8e79395-ac46-4e68-b8a5-5ae31d78ee59.png" class="left-block img-circle" style="width:23px; height:23px;margin-right:8px">	
                                                                         
-                                                                        	<a href="/MississaugaCricketLeague/viewPlayer.do?playerId=1207430&amp;clubId=2565"><b>Noman Siddiqui</b> </a>
+                                                                        	<a href="/MississaugaCricketLeague/viewPlayer.do?playerId=1207430&amp;clubId=2565"><b>{{$player[$item->playerId]}}</b> </a>
                                                                         	<a style="display:none" id="btm_video_1207430" href="javascript:openVideoHTMLvs('1207430','bt', 'Noman Siddiqui');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
                                                                         	<div class="scorecard-out-text show-phone" style="margin-left:34px;">c <a href="viewPlayer.do?playerId=1277414&amp;clubId=2565">Sandy D</a> b <a href="viewPlayer.do?playerId=2993131&amp;clubId=2565">Shubh A P</a><a style="display:none" id="bthowOutPH_video_1207430" href="javascript:openVideoHTMLvs('1207430','out', 'Noman Siddiqui');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
                                                                         	</div>
@@ -80,11 +80,11 @@
                                                                         <th class="hidden-phone">c <a href="viewPlayer.do?playerId=1277414&amp;clubId=2565">Sandy D</a> b <a href="viewPlayer.do?playerId=2993131&amp;clubId=2565">Shubh A P</a><a id="bthowOut_video_1207430" style="display:none" href="javascript:openVideoHTMLvs('1207430','out', 'Noman Siddiqui');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
                                                                         	</th>
                                                                         <th style="text-align: right;"><b>{{$item->total_runs}}</b></th>
-                                                                        <th style="text-align: right;">11</th> 
-                                                                        <th style="text-align: right;">1<a style="display:none" id="btfour_video_1207430" href="javascript:openVideoHTMLvs('1207430','four', 'Noman Siddiqui');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
+                                                                        <th style="text-align: right;">{{$player_balls[$item->playerId]}}</th> 
+                                                                        <th style="text-align: right;">{{$item->total_fours}}<a style="display:none" id="btfour_video_1207430" href="javascript:openVideoHTMLvs('1207430','four', 'Noman Siddiqui');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
                                                                         	</th>
-                                                                        <th style="text-align: right;">0</th>
-                                                                        <th style="text-align: center;">90.91</th>
+                                                                        <th style="text-align: right;">{{$item->total_six}}</th>
+                                                                        <th style="text-align: center;">{{ isset($player_balls[$item->playerId]) && $player_balls[$item->playerId] != 0 ? number_format(($item->total_runs / $player_balls[$item->playerId]) * 100, 2) : 0.00 }}</th>
                                                                     </tr> 
                                                                     @endforeach
  
