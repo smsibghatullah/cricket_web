@@ -10,6 +10,7 @@ use App\Models\Player;
 use App\Models\Tournament;
 use App\Models\Fixture;
 use App\Models\Team;
+use App\Models\Ground;
 
 class HomeController extends Controller
 
@@ -38,15 +39,26 @@ class HomeController extends Controller
     {
         $tournament = Tournament::query();
         $tournament = $tournament->orderBy('id')->get();
+        $ground = Ground::query();
+        $ground = $ground->orderBy('id')->get();
         $match_results = Fixture::query();
-        $match_results->where('running_inning','=',3)->orderBy('id')->get();;
+        $match_results->where('running_inning','=',3);
+        $match_results = $match_results->orderBy('id')->get();;
+        // dd($match_results);
         // $match_results = $match_results
+        $upcoming_match = Fixture::query();
+        $upcoming_match->where('running_inning','=',0);
+        $upcoming_match = $upcoming_match->skip(5)->take(5)->orderBy('id')->get();;
         $teams = Team::query()->get()->pluck(
           'name',
           'id'
         );
+        $ground = Ground::query()->get()->pluck(
+            'name',
+            'id'
+          );
 
-        return view('home',compact('tournament', 'match_results','teams'));
+        return view('home',compact('tournament', 'match_results','teams','upcoming_match','ground'));
     }
 
     public function fullScorecard(int $id)

@@ -512,11 +512,11 @@
                     </div>
                     <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="MississaugaCricketLeague.html">Home</a></li>
-                            <!-- <li><a href="index.html#">Players</a>
+                            <li><a href="home">Home</a></li>
+                           <li><a href="search_player">Players</a>
                                 <ul class="sub-menu">
-                                    <li><a href="MississaugaCricketLeague/searchPlayer.do%3FclubId=2565.html">Player
-                                            Search</a></li>
+                                    <li><a href="search_player">Player
+                                           </a></li>
                                     <li><a
                                             href="https://www.mississaugacricketleague.ca/MississaugaCricketLeague/playerMatchesCount.do?clubId=2565">Player
                                             Matches Count</a></li>
@@ -534,7 +534,7 @@
 
                                 </ul>
                             </li>
-                            <li><a href="index.html#">Clubs</a>
+                          <!--  <li><a href="index.html#">Clubs</a>
                                 <ul class="sub-menu">
                                     <li><a href="MississaugaCricketLeague/viewInternalClubs.do%3FclubId=2565.html">View
                                             Clubs</a></li>
@@ -626,8 +626,8 @@
                                         class="fa fa-user"></i> Log in</a></li>
                             <li class="sponser"><a href="https://cricclubs.com/" target="_new"><img
                                         src="utilsv2/app/assets/images/pbcc-logo.png" class="img-responsive"
-                                        style="max-width:145px; top:3px; border-radius:3px;" /></a></li> -->
-                        </ul>
+                                        style="max-width:145px; top:3px; border-radius:3px;" /></a></li>
+                        </ul> -->
                     </div>
                 </nav>
             </div>

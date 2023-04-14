@@ -257,8 +257,11 @@ margin-right: 10px;
 										</div>
 
 									</div>
+
 									<div class="tab-pane fade "
 										id="tab3default">
+										@foreach($upcoming_match as $upcoming_match)
+	
 										<div class="team-vs-team">
 											<div class="row list-slign">
 												<div class="col-sm-4 col-xs-4">
@@ -280,219 +283,26 @@ margin-right: 10px;
 														<h4>L:
 															<a
 																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1092&amp;clubId=2565.html">
-																Titans</a>
+																{{$teams[$upcoming_match->team_id_a]}}</a>
 															
 															- vs -
 															<a
 																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1075&amp;clubId=2565.html">
-																Toronto Metro Cricket Club</a>
+																{{$teams[$upcoming_match->team_id_b]}}</a>
 															</h4>
 														<h5>
 															
 															at <a
 																href="EOSCLCricketLeague/viewGround.do%3FgroundId=43&amp;clubId=2565.html"
-																target="_new">WnW Pitch 1</a>
-															<span><i class="fa fa-clock-o"></i> 03/26/2023 8:30 PM</span>
+																target="_new">{{$ground[$upcoming_match->ground_id]}}</a>
+															<span><i class="fa fa-clock-o"></i> {{$upcoming_match->created_at}}</span>
 														</h5>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="team-vs-team">
-											<div class="row list-slign">
-												<div class="col-sm-4 col-xs-4">
-													<div class="vsteam-image">
-														<ul class="list-inline">
-															<li><img
-																src="https://cricclubs.com/documentsRep/teamLogos/f5320271-5186-4f51-af7a-f18eb7133175.jpg"
-																class="img-responsive img-circle"
-																style="width: 40px; height: 40px;" /></li>
-															<li><img
-																src="https://cricclubs.com/documentsRep/teamLogos/9deaa818-6154-4a1a-8eaf-89bb6e54f83d.jpg"
-																class="img-responsive img-circle"
-																style="width: 40px; height: 40px;" /></li>
-														</ul>
-													</div>
-												</div>
-												<div class="col-sm-8 col-xs-8">
-													<div class="vsteam-text">
-														<h4>L:
-															<a
-																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1091&amp;clubId=2565.html">
-																Whitby ASCA</a>
-															
-															- vs -
-															<a
-																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1103&amp;clubId=2565.html">
-																Royal Tigers</a>
-															</h4>
-														<h5>
-															
-															at <a
-																href="EOSCLCricketLeague/viewGround.do%3FgroundId=44&amp;clubId=2565.html"
-																target="_new">WnW Pitch 2</a>
-															<span><i class="fa fa-clock-o"></i> 03/26/2023 8:30 PM</span>
-														</h5>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="team-vs-team">
-											<div class="row list-slign">
-												<div class="col-sm-4 col-xs-4">
-													<div class="vsteam-image">
-														<ul class="list-inline">
-															<li><img
-																src="https://cricclubs.com/documentsRep/teamLogos/4685129f-1e36-40fd-ab4e-df7a0fedad03.jpg"
-																class="img-responsive img-circle"
-																style="width: 40px; height: 40px;" /></li>
-															<li><img
-																src="https://cricclubs.com/documentsRep/teamLogos/28ad19bf-4cad-4325-a8e6-d15b9d46f533.jpg"
-																class="img-responsive img-circle"
-																style="width: 40px; height: 40px;" /></li>
-														</ul>
-													</div>
-												</div>
-												<div class="col-sm-8 col-xs-8">
-													<div class="vsteam-text">
-														<h4>L:
-															<a
-																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1085&amp;clubId=2565.html">
-																Asian Hawks</a>
-															
-															- vs -
-															<a
-																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1086&amp;clubId=2565.html">
-																EOSCL Cricket Club</a>
-															</h4>
-														<h5>
-															
-															at <a
-																href="EOSCLCricketLeague/viewGround.do%3FgroundId=45&amp;clubId=2565.html"
-																target="_new">WnW Pitch 3</a>
-															<span><i class="fa fa-clock-o"></i> 03/26/2023 8:30 PM</span>
-														</h5>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="team-vs-team">
-											<div class="row list-slign">
-												<div class="col-sm-4 col-xs-4">
-													<div class="vsteam-image">
-														<ul class="list-inline">
-															<li><img
-																src="https://cricclubs.com/documentsRep/teamLogos/3de1d6b0-210e-490c-b111-2038ec3e0c8d.jpeg"
-																class="img-responsive img-circle"
-																style="width: 40px; height: 40px;" /></li>
-															<li><img
-																src="https://cricclubs.com/documentsRep/teamLogos/57dddf01-13bf-48f5-bb38-bffc5faa2d67.jpeg"
-																class="img-responsive img-circle"
-																style="width: 40px; height: 40px;" /></li>
-														</ul>
-													</div>
-												</div>
-												<div class="col-sm-8 col-xs-8">
-													<div class="vsteam-text">
-														<h4>L:
-															<a
-																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1069&amp;clubId=2565.html">
-																Kitchener Bulls</a>
-															
-															- vs -
-															<a
-																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1078&amp;clubId=2565.html">
-																GTA United</a>
-															</h4>
-														<h5>
-															
-															at <a
-																href="EOSCLCricketLeague/viewGround.do%3FgroundId=43&amp;clubId=2565.html"
-																target="_new">WnW Pitch 1</a>
-															<span><i class="fa fa-clock-o"></i> 04/02/2023 8:30 PM</span>
-														</h5>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="team-vs-team">
-											<div class="row list-slign">
-												<div class="col-sm-4 col-xs-4">
-													<div class="vsteam-image">
-														<ul class="list-inline">
-															<li><img
-																src="https://cricclubs.com/documentsRep/teamLogos/9deaa818-6154-4a1a-8eaf-89bb6e54f83d.jpg"
-																class="img-responsive img-circle"
-																style="width: 40px; height: 40px;" /></li>
-															<li><img
-																src="https://cricclubs.com/documentsRep/teamLogos/8c45d0e8-b2c3-4d50-bb8b-70573b533552.jpg"
-																class="img-responsive img-circle"
-																style="width: 40px; height: 40px;" /></li>
-														</ul>
-													</div>
-												</div>
-												<div class="col-sm-8 col-xs-8">
-													<div class="vsteam-text">
-														<h4>L:
-															<a
-																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1103&amp;clubId=2565.html">
-																Royal Tigers</a>
-															
-															- vs -
-															<a
-																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1072&amp;clubId=2565.html">
-																Toronto Jaguars</a>
-															</h4>
-														<h5>
-															
-															at <a
-																href="EOSCLCricketLeague/viewGround.do%3FgroundId=44&amp;clubId=2565.html"
-																target="_new">WnW Pitch 2</a>
-															<span><i class="fa fa-clock-o"></i> 04/02/2023 8:30 PM</span>
-														</h5>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="team-vs-team">
-											<div class="row list-slign">
-												<div class="col-sm-4 col-xs-4">
-													<div class="vsteam-image">
-														<ul class="list-inline">
-															<li><img
-																src="https://cricclubs.com/documentsRep/teamLogos/a2530a09-334e-4d16-9206-1dfb63857ac8.jpg"
-																class="img-responsive img-circle"
-																style="width: 40px; height: 40px;" /></li>
-															<li><img
-																src="https://cricclubs.com/documentsRep/teamLogos/28ad19bf-4cad-4325-a8e6-d15b9d46f533.jpg"
-																class="img-responsive img-circle"
-																style="width: 40px; height: 40px;" /></li>
-														</ul>
-													</div>
-												</div>
-												<div class="col-sm-8 col-xs-8">
-													<div class="vsteam-text">
-														<h4>L:
-															<a
-																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1075&amp;clubId=2565.html">
-																Toronto Metro Cricket Club</a>
-															
-															- vs -
-															<a
-																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1086&amp;clubId=2565.html">
-																EOSCL Cricket Club</a>
-															</h4>
-														<h5>
-															
-															at <a
-																href="EOSCLCricketLeague/viewGround.do%3FgroundId=45&amp;clubId=2565.html"
-																target="_new">WnW Pitch 3</a>
-															<span><i class="fa fa-clock-o"></i> 04/02/2023 8:30 PM</span>
-														</h5>
-													</div>
-												</div>
-											</div>
-										</div>
+										@endforeach
+
 										<div class="complete text-center">
 											<a
 												href="EOSCLCricketLeague/fixtures.do%3FclubId=2565.html">Complete
