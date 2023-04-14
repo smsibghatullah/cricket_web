@@ -205,6 +205,19 @@
     <script src="https://cdn.jsdelivr.net/jquery.cookiefy/1.0/jquery.cookiefy.min.js') !!}"></script>
     <script type="text/javascript" src="{!! asset('utilsv2/sortable.js') !!}"></script>
     <script type="text/javascript" src="{!! asset('utilsv2/app/assets/js/jquery.slimscroll.min.js') !!}"></script>
+<style>
+    #navbarSlider {
+    display: flex;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    margin-bottom: 15px;
+}
+
+.navbar-slide {
+    flex: 0 0 auto;
+}
+
+    </style>
 </head>
 
 <body>
@@ -247,68 +260,37 @@
 					
 
 						</div>
-						<div style="margin-left:15px;margin-right:15px;/* display:flex; */">
-                                    <div class="spon-image hvr-grow">
-                                        <a href='#' style='text-decoration: none;' target='_blank'>
-                                            <table class='thinBorder'>
-                                                <tr>
-                                                    <td class='thinBorder' title='Yashi Sports'
-                                                        style='padding:0px;height:90px;'>									<div class="card">
-														<div class="card-content">
-													<h6 style="margin-top: 20px;color:white">L:&nbsp;&nbsp;<span style="color:white;font-weight:bold">Titan</span>&nbsp;&nbsp;VS&nbsp;&nbsp;<span style="color:white;font-weight:bold">lahore star</span></h6>
-													<p style="color:white">Titans won by 5 Run(s)</p>
-													
-													</div>
-													</div>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </a>
-                                    </div>
-                                </div>
+<div id="navbarSlider" style="overflow-x: hidden;">
+@foreach($match_results as $match_result)           
+    <div class="navbar-slide" style="margin-left:15px;margin-right:15px;">
+        <div class="spon-image hvr-grow">
+            <a href='#' style='text-decoration: none;' target='_blank'>
+                <table class='thinBorder'>
+                    <tr>
+                        <td class='thinBorder' title='' style='padding:0px;height:90px;'>
+                            <div class="card">
+                                <div class="card-content">
+                                    <h6 style="margin-top: 20px;color:white">L:&nbsp;&nbsp;<span
+                                            style="color:white;font-weight:bold">{{$teams[$match_result->team_id_a]}} - vs - {{$teams[$match_result->team_id_b]}}</span></h6>
+                                    <p style="color:white">{{$match_result->match_result_description}}</p>
 
-								<div style="margin-left:15px;margin-right:15px;/* display:flex; */">
-                                    <div class="spon-image hvr-grow">
-                                        <a href='#' style='text-decoration: none;' target='_blank'>
-                                            <table class='thinBorder'>
-                                                <tr>
-                                                    <td class='thinBorder' title='Yashi Sports'
-                                                        style='padding:0px;height:90px;'>									<div class="card">
-														<div class="card-content">
-													<h6 style="margin-top: 20px;color:white">L:&nbsp;&nbsp;<span style="color:white;font-weight:bold">Titan</span>&nbsp;&nbsp;VS&nbsp;&nbsp;<span style="color:white;font-weight:bold">lahore star</span></h6>
-													<p style="color:white">Titans won by 5 Run(s)</p>
-													
-													</div>
-													</div>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </a>
-                                    </div>
                                 </div>
-								<div style="margin-left:15px;margin-right:15px;/* display:flex; */">
-                                    <div class="spon-image hvr-grow">
-                                        <a href='#' style='text-decoration: none;' target='_blank'>
-                                            <table class='thinBorder'>
-                                                <tr>
-                                                    <td class='thinBorder' title='Yashi Sports'
-                                                        style='padding:0px;height:90px;'>									<div class="card">
-													<div class="card-content">
-													<h6 style="margin-top: 20px;color:white">L:&nbsp;&nbsp;<span style="color:white;font-weight:bold">Titan</span>&nbsp;&nbsp;VS&nbsp;&nbsp;<span style="color:white;font-weight:bold">lahore star</span></h6>
-													<p style="color:white">Titans won by 5 Run(s)</p>
-													
-													</div>
-													</div>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </a>
-                                    </div>
-                                </div>
-                        <div class="col-sm-8 hidden-phone slider">
-                            <div class="slick-carousel-header" style="display:flex;">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </a>
+        </div>
+    </div>
+    @endforeach
+</div>
 
-                                <div style="margin-left:15px;margin-right:15px;/* display:flex; */">
+
+
+<div class="col-sm-8 hidden-phone slider "   style="overflow-x: hidden;">
+                            <div class="slick-carousel-header" id="navbarSlider"  style="display:flex;">
+
+                                <div style="margin-left:15px;margin-right:15px;/* display:flex; */" class="navbar-slide">
                                     <div class="spon-image hvr-grow">
                                         <a href='#' style='text-decoration: none;' target='_blank'>
                                             <table class='thinBorder'>
@@ -322,7 +304,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div style="margin-left:15px;margin-right:15px;/* display:flex; */">
+                                <div style="margin-left:15px;margin-right:15px;/* display:flex; */" class="navbar-slide">
                                     <div class="spon-image hvr-grow">
                                         <a href='#' style='text-decoration: none;' target='_blank'>
                                             <table class='thinBorder'>
@@ -336,7 +318,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div style="margin-left:15px;margin-right:15px;/* display:flex; */">
+                                <div style="margin-left:15px;margin-right:15px;/* display:flex; */" class="navbar-slide">
                                     <div class="spon-image hvr-grow">
                                         <a href='#' style='text-decoration: none;' target='_blank'>
                                             <table class='thinBorder'>
@@ -350,7 +332,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div style="margin-left:15px;margin-right:15px;/* display:flex; */">
+                                <div style="margin-left:15px;margin-right:15px;/* display:flex; */" class="navbar-slide">
                                     <div class="spon-image hvr-grow">
                                         <a href='#' style='text-decoration: none;' target='_blank'>
                                             <table class='thinBorder'>
@@ -373,22 +355,43 @@
             </div>
         </div>
         <script>
-        var slideIndex = 0;
-        showSlides();
+      // Get the navbar slider element
+var navbarSlider = document.getElementById("navbarSlider");
 
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("slider").filter(i => i.getElementsByTagName("img"));
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 4;
-            }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
+// Set the initial slide index to 0
+var currentSlide = 0;
+
+// Function to move to the next slide
+function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= navbarSlider.children.length) {
+        currentSlide = 0;
+    }
+    scrollToCurrentSlide();
+}
+
+// Function to scroll to the current slide
+function scrollToCurrentSlide() {
+    var slide = navbarSlider.children[currentSlide];
+    navbarSlider.scrollTo({
+        left: slide.offsetLeft,
+        behavior: "smooth"
+    });
+}
+
+// Automatically move to the next slide every 3 seconds (3000 milliseconds)
+var intervalId = setInterval(nextSlide, 5000);
+
+// Stop the automatic sliding when the mouse is over the navbar slider
+navbarSlider.addEventListener("mouseover", function() {
+    clearInterval(intervalId);
+});
+
+// Resume the automatic sliding when the mouse leaves the navbar slider
+navbarSlider.addEventListener("mouseout", function() {
+    intervalId = setInterval(nextSlide, 5000);
+});
+
         </script>
 
         <div class="col-sm-12">
@@ -512,11 +515,11 @@
                     </div>
                     <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="MississaugaCricketLeague.html">Home</a></li>
-                            <!-- <li><a href="index.html#">Players</a>
+                            <li><a href="home">Home</a></li>
+                           <li><a href="search_player">Players</a>
                                 <ul class="sub-menu">
-                                    <li><a href="MississaugaCricketLeague/searchPlayer.do%3FclubId=2565.html">Player
-                                            Search</a></li>
+                                    <li><a href="search_player">Player
+                                           </a></li>
                                     <li><a
                                             href="https://www.mississaugacricketleague.ca/MississaugaCricketLeague/playerMatchesCount.do?clubId=2565">Player
                                             Matches Count</a></li>
@@ -534,7 +537,7 @@
 
                                 </ul>
                             </li>
-                            <li><a href="index.html#">Clubs</a>
+                            <!-- <li><a href="index.html#">Clubs</a> 
                                 <ul class="sub-menu">
                                     <li><a href="MississaugaCricketLeague/viewInternalClubs.do%3FclubId=2565.html">View
                                             Clubs</a></li>
@@ -626,8 +629,8 @@
                                         class="fa fa-user"></i> Log in</a></li>
                             <li class="sponser"><a href="https://cricclubs.com/" target="_new"><img
                                         src="utilsv2/app/assets/images/pbcc-logo.png" class="img-responsive"
-                                        style="max-width:145px; top:3px; border-radius:3px;" /></a></li> -->
-                        </ul>
+                                        style="max-width:145px; top:3px; border-radius:3px;" /></a></li>
+                        </ul> -->
                     </div>
                 </nav>
             </div>
