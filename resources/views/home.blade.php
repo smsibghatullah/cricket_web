@@ -166,7 +166,7 @@ $('.common__slider').slick({
 			</div>
 			
 			
-			<!-- <div class="col-sm-5 p-sm-0">
+			<div class="col-sm-5 p-sm-0">
 			<div id="resultsDiv">
 					<div class="complete-list">
 						<div class="panel with-nav-tabs panel-default list-tab-mobile">
@@ -737,7 +737,7 @@ $('.common__slider').slick({
 							</div>
 						</div>
 					</div>
-				</div> -->
+				</div>
 
 				<div style="text-align: center;background: #fff; padding-bottom: 15px;" class="col-sm-12">
 					<!-- Hot Star Changes -->
@@ -838,7 +838,7 @@ $('.common__slider').slick({
 					<div class="border-heading sp">
 						<h5>Facebook</h5>
 					</div>
-					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FEOSCLcricketleague%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=745734118815722" target="_top" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%EOSCLeague%2F&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=false&amp;appId=745734118815722" target="_top" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 				</div>
 				<div class="facebook">
 					<div class="border-heading sp">
@@ -847,6 +847,7 @@ $('.common__slider').slick({
 					<div style=" overflow-y: scroll; max-height: 500px; ">
 					<a class="twitter-timeline" href="https://twitter.com/EEoscl?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1003005776129150976%7Ctwgr%5E2eef71c9b1181f3aed0a5fb71c24b561abaad9b9%7Ctwcon%5Es1_&ref_url=http%3A%2F%2Fwww.eoscl.com%2FDefault.aspx">Tweets by MissCricLeague</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 				</div>
+				
 				</div>
 		
 		
