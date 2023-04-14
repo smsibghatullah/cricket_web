@@ -166,7 +166,7 @@ $('.common__slider').slick({
 			</div>
 			
 			
-			<div class="col-sm-5 p-sm-0">
+			<!-- <div class="col-sm-5 p-sm-0">
 			<div id="resultsDiv">
 					<div class="complete-list">
 						<div class="panel with-nav-tabs panel-default list-tab-mobile">
@@ -504,7 +504,7 @@ margin-right: 10px;
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
 				<div style="text-align: center;background: #fff; padding-bottom: 15px;" class="col-sm-12">
 					<!-- Hot Star Changes -->
