@@ -44,16 +44,13 @@ class HomeController extends Controller
         $ground = $ground->orderBy('id')->get();
         $match_results = Fixture::query();
         $match_results->where('running_inning','=',3);
-<<<<<<< HEAD
+
         $match_results = $match_results->orderBy('id')->get();;
         // dd($match_results);
         // $match_results = $match_results
         $upcoming_match = Fixture::query();
         $upcoming_match->where('running_inning','=',0);
         $upcoming_match = $upcoming_match->skip(5)->take(5)->orderBy('id')->get();;
-=======
-        $match_results = $match_results->orderBy('id')->get();
->>>>>>> 1c3f3373b7470532165c3aa1f56e41ec597f1a38
         $teams = Team::query()->get()->pluck(
           'name',
           'id'
@@ -87,9 +84,15 @@ class HomeController extends Controller
 
     public function search_player()
     {
-
+        $match_results = Fixture::query();
+        $match_results->where('running_inning','=',3);
+        $teams = Team::query()->get()->pluck(
+            'name',
+            'id'
+          );
+        $match_results = $match_results->orderBy('id')->get();;
         $result = [];
-        return view('search_player',compact('result'));
+        return view('search_player',compact('result','match_results','teams'));
 
     }
 
