@@ -54,8 +54,12 @@ class HomeController extends Controller
     {
 
         $result = [];
+        $teams = Team::query()->get()->pluck(
+          'name',
+          'id'
+        );
 
-        $card =FixtureScore::Where('fixture_id','=',$id)
+        $player_runs =FixtureScore::Where('fixture_id','=',$id)
                 ->selectRaw("sum(runs) as total_runs")
                 ->selectRaw("count(isfour) as total_fours")
                 ->selectRaw("count(issix) as total_six")
@@ -63,9 +67,18 @@ class HomeController extends Controller
                 ->groupBy('playerId')
                 ->get();
 
+        $variable1 = 'R';
+        $variable2 = 'Wicket';       
+        $player_balls = FixtureScore::where('fixture_id','=',$id)
+               ->where(function($query) use ($variable1,$variable2){
+                    $query->where('balltype','=',$variable1)
+                   ->orWhere('balltype','=',$variable2);
+               })->selectRaw("count(id) as balls")
+                ->selectRaw("playerId")->groupBy('playerId')
+                ->get()->pluck('balls','playerId');;
 
-        // dd($card);
-        return view('score_card',compact('result'));
+
+        return view('score_card',compact('player_runs', 'player_balls'));
 
     }
 
