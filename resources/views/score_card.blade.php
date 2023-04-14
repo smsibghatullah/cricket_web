@@ -65,9 +65,11 @@
                                                                         <th style="text-align: center;">SR</th>
                                                                         </tr> 
                                                                     </thead> 
+                                                                    @foreach($result as $item)
                                                                     <tbody> 
                                                                     <tr> 
                                                                    <th>
+                                                                   
                                                                         	<img src="https://cricclubs.com/documentsRep/profilePics/b8e79395-ac46-4e68-b8a5-5ae31d78ee59.png" class="left-block img-circle" style="width:23px; height:23px;margin-right:8px">	
                                                                         
                                                                         	<a href="/MississaugaCricketLeague/viewPlayer.do?playerId=1207430&amp;clubId=2565"><b>Noman Siddiqui</b> </a>
@@ -77,133 +79,15 @@
                                                                         </th> 
                                                                         <th class="hidden-phone">c <a href="viewPlayer.do?playerId=1277414&amp;clubId=2565">Sandy D</a> b <a href="viewPlayer.do?playerId=2993131&amp;clubId=2565">Shubh A P</a><a id="bthowOut_video_1207430" style="display:none" href="javascript:openVideoHTMLvs('1207430','out', 'Noman Siddiqui');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
                                                                         	</th>
-                                                                        <th style="text-align: right;"><b>10</b></th>
+                                                                        <th style="text-align: right;"><b>{{$item->total_runs}}</b></th>
                                                                         <th style="text-align: right;">11</th> 
                                                                         <th style="text-align: right;">1<a style="display:none" id="btfour_video_1207430" href="javascript:openVideoHTMLvs('1207430','four', 'Noman Siddiqui');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
                                                                         	</th>
                                                                         <th style="text-align: right;">0</th>
                                                                         <th style="text-align: center;">90.91</th>
                                                                     </tr> 
-                                                                    <tr> 
-                                                                   <th>
-                                                                        	<img src="https://cricclubs.com/documentsRep/profilePics/no_image.png" class="left-block img-circle" style="width:23px; height:23px;margin-right:8px">	
-                                                                        
-                                                                        	<a href="/MississaugaCricketLeague/viewPlayer.do?playerId=2237865&amp;clubId=2565"><b>Abdullah Abbas</b> </a>
-                                                                        	<a style="display:none" id="btm_video_2237865" href="javascript:openVideoHTMLvs('2237865','bt', 'Abdullah Abbas');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	<div class="scorecard-out-text show-phone" style="margin-left:34px;">St <a href="viewPlayer.do?playerId=3088351&amp;clubId=2565">Rohit A</a> b <a href="viewPlayer.do?playerId=3088351&amp;clubId=2565">Rohit A</a><a style="display:none" id="bthowOutPH_video_2237865" href="javascript:openVideoHTMLvs('2237865','out', 'Abdullah Abbas');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</div>
-                                                                        </th> 
-                                                                        <th class="hidden-phone">St <a href="viewPlayer.do?playerId=3088351&amp;clubId=2565">Rohit A</a> b <a href="viewPlayer.do?playerId=3088351&amp;clubId=2565">Rohit A</a><a id="bthowOut_video_2237865" style="display:none" href="javascript:openVideoHTMLvs('2237865','out', 'Abdullah Abbas');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</th>
-                                                                        <th style="text-align: right;"><b>11</b></th>
-                                                                        <th style="text-align: right;">13</th> 
-                                                                        <th style="text-align: right;">1<a style="display:none" id="btfour_video_2237865" href="javascript:openVideoHTMLvs('2237865','four', 'Abdullah Abbas');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</th>
-                                                                        <th style="text-align: right;">0</th>
-                                                                        <th style="text-align: center;">84.62</th>
-                                                                    </tr> 
-                                                                    <tr> 
-                                                                   <th>
-                                                                        	<img src="https://cricclubs.com/documentsRep/profilePics/14461a6d-3328-446b-9e27-82e35cf05d6f.jpeg" class="left-block img-circle" style="width:23px; height:23px;margin-right:8px">	
-                                                                        
-                                                                        	<a href="/MississaugaCricketLeague/viewPlayer.do?playerId=1036746&amp;clubId=2565"><b>Muhammad Salman Arshad</b> </a>
-                                                                        	<a style="display:none" id="btm_video_1036746" href="javascript:openVideoHTMLvs('1036746','bt', 'Muhammad Salman Arshad');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	<div class="scorecard-out-text show-phone" style="margin-left:34px;">c&amp;b <a href="viewPlayer.do?playerId=1287040&amp;clubId=2565">Prashant S</a><a style="display:none" id="bthowOutPH_video_1036746" href="javascript:openVideoHTMLvs('1036746','out', 'Muhammad Salman Arshad');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</div>
-                                                                        </th> 
-                                                                        <th class="hidden-phone">c&amp;b <a href="viewPlayer.do?playerId=1287040&amp;clubId=2565">Prashant S</a><a id="bthowOut_video_1036746" style="display:none" href="javascript:openVideoHTMLvs('1036746','out', 'Muhammad Salman Arshad');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</th>
-                                                                        <th style="text-align: right;"><b>50</b></th>
-                                                                        <th style="text-align: right;">26</th> 
-                                                                        <th style="text-align: right;">1<a style="display:none" id="btfour_video_1036746" href="javascript:openVideoHTMLvs('1036746','four', 'Muhammad Salman Arshad');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</th>
-                                                                        <th style="text-align: right;">3<a style="display:none" id="btsix_video_1036746" href="javascript:openVideoHTMLvs('1036746','six', 'Muhammad Salman Arshad');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</th>
-                                                                        <th style="text-align: center;">192.31</th>
-                                                                    </tr> 
-                                                                    <tr> 
-                                                                   <th>
-                                                                        	<img src="https://cricclubs.com/documentsRep/profilePics/no_image.png" class="left-block img-circle" style="width:23px; height:23px;margin-right:8px">	
-                                                                        
-                                                                        	<a href="/MississaugaCricketLeague/viewPlayer.do?playerId=1290963&amp;clubId=2565"><b>Turab Ghani</b> </a>
-                                                                        	<a style="display:none" id="btm_video_1290963" href="javascript:openVideoHTMLvs('1290963','bt', 'Turab Ghani');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	<div class="scorecard-out-text show-phone" style="margin-left:34px;">c <a href="viewPlayer.do?playerId=1277889&amp;clubId=2565">Kanwarjeet S</a> b <a href="viewPlayer.do?playerId=2155902&amp;clubId=2565">Jival S</a><a style="display:none" id="bthowOutPH_video_1290963" href="javascript:openVideoHTMLvs('1290963','out', 'Turab Ghani');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</div>
-                                                                        </th> 
-                                                                        <th class="hidden-phone">c <a href="viewPlayer.do?playerId=1277889&amp;clubId=2565">Kanwarjeet S</a> b <a href="viewPlayer.do?playerId=2155902&amp;clubId=2565">Jival S</a><a id="bthowOut_video_1290963" style="display:none" href="javascript:openVideoHTMLvs('1290963','out', 'Turab Ghani');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</th>
-                                                                        <th style="text-align: right;"><b>6</b></th>
-                                                                        <th style="text-align: right;">7</th> 
-                                                                        <th style="text-align: right;">0</th>
-                                                                        <th style="text-align: right;">0</th>
-                                                                        <th style="text-align: center;">85.71</th>
-                                                                    </tr> 
-                                                                    <tr> 
-                                                                   <th>
-                                                                        	<img src="https://cricclubs.com/documentsRep/profilePics/no_image.png" class="left-block img-circle" style="width:23px; height:23px;margin-right:8px">	
-                                                                        
-                                                                        	<a href="/MississaugaCricketLeague/viewPlayer.do?playerId=3103735&amp;clubId=2565"><b>Saood Pirzada</b> </a>
-                                                                        	<a style="display:none" id="btm_video_3103735" href="javascript:openVideoHTMLvs('3103735','bt', 'Saood Pirzada');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	<div class="scorecard-out-text show-phone" style="margin-left:34px;">c&amp;b <a href="viewPlayer.do?playerId=2155902&amp;clubId=2565">Jival S</a><a style="display:none" id="bthowOutPH_video_3103735" href="javascript:openVideoHTMLvs('3103735','out', 'Saood Pirzada');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</div>
-                                                                        </th> 
-                                                                        <th class="hidden-phone">c&amp;b <a href="viewPlayer.do?playerId=2155902&amp;clubId=2565">Jival S</a><a id="bthowOut_video_3103735" style="display:none" href="javascript:openVideoHTMLvs('3103735','out', 'Saood Pirzada');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</th>
-                                                                        <th style="text-align: right;"><b>0</b></th>
-                                                                        <th style="text-align: right;">1</th> 
-                                                                        <th style="text-align: right;">0</th>
-                                                                        <th style="text-align: right;">0</th>
-                                                                        <th style="text-align: center;">0.00</th>
-                                                                    </tr> 
-                                                                    <tr> 
-                                                                   <th>
-                                                                        	<img src="https://cricclubs.com/documentsRep/profilePics/e8b0d6d5-494d-4615-8832-66d07113eab5.png" class="left-block img-circle" style="width:23px; height:23px;margin-right:8px">	
-                                                                        
-                                                                        	<a href="/MississaugaCricketLeague/viewPlayer.do?playerId=941674&amp;clubId=2565"><b>Manik Sharma</b> </a>
-                                                                        	<a style="display:none" id="btm_video_941674" href="javascript:openVideoHTMLvs('941674','bt', 'Manik Sharma');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	<div class="scorecard-out-text show-phone" style="margin-left:34px;">run out (<a href="viewPlayer.do?playerId=1287040&amp;clubId=2565">Prashant S</a>) <a style="display:none" id="bthowOutPH_video_941674" href="javascript:openVideoHTMLvs('941674','out', 'Manik Sharma');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</div>
-                                                                        </th> 
-                                                                        <th class="hidden-phone">run out (<a href="viewPlayer.do?playerId=1287040&amp;clubId=2565">Prashant S</a>) <a id="bthowOut_video_941674" style="display:none" href="javascript:openVideoHTMLvs('941674','out', 'Manik Sharma');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</th>
-                                                                        <th style="text-align: right;"><b>0</b></th>
-                                                                        <th style="text-align: right;">1</th> 
-                                                                        <th style="text-align: right;">0</th>
-                                                                        <th style="text-align: right;">0</th>
-                                                                        <th style="text-align: center;">0.00</th>
-                                                                    </tr> 
-                                                                    <tr> 
-                                                                   <th>
-                                                                        	<img src="https://cricclubs.com/documentsRep/profilePics/no_image.png" class="left-block img-circle" style="width:23px; height:23px;margin-right:8px">	
-                                                                        
-                                                                        	<a href="/MississaugaCricketLeague/viewPlayer.do?playerId=2674040&amp;clubId=2565"><b>Irfan Sadaat</b> </a>
-                                                                        	<a style="display:none" id="btm_video_2674040" href="javascript:openVideoHTMLvs('2674040','bt', 'Irfan Sadaat');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	<div class="scorecard-out-text show-phone" style="margin-left:34px;">not out</div>
-                                                                        </th> 
-                                                                        <th class="hidden-phone">not out</th>
-                                                                        <th style="text-align: right;"><b>9</b></th>
-                                                                        <th style="text-align: right;">6</th> 
-                                                                        <th style="text-align: right;">0</th>
-                                                                        <th style="text-align: right;">1<a style="display:none" id="btsix_video_2674040" href="javascript:openVideoHTMLvs('2674040','six', 'Irfan Sadaat');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</th>
-                                                                        <th style="text-align: center;">150.00</th>
-                                                                    </tr> 
-                                                                    <tr> 
-                                                                   <th>
-                                                                        	<img src="https://cricclubs.com/documentsRep/profilePics/ded9fcde-c763-4134-ac0b-e76970da84a4.png" class="left-block img-circle" style="width:23px; height:23px;margin-right:8px">	
-                                                                        
-                                                                        	<a href="/MississaugaCricketLeague/viewPlayer.do?playerId=1207349&amp;clubId=2565"><b>Imran Samdani</b> </a>
-                                                                        	<a style="display:none" id="btm_video_1207349" href="javascript:openVideoHTMLvs('1207349','bt', 'Imran Samdani');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	<div class="scorecard-out-text show-phone" style="margin-left:34px;">not out</div>
-                                                                        </th> 
-                                                                        <th class="hidden-phone">not out</th>
-                                                                        <th style="text-align: right;"><b>13</b></th>
-                                                                        <th style="text-align: right;">8</th> 
-                                                                        <th style="text-align: right;">0</th>
-                                                                        <th style="text-align: right;">1<a style="display:none" id="btsix_video_1207349" href="javascript:openVideoHTMLvs('1207349','six', 'Imran Samdani');"><img alt="Watch Ball Video" title="Watch Ball Video" src="/utilsv2/images/youtube.png" width="20px" height="20px"></a>
-                                                                        	</th>
-                                                                        <th style="text-align: center;">162.50</th>
-                                                                    </tr> 
+                                                                    @endforeach
+ 
                                                                     <tr> 
                                                                         <th>Extras<div class="scorecard-out-text show-phone">(b 0 lb 1 w 5 nb 1)</div></th> 
                                                                         <th class="hidden-phone">(b 0 lb 1 w 5 nb 1)</th>
