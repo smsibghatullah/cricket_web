@@ -195,6 +195,10 @@ $('.common__slider').slick({
 									</div>
 									<div class="tab-pane fade in active"
 										id="tab2default">
+									@foreach($match_results as $match_result)
+
+
+
 										<div class="team-vs-team">
 											<div class="row list-slign">
 												<div class="col-sm-4 col-xs-4">
@@ -220,9 +224,9 @@ $('.common__slider').slick({
 														<h4>
 															<a class="list-score" style="color: inherit;"
 																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3311&amp;clubId=2565.html">L:
-																Royal Tigers - vs - GTA United</a>
+																{{$teams[$match_result->team_id_a]}} - vs - {{$teams[$match_result->team_id_b]}}</a>
 															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
-    margin-right: 10px;
+margin-right: 10px;
     margin-top: -3px; cursor: pointer;
      "
 																src="utilsv2/theme2-static/images/cric-ball.png" width="15px" height="15px"/>
@@ -230,7 +234,7 @@ $('.common__slider').slick({
 														<h5>
 															<a class="list-score" 
 																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3311&amp;clubId=2565.html">
-																GTA United won by 8 Wkt(s)</a>
+																{{$match_result->match_result_description}}</a>
 														<a style="float: right;font-size: 0.85rem;background: #2098d1;
     padding: 4px 9px;
     border-radius: 5px;
@@ -243,246 +247,9 @@ $('.common__slider').slick({
 												</div>
 											</div>
 										</div>
-										<div class="team-vs-team">
-											<div class="row list-slign">
-												<div class="col-sm-4 col-xs-4">
-													<div class="vsteam-image">
-														<a
-															title="03/19/2023"
-															href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3310&amp;clubId=2565.html">
-															<ul class="list-inline">
-																<li><img
-																	src="https://cricclubs.com/documentsRep/teamLogos/8c45d0e8-b2c3-4d50-bb8b-70573b533552.jpg"
-																	class="img-responsive img-circle"
-																	style="width: 40px; height: 40px;" /></li>
-																<li><img
-																	src="https://cricclubs.com/documentsRep/teamLogos/fbe34fc1-a4d9-4ac0-a043-0037488e280d.jpeg"
-																	class="img-responsive img-circle"
-																	style="width: 40px; height: 40px;" /></li>
-															</ul>
-														</a>
-													</div>
-												</div>
-												<div class="col-sm-8 col-xs-8">
-													<div class="vsteam-text">
-														<h4>
-															<a class="list-score" style="color: inherit;"
-																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3310&amp;clubId=2565.html">L:
-																Toronto Jaguars - vs - 820 CC</a>
-															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
-    margin-right: 10px;
-    margin-top: -3px; cursor: pointer;
-     "
-																src="utilsv2/theme2-static/images/cric-ball.png" width="15px" height="15px"/>
-															</h4>
-														<h5>
-															<a class="list-score" 
-																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3310&amp;clubId=2565.html">
-																Toronto Jaguars won by 6 Run(s)</a>
-														<a style="float: right;font-size: 0.85rem;background: #2098d1;
-    padding: 4px 9px;
-    border-radius: 5px;
-    color: #fff;
-    margin-right: 1rem;" href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3310&amp;clubId=2565.html"> Scorecard</a>
-														</h5>
-														
-														
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="team-vs-team">
-											<div class="row list-slign">
-												<div class="col-sm-4 col-xs-4">
-													<div class="vsteam-image">
-														<a
-															title="03/19/2023"
-															href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3309&amp;clubId=2565.html">
-															<ul class="list-inline">
-																<li><img
-																	src="https://cricclubs.com/documentsRep/teamLogos/3de1d6b0-210e-490c-b111-2038ec3e0c8d.jpeg"
-																	class="img-responsive img-circle"
-																	style="width: 40px; height: 40px;" /></li>
-																<li><img
-																	src="https://cricclubs.com/documentsRep/teamLogos/28ad19bf-4cad-4325-a8e6-d15b9d46f533.jpg"
-																	class="img-responsive img-circle"
-																	style="width: 40px; height: 40px;" /></li>
-															</ul>
-														</a>
-													</div>
-												</div>
-												<div class="col-sm-8 col-xs-8">
-													<div class="vsteam-text">
-														<h4>
-															<a class="list-score" style="color: inherit;"
-																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3309&amp;clubId=2565.html">L:
-																Kitchener Bulls - vs - EOSCL Cricket Club</a>
-															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
-    margin-right: 10px;
-    margin-top: -3px; cursor: pointer;
-     "
-																src="utilsv2/theme2-static/images/cric-ball.png" width="15px" height="15px"/>
-															</h4>
-														<h5>
-															<a class="list-score" 
-																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3309&amp;clubId=2565.html">
-																Kitchener Bulls won by 60 Run(s)</a>
-														<a style="float: right;font-size: 0.85rem;background: #2098d1;
-    padding: 4px 9px;
-    border-radius: 5px;
-    color: #fff;
-    margin-right: 1rem;" href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3309&amp;clubId=2565.html"> Scorecard</a>
-														</h5>
-														
-														
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="team-vs-team">
-											<div class="row list-slign">
-												<div class="col-sm-4 col-xs-4">
-													<div class="vsteam-image">
-														<a
-															title="03/12/2023"
-															href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3308&amp;clubId=2565.html">
-															<ul class="list-inline">
-																<li><img
-																	src="https://cricclubs.com/documentsRep/teamLogos/fbe34fc1-a4d9-4ac0-a043-0037488e280d.jpeg"
-																	class="img-responsive img-circle"
-																	style="width: 40px; height: 40px;" /></li>
-																<li><img
-																	src="https://cricclubs.com/documentsRep/teamLogos/a2530a09-334e-4d16-9206-1dfb63857ac8.jpg"
-																	class="img-responsive img-circle"
-																	style="width: 40px; height: 40px;" /></li>
-															</ul>
-														</a>
-													</div>
-												</div>
-												<div class="col-sm-8 col-xs-8">
-													<div class="vsteam-text">
-														<h4>
-															<a class="list-score" style="color: inherit;"
-																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3308&amp;clubId=2565.html">L:
-																820 CC - vs - Toronto Metro Cricket Club</a>
-															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
-    margin-right: 10px;
-    margin-top: -3px; cursor: pointer;
-     "
-																src="utilsv2/theme2-static/images/cric-ball.png" width="15px" height="15px"/>
-															</h4>
-														<h5>
-															<a class="list-score" 
-																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3308&amp;clubId=2565.html">
-																820 CC won by 8 Run(s)</a>
-														<a style="float: right;font-size: 0.85rem;background: #2098d1;
-    padding: 4px 9px;
-    border-radius: 5px;
-    color: #fff;
-    margin-right: 1rem;" href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3308&amp;clubId=2565.html"> Scorecard</a>
-														</h5>
-														
-														
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="team-vs-team">
-											<div class="row list-slign">
-												<div class="col-sm-4 col-xs-4">
-													<div class="vsteam-image">
-														<a
-															title="03/12/2023"
-															href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3307&amp;clubId=2565.html">
-															<ul class="list-inline">
-																<li><img
-																	src="https://cricclubs.com/documentsRep/teamLogos/95c38746-679e-45d2-804d-2971933b0169.jpg"
-																	class="img-responsive img-circle"
-																	style="width: 40px; height: 40px;" /></li>
-																<li><img
-																	src="https://cricclubs.com/documentsRep/teamLogos/4685129f-1e36-40fd-ab4e-df7a0fedad03.jpg"
-																	class="img-responsive img-circle"
-																	style="width: 40px; height: 40px;" /></li>
-															</ul>
-														</a>
-													</div>
-												</div>
-												<div class="col-sm-8 col-xs-8">
-													<div class="vsteam-text">
-														<h4>
-															<a class="list-score" style="color: inherit;"
-																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3307&amp;clubId=2565.html">L:
-																Titans - vs - Asian Hawks</a>
-															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
-    margin-right: 10px;
-    margin-top: -3px; cursor: pointer;
-     "
-																src="utilsv2/theme2-static/images/cric-ball.png" width="15px" height="15px"/>
-															</h4>
-														<h5>
-															<a class="list-score" 
-																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3307&amp;clubId=2565.html">
-																Titans won by 5 Run(s)</a>
-														<a style="float: right;font-size: 0.85rem;background: #2098d1;
-    padding: 4px 9px;
-    border-radius: 5px;
-    color: #fff;
-    margin-right: 1rem;" href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3307&amp;clubId=2565.html"> Scorecard</a>
-														</h5>
-														
-														
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="team-vs-team">
-											<div class="row list-slign">
-												<div class="col-sm-4 col-xs-4">
-													<div class="vsteam-image">
-														<a
-															title="03/12/2023"
-															href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3306&amp;clubId=2565.html">
-															<ul class="list-inline">
-																<li><img
-																	src="https://cricclubs.com/documentsRep/teamLogos/8c45d0e8-b2c3-4d50-bb8b-70573b533552.jpg"
-																	class="img-responsive img-circle"
-																	style="width: 40px; height: 40px;" /></li>
-																<li><img
-																	src="https://cricclubs.com/documentsRep/teamLogos/f5320271-5186-4f51-af7a-f18eb7133175.jpg"
-																	class="img-responsive img-circle"
-																	style="width: 40px; height: 40px;" /></li>
-															</ul>
-														</a>
-													</div>
-												</div>
-												<div class="col-sm-8 col-xs-8">
-													<div class="vsteam-text">
-														<h4>
-															<a class="list-score" style="color: inherit;"
-																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3306&amp;clubId=2565.html">L:
-																Toronto Jaguars - vs - Whitby ASCA</a>
-															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
-    margin-right: 10px;
-    margin-top: -3px; cursor: pointer;
-     "
-																src="utilsv2/theme2-static/images/cric-ball.png" width="15px" height="15px"/>
-															</h4>
-														<h5>
-															<a class="list-score" 
-																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3306&amp;clubId=2565.html">
-																Whitby ASCA won by 7 Wkt(s)</a>
-														<a style="float: right;font-size: 0.85rem;background: #2098d1;
-    padding: 4px 9px;
-    border-radius: 5px;
-    color: #fff;
-    margin-right: 1rem;" href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3306&amp;clubId=2565.html"> Scorecard</a>
-														</h5>
-														
-														
-													</div>
-												</div>
-											</div>
-										</div>
+
+ @endforeach
+
 										<div class="complete text-center">
 											<a
 												href="EOSCLCricketLeague/listMatches.do%3FclubId=2565.html">Complete
