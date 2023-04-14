@@ -77,7 +77,9 @@ class HomeController extends Controller
                 ->selectRaw("count(isfour) as total_fours")
                 ->selectRaw("count(issix) as total_six")
                 ->selectRaw("playerId")
+                ->selectRaw("inningnumber")
                 ->groupBy('playerId')
+                ->groupBy('inningnumber')
                 ->get();
 
         $variable1 = 'R';
