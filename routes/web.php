@@ -23,7 +23,7 @@ use App\Http\Controllers\HomeController;
 Route::get('home',[HomeController::class,'home']);
 
 Route::get('search_player',[HomeController::class,'search_player']);
-
-
 Route::post('searchplayer-form-submit',[HomeController::class,'searchplayer_form_submit']);
 
+
+Route::get('fullScorecard/{id}',[HomeController::class,'fullScorecard']);
