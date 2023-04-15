@@ -64,6 +64,25 @@ class HomeController extends Controller
         return view('home',compact('tournament', 'match_results','teams','upcoming_match','ground'));
     }
 
+    
+    public function balltoballScorecard(int $id)
+    {
+
+            $player_runs =FixtureScore::Where('fixture_id','=',$id)
+            // ->selectRaw("sum(runs) as total_runs")
+            // ->selectRaw("count(isfour) as total_fours")
+            // ->selectRaw("count(issix) as total_six")
+            ->selectRaw("playerId")
+            ->selectRaw("balltype")
+            ->selectRaw("runs")
+            ->selectRaw("bowlerId")
+            ->selectRaw("inningnumber")
+            // ->groupBy('playerId')
+            ->groupBy('inningnumber')
+            ->get();
+        return view('ballbyballscorecard',compact('tournament', 'match_results','teams','upcoming_match','ground'));
+    }
+
     public function fullScorecard(int $id)
     {
         $ground = Ground::query();
@@ -90,16 +109,16 @@ class HomeController extends Controller
             'id'
           );
         
-          $player_runs =FixtureScore::Where('fixture_id','=',$id)
-          ->selectRaw("sum(runs) as total_runs")
-          ->selectRaw("count(isfour) as total_fours")
-          ->selectRaw("count(issix) as total_six")
-          ->selectRaw("playerId")
-          ->selectRaw("inningnumber")
-          ->groupBy('playerId')
-          ->groupBy('inningnumber')
-          ->get();
-          
+
+        $player_runs =FixtureScore::Where('fixture_id','=',$id)
+                ->selectRaw("sum(runs) as total_runs")
+                ->selectRaw("count(isfour) as total_fours")
+                ->selectRaw("count(issix) as total_six")
+                ->selectRaw("playerId")
+                ->selectRaw("inningnumber")
+                ->groupBy('playerId')
+                ->groupBy('inningnumber')
+                ->get();
 
         $variable1 = 'R';
         $variable2 = 'Wicket';       
