@@ -27,3 +27,4 @@ Route::post('searchplayer-form-submit',[HomeController::class,'searchplayer_form
 
 
 Route::get('fullScorecard/{id}',[HomeController::class,'fullScorecard']);
+Route::get('balltoballscorecard/{id}',[HomeController::class,'balltoballScorecard']);
