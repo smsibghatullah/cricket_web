@@ -205,7 +205,7 @@ $('.common__slider').slick({
 													<div class="vsteam-image">
 														<a
 															title="03/19/2023"
-															href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3311&amp;clubId=2565.html">
+															href="{{ url('fullScorecard/' . $match_result->id) }}">
 															<ul class="list-inline">
 																<li><img
 																	src="https://cricclubs.com/documentsRep/teamLogos/9deaa818-6154-4a1a-8eaf-89bb6e54f83d.jpg"
@@ -223,7 +223,7 @@ $('.common__slider').slick({
 													<div class="vsteam-text">
 														<h4>
 															<a class="list-score" style="color: inherit;"
-																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3311&amp;clubId=2565.html">L:
+																href="{{ url('fullScorecard/' . $match_result->id) }}">L:
 																{{$teams[$match_result->team_id_a]}} - vs - {{$teams[$match_result->team_id_b]}}</a>
 															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
 margin-right: 10px;
@@ -233,13 +233,13 @@ margin-right: 10px;
 															</h4>
 														<h5>
 															<a class="list-score" 
-																href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3311&amp;clubId=2565.html">
+																href="{{ url('fullScorecard/' . $match_result->id) }}">
 																{{$match_result->match_result_description}}</a>
 														<a style="float: right;font-size: 0.85rem;background: #2098d1;
     padding: 4px 9px;
     border-radius: 5px;
     color: #fff;
-    margin-right: 1rem;" href="EOSCLCricketLeague/viewScorecard.do%3FmatchId=3311&amp;clubId=2565.html"> Scorecard</a>
+    margin-right: 1rem;" href="{{ url('fullScorecard/' . $match_result->id) }}"> Scorecard</a>
 														</h5>
 														
 														

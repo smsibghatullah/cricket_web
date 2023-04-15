@@ -66,10 +66,21 @@ class HomeController extends Controller
 
     public function fullScorecard(int $id)
     {
+        $ground = Ground::query();
+        $ground = $ground->orderBy('id')->get();
+        $ground = Ground::query()->get()->pluck(
+          'name',
+          'id'
+        );
         $match_results = Fixture::query();
-        $match_results->where('running_inning','=',3);
+        $match_results->where('id','=',$id);
         $match_results = $match_results->orderBy('id')->get();
         $result = [];
+        $match_data = $match_results->find($id); 
+        $tournamentId = $match_results->first()->tournament_id;
+        $tournament = Tournament::query()->where('id','=',$tournamentId)->get()->pluck(
+            'name'
+          );
         $teams = Team::query()->get()->pluck(
           'name',
           'id'
@@ -79,13 +90,16 @@ class HomeController extends Controller
             'id'
           );
         
-        $player_runs =FixtureScore::Where('fixture_id','=',$id)
-                ->selectRaw("sum(runs) as total_runs")
-                ->selectRaw("count(isfour) as total_fours")
-                ->selectRaw("count(issix) as total_six")
-                ->selectRaw("playerId")
-                ->groupBy('playerId')
-                ->get();
+          $player_runs =FixtureScore::Where('fixture_id','=',$id)
+          ->selectRaw("sum(runs) as total_runs")
+          ->selectRaw("count(isfour) as total_fours")
+          ->selectRaw("count(issix) as total_six")
+          ->selectRaw("playerId")
+          ->selectRaw("inningnumber")
+          ->groupBy('playerId')
+          ->groupBy('inningnumber')
+          ->get();
+          
 
         $variable1 = 'R';
         $variable2 = 'Wicket';       
@@ -98,7 +112,7 @@ class HomeController extends Controller
                 ->get()->pluck('balls','playerId');;
 
 
-        return view('score_card',compact('player_runs', 'player_balls','match_results','teams','player'));
+        return view('score_card',compact('player_runs', 'player_balls','match_results','teams','player','tournament','ground','match_data'));
 
     }
 
