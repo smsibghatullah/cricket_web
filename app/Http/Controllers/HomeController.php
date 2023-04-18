@@ -124,6 +124,19 @@ public function balltoballScorecard(int $id)
   return view('ballbyballscorecard',compact('teams_one' ,'match_data', 'teams_two','match_detail','match_results','teams','player','total_run','total_wickets','total_overs','tournament')); 
 }
 
+    
+    public function fullScorecard_overbyover(int $id)
+    {
+
+        $scores = FixtureScore::query();
+        $scores->where('fixture_id','=',$id);
+        $scores = $scores->orderBy('id')->get();
+        // dd($scores);
+
+        return view('score_overbyover', compact('scores'));
+
+    }
+
     public function fullScorecard(int $id)
     {
         $ground = Ground::query();
