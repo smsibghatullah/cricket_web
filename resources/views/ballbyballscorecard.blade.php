@@ -56,8 +56,8 @@
                         </div>
                     </div>
                    
-                    <h3>2022 MCLT12 Winter League:  League &nbsp; - &nbsp; {{$match_result_description}}   
-                     		(04/02/2023)</h3>
+                    <h3>{{$tournament}}:  League &nbsp; - &nbsp; {{$match_results[0]->match_result_description}}   
+                   ({{ date('d/m/Y', strtotime($match_results[0]->created_at)) }} )</h3>
                      <div class="row">
 	                    <div class="col-sm-10">
 	                    </div>
@@ -2613,32 +2613,7 @@ function printnow(){
    			  bottom: 0;
 				}
 			</style>
-    <footer>
-    	<div class="container">
-        	<div class="row footer-list">
-            	<div class="col-sm-6 col-xs-12">
-                	<div class="copy">
-                	<p>© Copyright <script>document.write(new Date().getFullYear());</script>2023 CricClubs.com. All Rights Reserved. </p>
-                    	</div>
-                </div>
-                <div class="col-sm-6 col-xs-12 text-center">
-                	<div class="social" style="display:flex; float: right; padding-right: 4em;">
-                    	<ul class="list-inline">
-                    	<li><a href="https://www.facebook.com/mississaugacricketleague/" target="_new"><img src="/utilsv2/img/icons/share-1.png" class="img-responsive"></a></li>
-                            <li><a href="https://twitter.com/MissCricLeague" target="_new"><img src="/utilsv2/img/icons/share-2.png" class="img-responsive"></a></li>
-                         
-                    	</ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script>
-        	function hideMergeModal(){
-        		$("#displayMessage").remove();
-        	}
-        </script>
-     </footer>
-			
+ 
 							
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 	<script async="async" type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5400c8d21856f56e"></script>

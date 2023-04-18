@@ -69,14 +69,15 @@ public function balltoballScorecard(int $id)
   $match_results->where('id','=',$id);
   $match_results = $match_results->orderBy('id')->get();
   $match_data = $match_results->find($id); 
-  // dd($match_results );
- 
-  $match_result_description = Fixture::query()->get()->where($match_results[0]->match_result_description)->first(); 
   $teams = Team::query()->get()->pluck(
     'name',
     'id'
   );
- 
+  
+  $tournament = Tournament::query()->get()->where('id', '=', $match_results[0]->tournament_id)->pluck(
+    'name',
+    'id'
+  )->first();
   $teams_one = Team::query()->get()->where('id', '=', $match_results[0]->first_inning_team_id)->pluck(
     'name',
     'id'
@@ -120,7 +121,7 @@ public function balltoballScorecard(int $id)
     ->selectRaw("inningnumber")
     ->get();
 
-  return view('ballbyballscorecard',compact('teams_one' ,'match_data','match_result_description', 'teams_two','match_detail','match_results','teams','player','total_run','total_wickets','total_overs')); 
+  return view('ballbyballscorecard',compact('teams_one' ,'match_data', 'teams_two','match_detail','match_results','teams','player','total_run','total_wickets','total_overs','tournament')); 
 }
 
     public function fullScorecard(int $id)
