@@ -83,6 +83,19 @@ class HomeController extends Controller
         return view('ballbyballscorecard',compact('tournament', 'match_results','teams','upcoming_match','ground'));
     }
 
+    
+    public function fullScorecard_overbyover(int $id)
+    {
+
+        $scores = FixtureScore::query();
+        $scores->where('fixture_id','=',$id);
+        $scores = $scores->orderBy('id')->get();
+        // dd($scores);
+
+        return view('score_overbyover', compact('scores'));
+
+    }
+
     public function fullScorecard(int $id)
     {
         $ground = Ground::query();
