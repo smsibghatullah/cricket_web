@@ -63,25 +63,65 @@ class HomeController extends Controller
 
         return view('home',compact('tournament', 'match_results','teams','upcoming_match','ground'));
     }
+public function balltoballScorecard(int $id)
+{
+  $match_results = Fixture::query();
+  $match_results->where('id','=',$id);
+  $match_results = $match_results->orderBy('id')->get();
+  $match_data = $match_results->find($id); 
+  // dd($match_results );
+ 
+  $match_result_description = Fixture::query()->get()->where($match_results[0]->match_result_description)->first(); 
+  $teams = Team::query()->get()->pluck(
+    'name',
+    'id'
+  );
+ 
+  $teams_one = Team::query()->get()->where('id', '=', $match_results[0]->first_inning_team_id)->pluck(
+    'name',
+    'id'
+  )->first();
+  $teams_two = Team::query()->get()->where('id', '=', $match_results[0]->second_inning_team_id)->pluck(
+    'name',
+    'id'
+  )->first(); 
+ 
+  $player = Player::query()->get()->pluck(
+    'fullname',
+    'id'
+  );
+  $total_run =FixtureScore::Where('fixture_id','=',$id)
+    ->selectRaw("sum(runs) as total_runs")
+    ->selectRaw("inningnumber")
+    ->groupBy('inningnumber')
+    ->get();
 
-    
-    public function balltoballScorecard(int $id)
-    {
+  $total_wickets = FixtureScore::where('fixture_id', '=', $id)
+  ->selectRaw("SUM(CASE WHEN balltype = 'Wicket' THEN 1 ELSE 0 END) as total_wickets")
+  ->selectRaw("inningnumber")
+  ->groupBy('inningnumber')
+  ->get();
 
-            $player_runs =FixtureScore::Where('fixture_id','=',$id)
-            // ->selectRaw("sum(runs) as total_runs")
-            // ->selectRaw("count(isfour) as total_fours")
-            // ->selectRaw("count(issix) as total_six")
-            ->selectRaw("playerId")
-            ->selectRaw("balltype")
-            ->selectRaw("runs")
-            ->selectRaw("bowlerId")
-            ->selectRaw("inningnumber")
-            // ->groupBy('playerId')
-            ->groupBy('inningnumber')
-            ->get();
-        return view('ballbyballscorecard',compact('tournament', 'match_results','teams','upcoming_match','ground'));
-    }
+  $total_overs = FixtureScore::where('fixture_id', '=', $id)
+  ->get()
+  ->sum(function ($item) {
+      $overs = floor($item->overnumber);
+      return $overs/6;
+  });
+
+
+  $match_detail = FixtureScore::Where('fixture_id','=',$id)
+    ->selectRaw("playerId")
+    ->selectRaw("balltype")
+    ->selectRaw("runs")
+    ->selectRaw("overnumber")
+    ->selectRaw("ballnumber")
+    ->selectRaw("bowlerId")
+    ->selectRaw("inningnumber")
+    ->get();
+
+  return view('ballbyballscorecard',compact('teams_one' ,'match_data','match_result_description', 'teams_two','match_detail','match_results','teams','player','total_run','total_wickets','total_overs')); 
+}
 
     
     public function fullScorecard_overbyover(int $id)

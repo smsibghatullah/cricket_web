@@ -808,13 +808,13 @@
 							                            <tr> 
 							                                <th>Toss:</th> 
 							                                <th>   {{$teams[$match_data->toss_winning_team_id]}} 
-    @if ($teams[$match_data->toss_winning_team_id] == $teams[$match_data->first_inning_team_id])
-        won the toss and elected to bat first.
-    @elseif ($teams[$match_data->toss_winning_team_id] == $teams[$match_data->second_inning_team_id])
-        won the toss and elected to bowl first.
-    @else
-        Invalid data in the database.
-    @endif
+															@if ($teams[$match_data->toss_winning_team_id] == $teams[$match_data->first_inning_team_id])
+																won the toss and elected to bat first.
+															@elseif ($teams[$match_data->toss_winning_team_id] == $teams[$match_data->second_inning_team_id])
+																won the toss and elected to bowl first.
+															@else
+																Invalid data in the database.
+															@endif
 							                            </tr>
 							                            <tr> 
 							                                <th>Player of the Match:</th> 
