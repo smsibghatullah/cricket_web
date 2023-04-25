@@ -355,7 +355,9 @@ function unLockMatch(matchId,name){
     if(count($results) > 0){
 @endphp
                          @foreach($results as $data)
-                         <!-- {{$data['created_at']}} -->
+
+                       	
+                       	
 <div class="month-all sp">
 <div class="month-all listView">
        <div class="schedule-all">
@@ -422,6 +424,7 @@ function unLockMatch(matchId,name){
         
     
        </div>
+       							@endforeach
         
        <div class="month-all gridView" style="display: none;">
 <table id="schedule-table1" class="table list-table table-hover" style="color: #fff!important; background: #423256;">
@@ -456,7 +459,7 @@ function unLockMatch(matchId,name){
 		
 		</tbody>
 </table>
-@endforeach
+
  
  @php
 }
