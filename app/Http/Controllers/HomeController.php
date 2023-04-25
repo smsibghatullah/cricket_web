@@ -320,9 +320,13 @@ public function balltoballScorecard(int $id)
             'name',
             'id'
           );
+          // dd($teams);
         $match_results = $match_results->orderBy('id')->get();;
         $results = [];
-        return view('result',compact('results','match_results','teams'));
+        $tournament = Tournament::query()->pluck(
+          'name',
+      )->first();
+        return view('result',compact('results','match_results','teams','tournament','teams'));
 
     }
     public function result_form_submit(Request $request)
@@ -346,6 +350,18 @@ public function balltoballScorecard(int $id)
         if (!empty($term['year'])) {
             $year = $term['year'];
             $data->whereRaw("YEAR(created_at) = $year");
+            $start_date = $year . '-01-01'; 
+            $end_date = $year . '-12-31'; 
+            $all_dates = [];
+            while (strtotime($start_date) <= strtotime($end_date)) { 
+                $all_dates[] = $start_date; 
+                $start_date = date('Y-m-d', strtotime($start_date . ' +1 day')); 
+            }
+           
+        }
+        if (!empty($term['teams'])) {
+            $team = $term['teams'];
+            $data->where('team_id_a', '=', $team);
         }
     
         $teams = Team::query()->get()->pluck(
@@ -353,21 +369,10 @@ public function balltoballScorecard(int $id)
             'id'
         );
         $results = $data->orderBy('id')->get();
-        $tournament = '';
-        if (!empty($term['year'])) {
-            $year = $term['year'];
-            $fixtures = Fixture::query()
-                ->whereRaw("YEAR(created_at) = $year")
-                ->orderBy('id')
-                ->get();
-            if ($fixtures->isNotEmpty()) {
-                $tournament = Tournament::query()
-                    ->where('id', $fixtures->first()->tournament_id)
-                    ->pluck('name', 'id')
-                    ->first();
-            }
-        }
-        dd($tournament);
+        $tournament = Tournament::query()->pluck(
+                'name',
+                'id'
+            )->first();
         return view('result', compact('results', 'teams', 'match_results', 'years', 'tournament'));
     }
     

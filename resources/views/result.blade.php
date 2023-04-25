@@ -65,59 +65,12 @@
 
                     <div class="col-xs-6 col-sm-3">
 						<div class="dropdown">
-							<button class="btn btn-default dropdown-toggle btn-align" type="button" id="dropdownMenu1" data-toggle="dropdown">
-							<p>2022 - Boom Boom T10</p>	<span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu dropdown-height" role="menu" aria-labelledby="dropdownMenu1">
-						   <li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=0&amp;year=null&amp;clubId=2565">All Series</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;year=null&amp;clubId=2565">2022 - Boom Boom T10</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=114&amp;year=null&amp;clubId=2565">2022 MCLT12 Winter League</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=108&amp;year=null&amp;clubId=2565">MCL vs Singapore</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=100&amp;year=null&amp;clubId=2565">2022 MCLT25</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=93&amp;year=null&amp;clubId=2565">2022 MCLT20</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=92&amp;year=null&amp;clubId=2565">2022 - MCL50 SUPER 7</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=91&amp;year=null&amp;clubId=2565">2022 MCL100 - Super 8</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=90&amp;year=null&amp;clubId=2565">2021 MCL Tapeball Winter League</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=89&amp;year=null&amp;clubId=2565">2021 MCLT12 Winter League</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=86&amp;year=null&amp;clubId=2565">2021 MCL100</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=85&amp;year=null&amp;clubId=2565">2021 MCLT20 Day/Night</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=80&amp;year=null&amp;clubId=2565">2021 MCLT20</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=79&amp;year=null&amp;clubId=2565">2021 MCL50 Super 9</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=71&amp;year=null&amp;clubId=2565">2021 MCLT25</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=70&amp;year=null&amp;clubId=2565">2021 - BOOM BOOM T10 BLAST</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=66&amp;year=null&amp;clubId=2565">2020 MCL Winter</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=65&amp;year=null&amp;clubId=2565">RGILL Corporation &amp; Phat Sportsplex -Boom Boom T10 Blast</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=64&amp;year=null&amp;clubId=2565">September Boom Boom T10 Blast</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=59&amp;year=null&amp;clubId=2565">2020 MCLT20</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=52&amp;year=null&amp;clubId=2565">2020 MCLT25</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=51&amp;year=null&amp;clubId=2565">2020 MCL100</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=50&amp;year=null&amp;clubId=2565">2020 MCL50 Super 8</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=49&amp;year=null&amp;clubId=2565">2019 MCL 100</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=46&amp;year=null&amp;clubId=2565">2018 T25&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=45&amp;year=null&amp;clubId=2565">2018 T20&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=44&amp;year=null&amp;clubId=2565">2018 - T25 Playoffs&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=43&amp;year=null&amp;clubId=2565">2018 - T25 Finals&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=42&amp;year=null&amp;clubId=2565">2018 - T20 Playoffs&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=41&amp;year=null&amp;clubId=2565">2018 - T20 Finals&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=40&amp;year=null&amp;clubId=2565">2017 T25&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=39&amp;year=null&amp;clubId=2565">2017 T20&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=38&amp;year=null&amp;clubId=2565">2017 - T25 Playoffs&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=37&amp;year=null&amp;clubId=2565">2017 - T25 Finals&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=36&amp;year=null&amp;clubId=2565">2017 - T20 Playoffs&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=35&amp;year=null&amp;clubId=2565">2017 - T20 Finals&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=34&amp;year=null&amp;clubId=2565">2016 T25&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=33&amp;year=null&amp;clubId=2565">2016 T20&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=32&amp;year=null&amp;clubId=2565">2015 T20&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=31&amp;year=null&amp;clubId=2565">2015 T20 Playoffs&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=20&amp;year=null&amp;clubId=2565">2019 MCL T20</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=15&amp;year=null&amp;clubId=2565">2019 MCL T25</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=11&amp;year=null&amp;clubId=2565">2016 T25 Playoffs</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=10&amp;year=null&amp;clubId=2565">2016 T25 Final</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=8&amp;year=null&amp;clubId=2565">2016 T20 Div2 Playoffs</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=7&amp;year=null&amp;clubId=2565">2016 T20 Div2 Final</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=6&amp;year=null&amp;clubId=2565">2016 T20 Div1 Playoffs</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=5&amp;year=null&amp;clubId=2565">2016 T20 Div1 Final</a></li>
-								</ul>
+                        <select name="tournament" id="tournament" class="form-control" >
+                                 		<option value=""> Select tournament(s)</option>
+                                         
+                                        <option value="{{ $tournament }}" >{{ $tournament }}</option>
+                                      
+									</select>
 						</div>
                     </div>
                  	<div class="col-xs-6 col-sm-3" title="Change internal club">
@@ -153,32 +106,12 @@
                     <div class="col-xs-6 col-sm-3">
                   
 							<div class="dropdown">
-								<button class="btn btn-default dropdown-toggle btn-align" type="button" id="dropdownMenu2" data-toggle="dropdown">
-									All Teams<span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu dropdown-height" role="menu" aria-labelledby="dropdownMenu2">
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;internalClubId=null&amp;year=null&amp;clubId=2565">All Teams</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1044&amp;internalClubId=null&amp;year=null&amp;clubId=2565">6ixers</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1045&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Azaad CC</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1064&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Brampton Pacers</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1060&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Canada Blasters</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1061&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Dhurham Maple Leaf</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1062&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Gujarat Giants</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1056&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Islanders</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1048&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Jammu Elite</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1049&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Jammu Kings XI</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1057&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Jarry Strikers</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1050&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Kitchener Bulls</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1065&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Markhor Raiders</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1046&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Melbourne Cricket Club</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1058&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Northern Stars United</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1051&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Patiala Shahi Cricket Association</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1063&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Punjab CC</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1059&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Punjab United</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1066&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Sonu's Battalion cricket club</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1067&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Watan Warriors</a></li>
-									<li role="presentation"><a role="menuitem" tabindex="-1" href="/MississaugaCricketLeague/listMatches.do?league=116&amp;teamId=1047&amp;internalClubId=null&amp;year=null&amp;clubId=2565">Yorkshire</a></li>
-									</ul>
+                            <select name="teams" id="teams" class="form-control">
+                                <option value="">Select team(s)</option>
+                                @foreach($teams as $team_id => $team_name)
+                                    <option value="{{ $team_id }}">{{ $team_name }}</option>
+                                @endforeach
+                            </select>
 							</div>
 							
                     </div>
@@ -421,8 +354,8 @@ function unLockMatch(matchId,name){
 @php
     if(count($results) > 0){
 @endphp
-                         @foreach($results as $player)
-                         {{$player['created_at']}}
+                         @foreach($results as $data)
+                         <!-- {{$data['created_at']}} -->
 <div class="month-all sp">
 <div class="month-all listView">
        <div class="schedule-all">
@@ -430,8 +363,8 @@ function unLockMatch(matchId,name){
                <div class="col-xs-3 col-sm-1 sp mobile-b">
                    <div class="sch-time text-center h-90">
                        <h5><strong>Final</strong></h5>
-                       <h2>10</h2>
-                       <h5>Oct 2022</h5>
+                       <h2>{{date('d', strtotime($data['created_at']))}}</h2>
+                       <h5>{{date('M Y', strtotime($data['created_at']))}}</h5>
                    </div>
                </div>
                <div class="col-xs-9 col-sm-4 p-sm-0 mobile-b">
