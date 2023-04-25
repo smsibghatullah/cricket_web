@@ -515,8 +515,8 @@ navbarSlider.addEventListener("mouseout", function() {
                     </div>
                     <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="home">Home</a></li>
-                           <li><a href="search_player">Players</a>
+                            <li><a href="{{ route('home')}}">Home</a></li>
+                           <li><a href="{{ route('search_player')}}">Players</a>
                                 <ul class="sub-menu">
                                     <li><a href="search_player">Player
                                            </a></li>

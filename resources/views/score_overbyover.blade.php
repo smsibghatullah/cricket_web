@@ -19,9 +19,9 @@
            	 	<div class="panel with-nav-tabs panel-default">
                        <div class="panel-heading score-tabs">
                            <ul class="nav nav-tabs">
-  							<li><a href="#tab1default" role="tab" data-toggle="tab" onclick="loadView('ballbyball');">Ball By Ball</a></li>
-							<li><a href="#tab2default" role="tab" data-toggle="tab" onclick="loadView('fullScorecard');">Full Scorecard</a></li>
-							<li class="active"><a href="#tab5default" role="tab" data-toggle="tab" onclick="loadView('overbyoverscoreview');">Over by Over Score</a></li>
+  							<li><a href="{{ route('balltoballScorecard', $match_results[0]->id) }}" >Ball By Ball</a></li>
+							<li><a href="{{ route('fullScorecard', $match_results[0]->id) }}" >Full Scorecard</a></li>
+							<li class="active"><a href="{{ route('fullScorecard_overbyover', $match_results[0]->id) }}" >Over by Over Score</a></li>
 							<li><a href="#tab4default" role="tab" data-toggle="tab" onclick="loadView('graphsView');">Charts</a></li>
 							</ul>
                        </div>
@@ -57,7 +57,7 @@
 									<table class="table table-bordered">
 										<thead>
 											<tr style="font-weight: bold; text-align: left;">
-												<th colspan="4">Royal Tigers
+												<th colspan="4">{{$teams_one}}
 													Batting</th>
 											</tr>
 											<tr style="font-weight: bold; text-align: center;">
@@ -71,38 +71,42 @@
 											 @php $currnet_over = $scores[0]['overnumber'];
 											 $last_over = $scores[0]['overnumber'];
 											 $sum_score = 0;
+											 $sum_wicket=0;
 											 $sum_run = 0;  @endphp
+											
 											<tr style="text-align: center;">
 													<td>{{$scores[0]['overnumber']}} </td>												
-													<td class="text-left">Rohit M Khan<br>
+													<td class="text-left">{{$player[$scores[0]['bowlerId']]}}<br>
 														<ul class="overballsec">
 											@foreach($scores as $score)
+											@if($score->inningnumber==1)
 												@if($currnet_over !== $score['overnumber'])
 												
 													</ul>
 													</td>
 													
 													<td>{{$sum_run}}</td>
-													<td>{{$sum_score}}/0</td>
+													<td>{{$sum_score}}/{{$sum_wicket}}</td>
 												</tr>
 
 												<tr style="text-align: center;">
 													<td>{{$score['overnumber']}}</td>												
-													<td class="text-left">Rohit M Khan<br>
+													<td class="text-left">{{$player[$score['bowlerId']]}}<br>
 														<ul class="overballsec">
 															@php $sum_run = 0; @endphp
 													@endif
-															<li class="runs">{{$score['runs']}} </li>
+															<li class="runs">{{$score['runs']}} {{$score['balltype']}} </li>
 													@php $sum_score +=$score['runs'];
 														 $sum_run +=$score['runs'];
+														 $sum_wicket += ($score['balltype'] == 'Wicket') ? 1 : 0;
 													     $currnet_over = $score['overnumber'] @endphp
-
+														 @endif
 											@endforeach 
 </ul>
 													</td>
 													
 													<td>{{$sum_run}}</td>
-													<td>{{$sum_score}}/0</td>
+													<td>{{$sum_score}}/{{$sum_wicket}}</td>
 												</tr>
 											
 											</thead>
@@ -115,189 +119,61 @@
 						<div class="col-sm-6">
 							<div class="match-table-innings">
 								<div class="about-table  table-responsive" id="tab1default">
-									<table class="table table-bordered">
+								<table class="table table-bordered">
 										<thead>
-											<tr style="font-weight: bold;">
-												<th colspan="4">820 CC
+											<tr style="font-weight: bold; text-align: left;">
+												<th colspan="4">{{$teams_two}}
 													Batting</th>
 											</tr>
-											
 											<tr style="font-weight: bold; text-align: center;">
 												<td>#</td>
 												<td class="text-left">Bowler</td>
 												<td>Runs</td>
 												<td>Score</td>
 											</tr>
+
+
+											 @php $currnet_over = $scores[0]['overnumber'];
+											 $last_over = $scores[0]['overnumber'];
+											 $sum_score = 0;
+											 $sum_wicket=0;
+											 $sum_run = 0;  @endphp
+											
 											<tr style="text-align: center;">
-												<td>1</td>
-												<td class="text-left">Irfan S<br>
-											<ul class="overballsec text-left">
-												<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs" style="padding: 11px 10px;">1wd</li>
-                                	<li class="runs">1</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="wicket">W</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		</ul>
-												</td>
-												<td>2</td>
-												<td>2/1</td>
-											</tr>
-											<tr style="text-align: center;">
-												<td>2</td>
-												<td class="text-left">Imran S<br>
-											<ul class="overballsec text-left">
-												<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">2</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="wicket">W</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		</ul>
-												</td>
-												<td>2</td>
-												<td>4/2</td>
-											</tr>
-											<tr style="text-align: center;">
-												<td>3</td>
-												<td class="text-left">Irfan S<br>
-											<ul class="overballsec text-left">
-												<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="wicket">W</li>
-                                	<li class="runs" style="padding: 11px 10px;">1wd</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="wicket">W</li>
-                                	<li class="runs" style="padding: 11px 10px;">1wd</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="wicket">W</li>
-                                	</ul>
-												</td>
-												<td>2</td>
-												<td>6/5</td>
-											</tr>
-											<tr style="text-align: center;">
-												<td>4</td>
-												<td class="text-left">Imran S<br>
-											<ul class="overballsec text-left">
-												<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">6</li>
-                                	<li class="runs">2</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">6</li>
-                                	</ul>
-												</td>
-												<td>14</td>
-												<td>20/5</td>
-											</tr>
-											<tr style="text-align: center;">
-												<td>5</td>
-												<td class="text-left">Manik S<br>
-											<ul class="overballsec text-left">
-												<li class="runs">1</li>
-                                	<li class="runs">2</li>
-                                	<li class="runs" style="padding: 11px 10px;">1wd</li>
-                                	<li class="runs">2</li>
-                                	<li class="runs">2</li>
-                                	<li class="runs" style="padding: 11px 10px;">1wd</li>
-                                	<li class="runs">1</li>
-                                	<li class="runs">1</li>
-                                	</ul>
-												</td>
-												<td>11</td>
-												<td>31/5</td>
-											</tr>
-											<tr style="text-align: center;">
-												<td>6</td>
-												<td class="text-left">Abdullah A<br>
-											<ul class="overballsec text-left">
-												<li class="runs" style="padding: 11px 10px;">1wd</li>
-                                	<li class="runs">6</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">1</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		</ul>
-												</td>
-												<td>8</td>
-												<td>39/5</td>
-											</tr>
-											<tr style="text-align: center;">
-												<td>7</td>
-												<td class="text-left">Saood P<br>
-											<ul class="overballsec text-left">
-												<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">6</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">1</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		</ul>
-												</td>
-												<td>7</td>
-												<td>46/5</td>
-											</tr>
-											<tr style="text-align: center;">
-												<td>8</td>
-												<td class="text-left">Abdullah A<br>
-											<ul class="overballsec text-left">
-												<li class="runs" style="padding: 11px 10px;">1wd</li>
-                                	<li class="runs">1</li>
-                                	<li class="runs">4</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">1</li>
-                                	</ul>
-												</td>
-												<td>7</td>
-												<td>53/5</td>
-											</tr>
-											<tr style="text-align: center;">
-												<td>9</td>
-												<td class="text-left">Muhammad Salm<br>
-											<ul class="overballsec text-left">
-												<li class="runs">2</li>
-                                	<li class="runs">1</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">6</li>
-                                	</ul>
-												</td>
-												<td>9</td>
-												<td>62/5</td>
-											</tr>
-											<tr style="text-align: center;">
-												<td>10</td>
-												<td class="text-left">Saood P<br>
-											<ul class="overballsec text-left">
-												<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">6</li>
-                                	<li class="wicket">W</li>
-                                	<li class="wicket">W</li>
-                                	<li class="runs">1</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		</ul>
-												</td>
-												<td>7</td>
-												<td>69/7</td>
-											</tr>
-											<tr style="text-align: center;">
-												<td>11</td>
-												<td class="text-left">Irfan S<br>
-											<ul class="overballsec text-left">
-												<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="runs">1</li>
-                                	<li class="runs">0<!-- <i class="fa fa-dot-circle-o"></i> --></li>
-                            		<li class="wicket">W</li>
-                                	</ul>
-												</td>
-												<td>1</td>
-												<td>70/8</td>
-											</tr>
+													<td>{{$scores[0]['overnumber']}} </td>												
+													<td class="text-left">{{$player[$scores[0]['bowlerId']]}}<br>
+														<ul class="overballsec">
+											@foreach($scores as $score)
+											@if($score->inningnumber==2)
+												@if($currnet_over !== $score['overnumber'])
+												
+													</ul>
+													</td>
+													
+													<td>{{$sum_run}}</td>
+													<td>{{$sum_score}}/{{$sum_wicket}}</td>
+												</tr>
+
+												<tr style="text-align: center;">
+													<td>{{$score['overnumber']}}</td>												
+													<td class="text-left">{{$player[$score['bowlerId']]}}<br>
+														<ul class="overballsec">
+															@php $sum_run = 0; @endphp
+													@endif
+															<li class="runs">{{$score['runs']}} {{$score['balltype']}} </li>
+													@php $sum_score +=$score['runs'];
+														 $sum_run +=$score['runs'];
+														 $sum_wicket += ($score['balltype'] == 'Wicket') ? 1 : 0;
+													     $currnet_over = $score['overnumber'] @endphp
+														 @endif
+											@endforeach 
+</ul>
+													</td>
+													
+													<td>{{$sum_run}}</td>
+													<td>{{$sum_score}}/{{$sum_wicket}}</td>
+												</tr>
+											
 											</thead>
 									</table>
 								</div>

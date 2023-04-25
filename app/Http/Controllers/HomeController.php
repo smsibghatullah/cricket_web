@@ -12,6 +12,7 @@ use App\Models\Fixture;
 use App\Models\FixtureScore;
 use App\Models\Team;
 use App\Models\Ground;
+use App\Models\TeamPlayer;
 
 
 class HomeController extends Controller
@@ -63,12 +64,18 @@ class HomeController extends Controller
 
         return view('home',compact('tournament', 'match_results','teams','upcoming_match','ground'));
     }
+
+
 public function balltoballScorecard(int $id)
 {
+
+
   $match_results = Fixture::query();
   $match_results->where('id','=',$id);
   $match_results = $match_results->orderBy('id')->get();
+  
   $match_data = $match_results->find($id); 
+  // dd($match_data[0]->match_result_description);
   $teams = Team::query()->get()->pluck(
     'name',
     'id'
@@ -86,11 +93,25 @@ public function balltoballScorecard(int $id)
     'name',
     'id'
   )->first(); 
+
  
+  $teams_two_player = TeamPlayer::query()->get()->where('team_id', '=', $match_results[0]->second_inning_team_id)->pluck(
+    'player_id',
+    'id'
+  ); 
+
+
+  $teams_one_player = TeamPlayer::query()->get()->where('team_id', '=', $match_results[0]->first_inning_team_id)->pluck(
+    'player_id',
+    'id'
+  ); 
+  
+
   $player = Player::query()->get()->pluck(
     'fullname',
     'id'
   );
+ 
   $total_run =FixtureScore::Where('fixture_id','=',$id)
     ->selectRaw("sum(runs) as total_runs")
     ->selectRaw("inningnumber")
@@ -103,12 +124,32 @@ public function balltoballScorecard(int $id)
   ->groupBy('inningnumber')
   ->get();
 
-  $total_overs = FixtureScore::where('fixture_id', '=', $id)
-  ->get()
-  ->sum(function ($item) {
-      $overs = floor($item->overnumber);
-      return $overs/6;
-  });
+  $match_total_overs = FixtureScore::where('fixture_id', '=', $id)
+  ->selectRaw('max(overnumber) as max_over')
+  ->first()
+  ->max_over;
+
+  $overs = floor($match_total_overs);
+  $balls = ($match_total_overs - $overs) * 10;
+  $total_balls = ($overs * 6) + $balls;
+  $match_total_overs = $total_balls / 6;
+  $match_total_overs = round($match_total_overs, 2);
+
+
+  $innings = FixtureScore::where('fixture_id', '=', $id)
+  ->selectRaw('inningnumber, max(overnumber) as max_over')
+  ->groupBy('inningnumber')
+  ->get();
+
+  $total_overs = array();
+
+  foreach ($innings as $inning) {
+    $overs = $inning->max_over;
+    $balls = ($overs - floor($overs)) * 10;
+    $total_balls = ($overs * 6) + $balls;
+    $total_over = $total_balls / 6;
+    $total_overs[$inning->inningnumber] = round($total_over, 2);
+  }
 
 
   $match_detail = FixtureScore::Where('fixture_id','=',$id)
@@ -121,19 +162,53 @@ public function balltoballScorecard(int $id)
     ->selectRaw("inningnumber")
     ->get();
 
-  return view('ballbyballscorecard',compact('teams_one' ,'match_data', 'teams_two','match_detail','match_results','teams','player','total_run','total_wickets','total_overs','tournament')); 
+    $team_one_runs = FixtureScore::where('fixture_id', '=', $id)
+    ->where('inningnumber', '=', 1)
+    ->sum('runs');
+  
+  $team_one_overs = $total_overs[1];
+  
+  $team_one_run_rate = ($team_one_runs / $team_one_overs);
+  
+  $team_two_runs = FixtureScore::where('fixture_id', '=', $id)
+    ->where('inningnumber', '=', 2)
+    ->sum('runs');
+  
+  $team_two_overs = $total_overs[2];
+  
+  $team_two_run_rate = ($team_two_runs / $team_two_overs);
+  return view('ballbyballscorecard',compact('team_one_run_rate','team_two_run_rate','teams_one','match_total_overs' ,'match_data', 'teams_two','match_detail','match_results','teams','player','total_run','total_wickets','total_overs','tournament','teams_two_player','teams_one_player')); 
 }
 
     
     public function fullScorecard_overbyover(int $id)
     {
-
+      $match_results = Fixture::query();
+      $match_results->where('id','=',$id);
+      $match_results = $match_results->orderBy('id')->get();
+      $teams = Team::query()->get()->pluck(
+        'name',
+        'id'
+      );
+      $teams_one = Team::query()->get()->where('id', '=', $match_results[0]->first_inning_team_id)->pluck(
+        'name',
+        'id'
+      )->first();
+      $teams_two = Team::query()->get()->where('id', '=', $match_results[0]->second_inning_team_id)->pluck(
+        'name',
+        'id'
+      )->first(); 
+      $player = Player::query()->get()->pluck(
+        'fullname',
+        'id'
+      );
+      // dd($player);
         $scores = FixtureScore::query();
         $scores->where('fixture_id','=',$id);
         $scores = $scores->orderBy('id')->get();
-        // dd($scores);
+      
 
-        return view('score_overbyover', compact('scores'));
+        return view('score_overbyover', compact('scores','match_results','teams','player','teams_one','teams_two'));
 
     }
 
@@ -162,6 +237,14 @@ public function balltoballScorecard(int $id)
             'fullname',
             'id'
           );
+          $teams_one = Team::query()->get()->where('id', '=', $match_results[0]->first_inning_team_id)->pluck(
+            'name',
+            'id'
+          )->first();
+          $teams_two = Team::query()->get()->where('id', '=', $match_results[0]->second_inning_team_id)->pluck(
+            'name',
+            'id'
+          )->first(); 
         
 
         $player_runs =FixtureScore::Where('fixture_id','=',$id)
@@ -185,7 +268,7 @@ public function balltoballScorecard(int $id)
                 ->get()->pluck('balls','playerId');;
 
 
-        return view('score_card',compact('player_runs', 'player_balls','match_results','teams','player','tournament','ground','match_data'));
+        return view('score_card',compact('player_runs', 'teams_one','teams_two','player_balls','match_results','teams','player','tournament','ground','match_data'));
 
     }
 
@@ -205,7 +288,12 @@ public function balltoballScorecard(int $id)
 
     public function searchplayer_form_submit(Request $request)
     {
-
+      $match_results = Fixture::query();
+      $match_results->where('running_inning','=',3);
+      $teams = Team::query()->get()->pluck(
+          'name',
+          'id'
+        );
         $player = Player::query();
 
         $term = $request;
@@ -222,10 +310,8 @@ public function balltoballScorecard(int $id)
         $result = $player->orderBy('id')->get();
 
         // dd($result);
-        return view('search_player',compact('result'));
+        return view('search_player',compact('result','match_results'));
     }
-
-
 
 
  }

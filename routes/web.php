@@ -20,12 +20,12 @@ use App\Http\Controllers\HomeController;
 //     return view('welcome');
 // });
 
-Route::get('home',[HomeController::class,'home']);
+Route::get('home',[HomeController::class,'home'])->name('home');
 
-Route::get('search_player',[HomeController::class,'search_player']);
+Route::get('search_player',[HomeController::class,'search_player'])->name('search_player');
 Route::post('searchplayer-form-submit',[HomeController::class,'searchplayer_form_submit']);
 
 
-Route::get('fullScorecard/{id}',[HomeController::class,'fullScorecard']);
-Route::get('balltoballscorecard/{id}',[HomeController::class,'balltoballScorecard']);
-Route::get('fullScorecard_overbyover/{id}',[HomeController::class,'fullScorecard_overbyover']);
+Route::get('balltoballscorecard/{id}',[HomeController::class,'balltoballScorecard'])->name('balltoballScorecard');
+Route::get('fullScorecard/{id}', [HomeController::class, 'fullScorecard'])->name('fullScorecard');
+Route::get('fullScorecard_overbyover/{id}',[HomeController::class,'fullScorecard_overbyover'])->name('fullScorecard_overbyover');

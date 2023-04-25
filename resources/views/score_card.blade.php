@@ -17,11 +17,11 @@
        	<div class="score-tab">            
            	<div class="complete-list">
            	 	<div class="panel with-nav-tabs panel-default">
-                       <div class="panel-heading score-tabs">
+					<div class="panel-heading score-tabs">
                            <ul class="nav nav-tabs">
-  							<li><a href="#tab1default" role="tab" data-toggle="tab" onclick="loadView('ballbyball');">Ball By Ball</a></li>
-							<li class="active"><a href="#tab2default" role="tab" data-toggle="tab" onclick="loadView('fullScorecard');">Full Scorecard</a></li>
-							<li><a href="#tab5default" role="tab" data-toggle="tab" onclick="loadView('overbyoverscoreview');">Over by Over Score</a></li>
+  							<li><a href="{{ route('balltoballScorecard', $match_results[0]->id) }}" >Ball By Ball</a></li>
+							<li class="active"><a href="{{ route('fullScorecard', $match_results[0]->id) }}" >Full Scorecard</a></li>
+							<li ><a href="{{ route('fullScorecard_overbyover', $match_results[0]->id) }}" >Over by Over Score</a></li>
 							<li><a href="#tab4default" role="tab" data-toggle="tab" onclick="loadView('graphsView');">Charts</a></li>
 							</ul>
                        </div>
@@ -37,9 +37,9 @@
 											<div class="with-nav-tabs panel-default xs-nopadding">
 								                 <div class="panel-heading">
 								                 <ul class="nav nav-tabs">
-															<li id="ballByBallTeamTab1" class="active"><a href="#ballByBallTeam1" role="tab" data-toggle="tab" onclick="resizeScroll();">Royal Tigers</a></li>
+															<li id="ballByBallTeamTab1" class="active"><a href="#ballByBallTeam1" role="tab" data-toggle="tab" onclick="resizeScroll();">{{$teams_one}}</a></li>
 															
-																<li id="ballByBallTeamTab2"><a href="#ballByBallTeam2" role="tab" data-toggle="tab" onclick="resizeScroll();">820 CC</a></li>
+																<li id="ballByBallTeamTab2"><a href="#ballByBallTeam2" role="tab" data-toggle="tab" onclick="resizeScroll();">{{$teams_two}}</a></li>
 															
 								                        </ul>
 								                        </div>
