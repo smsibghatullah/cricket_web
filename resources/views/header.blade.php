@@ -200,9 +200,9 @@
     <script type="text/javascript" src="{!! asset('utilsv2/js/compressed-premium.js') !!}" language="javascript">
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js') !!}"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js') !!}"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.cookiefy/1.0/jquery.cookiefy.min.js') !!}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.cookiefy/1.0/jquery.cookiefy.min.js"></script>
     <script type="text/javascript" src="{!! asset('utilsv2/sortable.js') !!}"></script>
     <script type="text/javascript" src="{!! asset('utilsv2/app/assets/js/jquery.slimscroll.min.js') !!}"></script>
 <style>

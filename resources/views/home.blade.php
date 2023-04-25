@@ -128,16 +128,7 @@ color:#333;
 }
 
 </style>
-<script>
-$('.common__slider').slick({
-	  dots: false,
-	  arrows:true,
-	  infinite: false,
-	  speed: 300,
-	  slidesToShow: 1,
-	  variableWidth: true
-	});
-</script>
+
 
 				<div class="articles all-row-holder">
 					<div class="head-top">
@@ -489,39 +480,32 @@ margin-right: 10px;
     		  });
     		})(jQuery);
     	    	
-    	
-        			$('#92').onShow(function() { loadLeagueData(92 ); });
-        		
-        			$('#93').onShow(function() { loadLeagueData(93 ); });
-        		
-        			$('#91').onShow(function() { loadLeagueData(91 ); });
-        		
-        			$('#100').onShow(function() { loadLeagueData(100 ); });
+    
         		
 	});
 </script>
 
 <script type="text/javascript">
-	function loadLeagueData(leagueid) {	
-		
-		
-				var ajaxUrl = '/homePageLeagues.do?clubId=' +2565+ '&leagueId=' + leagueid;
-		
-		
-		$.ajax({
-			url : ajaxUrl,
-			success : function(result) {
-				$("#" + leagueid).html(result);
-				$(".panel").on("click", function(e) {
-					var $_target = $(e.currentTarget);
-					var $_panelBody = $_target.find(".panel-collapse");
-					if ($_panelBody) {
-						$_panelBody.collapse('toggle')
-					}
-				});
-			}
-		});
-	}
+	 $(document).ready(function() {
+	 	console.log('sssssss')
+            // Call the refreshData function every 5 seconds
+            setInterval(refreshData, 1000);
+        });
+	
+		function refreshData() {
+            $.ajax({
+            url: '/live_score',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+            	console.log(data)
+            	console.log("lve match")
+                // Update the content of the page with the retrieved data
+                $('#data').html(JSON.stringify(data));
+            	}
+        	});
+        }
+       
 </script><style >
 				.footer-bottom{
 					width: 100%;
