@@ -13,6 +13,8 @@ use App\Models\FixtureScore;
 use App\Models\Team;
 use App\Models\Ground;
 use App\Models\TeamPlayer;
+use Illuminate\Support\Facades\DB;
+
 
 
 class HomeController extends Controller
@@ -46,10 +48,7 @@ class HomeController extends Controller
         $ground = $ground->orderBy('id')->get();
         $match_results = Fixture::query();
         $match_results->where('running_inning','=',3);
-
         $match_results = $match_results->orderBy('id')->get();;
-        // dd($match_results);
-        // $match_results = $match_results
         $upcoming_match = Fixture::query();
         $upcoming_match->where('running_inning','=',0);
         $upcoming_match = $upcoming_match->skip(5)->take(5)->orderBy('id')->get();;
@@ -307,11 +306,73 @@ public function balltoballScorecard(int $id)
             $player->where('radius','=',$term['radius']);
         }
 
-        $result = $player->orderBy('id')->get();
+        $results = $player->orderBy('id')->get();
 
         // dd($result);
-        return view('search_player',compact('result','match_results'));
+        return view('search_player',compact('results','match_results'));
     }
+    
+    public function result()
+    {
+        $match_results = Fixture::query();
+        $match_results->where('running_inning','=',3);
+        $teams = Team::query()->get()->pluck(
+            'name',
+            'id'
+          );
+        $match_results = $match_results->orderBy('id')->get();;
+        $results = [];
+        return view('result',compact('results','match_results','teams'));
 
+    }
+    public function result_form_submit(Request $request)
+    {
+        if ($request->method() !== 'POST') {
+            abort(405, 'Method Not Allowed');
+        }
+    
+        $years = DB::table('fixtures')
+            ->select(DB::raw('YEAR(created_at) as year'))
+            ->groupBy(DB::raw('YEAR(created_at)'))
+            ->orderBy(DB::raw('YEAR(created_at)'), 'desc')
+            ->pluck('year');
+    
+        $match_results = Fixture::query()->orderBy('id')->get();
+        $data = Fixture::query();
+        $term = $request;
+        if (!empty($term->created_at)) {
+            $data->where('created_at', '=', $term['created_at']);
+        }
+        if (!empty($term['year'])) {
+            $year = $term['year'];
+            $data->whereRaw("YEAR(created_at) = $year");
+        }
+    
+        $teams = Team::query()->get()->pluck(
+            'name',
+            'id'
+        );
+        $results = $data->orderBy('id')->get();
+        $tournament = '';
+        if (!empty($term['year'])) {
+            $year = $term['year'];
+            $fixtures = Fixture::query()
+                ->whereRaw("YEAR(created_at) = $year")
+                ->orderBy('id')
+                ->get();
+            if ($fixtures->isNotEmpty()) {
+                $tournament = Tournament::query()
+                    ->where('id', $fixtures->first()->tournament_id)
+                    ->pluck('name', 'id')
+                    ->first();
+            }
+        }
+        dd($tournament);
+        return view('result', compact('results', 'teams', 'match_results', 'years', 'tournament'));
+    }
+    
+    
+    
+    
 
  }

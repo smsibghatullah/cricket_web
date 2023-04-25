@@ -29,3 +29,5 @@ Route::post('searchplayer-form-submit',[HomeController::class,'searchplayer_form
 Route::get('balltoballscorecard/{id}',[HomeController::class,'balltoballScorecard'])->name('balltoballScorecard');
 Route::get('fullScorecard/{id}', [HomeController::class, 'fullScorecard'])->name('fullScorecard');
 Route::get('fullScorecard_overbyover/{id}',[HomeController::class,'fullScorecard_overbyover'])->name('fullScorecard_overbyover');
+Route::get('result', [HomeController::class, 'result'])->name('result');
+Route::post('result-form-submit',[HomeController::class,'result_form_submit']);
