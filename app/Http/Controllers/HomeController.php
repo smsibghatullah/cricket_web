@@ -306,10 +306,10 @@ public function balltoballScorecard(int $id)
             $player->where('radius','=',$term['radius']);
         }
 
-        $results = $player->orderBy('id')->get();
+        $result = $player->orderBy('id')->get();
 
         // dd($result);
-        return view('search_player',compact('results','match_results'));
+        return view('search_player',compact('result','match_results'));
     }
     
     public function result()
@@ -369,6 +369,7 @@ public function balltoballScorecard(int $id)
             'id'
         );
         $results = $data->orderBy('id')->get();
+        dd($results);
         $tournament = Tournament::query()->pluck(
                 'name',
                 'id'
