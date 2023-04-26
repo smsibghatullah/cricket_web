@@ -329,6 +329,7 @@ public function balltoballScorecard(int $id)
         return view('result',compact('results','match_results','teams','tournament','teams'));
 
     }
+
     public function result_form_submit(Request $request)
     {
         if ($request->method() !== 'POST') {
@@ -379,6 +380,24 @@ public function balltoballScorecard(int $id)
     
     
     
-    
+
+public function live_score(Request $request)
+    {
+
+      $match_results = Fixture::query();
+      $match_results->where('running_inning','=',1);
+      $player_runs =FixtureScore::Where('fixture_id','=',1)
+                ->selectRaw("sum(runs) as total_runs")
+                ->selectRaw("count(isfour) as total_fours")
+                ->selectRaw("count(issix) as total_six")
+                ->selectRaw("playerId")
+                ->selectRaw("inningnumber")
+                ->groupBy('playerId')
+                ->groupBy('inningnumber')
+                ->get();
+
+      return response()->json($player_runs);
+
+    }    
 
  }

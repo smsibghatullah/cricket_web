@@ -31,3 +31,4 @@ Route::get('fullScorecard/{id}', [HomeController::class, 'fullScorecard'])->name
 Route::get('fullScorecard_overbyover/{id}',[HomeController::class,'fullScorecard_overbyover'])->name('fullScorecard_overbyover');
 Route::get('result', [HomeController::class, 'result'])->name('result');
 Route::post('result-form-submit',[HomeController::class,'result_form_submit']);
+Route::get('live_score',[HomeController::class,'live_score']);
