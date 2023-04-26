@@ -42,6 +42,8 @@ class HomeController extends Controller
 
     public function home()
     {
+
+
         $tournament = Tournament::query();
         $tournament = $tournament->orderBy('id')->get();
         $ground = Ground::query();
@@ -201,7 +203,6 @@ public function balltoballScorecard(int $id)
         'fullname',
         'id'
       );
-      // dd($player);
         $scores = FixtureScore::query();
         $scores->where('fixture_id','=',$id);
         $scores = $scores->orderBy('id')->get();
@@ -325,17 +326,18 @@ public function balltoballScorecard(int $id)
         $results = [];
         $tournament = Tournament::query()->pluck(
           'name',
-      )->first();
+          'id'
+      );
         return view('result',compact('results','match_results','teams','tournament','teams'));
-
     }
 
     public function result_form_submit(Request $request)
     {
+      DB::enableQueryLog();
+
         if ($request->method() !== 'POST') {
             abort(405, 'Method Not Allowed');
         }
-    
         $years = DB::table('fixtures')
             ->select(DB::raw('YEAR(created_at) as year'))
             ->groupBy(DB::raw('YEAR(created_at)'))
@@ -346,58 +348,89 @@ public function balltoballScorecard(int $id)
         $data = Fixture::query();
         $term = $request;
         if (!empty($term->created_at)) {
-            $data->where('created_at', '=', $term['created_at']);
+          $data->whereRaw("DATE(match_startdate) >= Date('$term->created_at')");
         }
+        if (!empty($term->end_at)) {
+          $data->whereRaw("DATE(match_enddate) <= Date('$term->end_at')");
+        }
+        // dd($data);
         if (!empty($term['year'])) {
             $year = $term['year'];
             $data->whereRaw("YEAR(created_at) = $year");
-            $start_date = $year . '-01-01'; 
-            $end_date = $year . '-12-31'; 
-            $all_dates = [];
-            while (strtotime($start_date) <= strtotime($end_date)) { 
-                $all_dates[] = $start_date; 
-                $start_date = date('Y-m-d', strtotime($start_date . ' +1 day')); 
-            }
-           
         }
         if (!empty($term['teams'])) {
             $team = $term['teams'];
-            $data->where('team_id_a', '=', $team);
+            $data->where('team_id_a', '=', $team)
+            ->oRWhere('team_id_b', '=', $team);
         }
+        if (!empty($term['tournament'])) {
+          $tournaments = $term['tournament'];
+          $data->where('tournament_id', '=', $tournaments);
+      }
     
         $teams = Team::query()->get()->pluck(
             'name',
             'id'
         );
-        $results = $data->orderBy('id')->get();
-        dd($results);
+
+        $results = $data->get();
+        // dd($results);
+//         $query = DB::getQueryLog();
+//         $query = DB::getQueryLog();
+// dd($query);
         $tournament = Tournament::query()->pluck(
                 'name',
                 'id'
-            )->first();
-        return view('result', compact('results', 'teams', 'match_results', 'years', 'tournament'));
+            );
+
+        $total_runs = [];
+         $total_wicket_fixture = [];
+         $total_run_fixture = [];
+         foreach ($results as $result) {
+          $match_summary = FixtureScore::where('fixture_id', '=', $result->id)
+          ->selectRaw("SUM(CASE WHEN balltype = 'Wicket' THEN 1 ELSE 0 END) as total_wickets")
+          ->selectRaw('inningnumber, max(overnumber) as max_over')
+          ->selectRaw('SUM(runs) as total_runs')
+          ->selectRaw("inningnumber")
+          ->groupBy('inningnumber')
+          ->get();
+      
+          if(count($match_summary)== 2)
+          {
+              $total_wicket_fixture[$result->id] = [$match_summary[0]['total_wickets'], $match_summary[1]['total_wickets']];
+              $total_run_fixture[$result->id] = [$match_summary[0]['max_over'], $match_summary[1]['max_over'] ] ;
+              $total_runs[$result->id] = [$match_summary[0]['total_runs'], $match_summary[1]['total_runs']];
+
+             }   
+        } 
+       
+       
+        return view('result', compact('results', 'teams', 'match_results', 'years', 'tournament','total_run_fixture','total_runs', 'total_wicket_fixture'));
     }
     
-    
-    
-
-public function live_score(Request $request)
+    public function live_score(Request $request)
     {
-
-      $match_results = Fixture::query();
-      $match_results->where('running_inning','=',1);
-      $player_runs =FixtureScore::Where('fixture_id','=',1)
-                ->selectRaw("sum(runs) as total_runs")
-                ->selectRaw("count(isfour) as total_fours")
-                ->selectRaw("count(issix) as total_six")
-                ->selectRaw("playerId")
-                ->selectRaw("inningnumber")
-                ->groupBy('playerId')
-                ->groupBy('inningnumber')
-                ->get();
-
-      return response()->json($player_runs);
-
-    }    
+        $fixture_id = [176, 177, 178]; 
+        
+        $match_results = Fixture::query();
+        // $match_results->selectRaw("id");
+        $match_results->orwhere('running_inning', '=', 1);
+        $match_results->orwhere('running_inning', '=', 2);  // for inning 1 or 2 
+        $data = $match_results->take(5)->pluck('id')->all();
+        $teams = Team::query()->get()->pluck(
+          'name',
+          'id'
+        );
+        
+        $player_runs = FixtureScore::whereIn('fixture_id', $data)
+        ->selectRaw("fixture_id, inningnumber, sum(runs) as total_runs")
+        ->selectRaw("SUM(CASE WHEN balltype = 'Wicket' THEN 1 ELSE 0 END) as total_wickets")
+        ->groupBy('fixture_id', 'inningnumber')
+        ->selectRaw('inningnumber, max(overnumber) as max_over')
+        ->get();
+        
+    
+        return response()->json($player_runs);
+    } 
 
  }

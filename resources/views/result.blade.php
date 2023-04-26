@@ -7,33 +7,11 @@
             	<div class="row series-drop">
                 	<div class="col-sm-6 col-xs-12">
                     	<div class="border-heading" style="margin-bottom: 0px;">
-                            <h5 style="text-align: left!important;">Match Results: 2022 - Boom Boom T10</h5>
+                            <h5 style="text-align: left!important;">Match Results</h5>
                         </div>
                     </div>
                     <div class="col-sm-6 col-xs-12">
-                     <table style="width: 100%">
-						
-						<tbody><tr class="text-right">
-						<td style="display: inline-flex;
-						" class="hidden-phone icon-fixture">
-							<button type="button" id="list-view" title="List View" class="btn btn-md hidden-phone" style="font-size:18px;margin-right: 10px;"><i class="fa fa-list" aria-hidden="true"></i></button>
-							<button type="button" id="grid-view" title="Grid View" class="btn btn-md hidden-phone" style="font-size:18px;"><i class="fa fa-th" aria-hidden="true"></i></button>
-						</td>
-						
-						
-							<td style="display: inline-block;
-						margin-left: 15px;"><div class="addthis_sharing_toolbox hidden-phone" style="height: 24px; text-align: right; clear: both;" data-url="https://www.mississaugacricketleague.ca/MississaugaCricketLeague/listMatches.do?league=116&amp;year=null&amp;clubId=2565" data-title="2022 - Boom Boom T10: Match Results - Mississauga Cricket League" data-description="20 Teams, 5 Group(s), Start Date: 10/08/2022"><div id="atstbx" class="at-share-tbx-element addthis-smartlayers addthis-animated at4-show" aria-labelledby="at-aab876de-62a8-4f46-a78b-aee5f62c6c9f" role="region"><span id="at-aab876de-62a8-4f46-a78b-aee5f62c6c9f" class="at4-visually-hidden">AddThis Sharing Buttons</span><div class="at-share-btn-elements"><a role="button" tabindex="0" class="at-icon-wrapper at-share-btn at-svc-facebook" style="background-color: rgb(59, 89, 152); border-radius: 0%;"><span class="at4-visually-hidden">Share to Facebook</span><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-facebook-1" class="at-icon at-icon-facebook" style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title id="at-svg-facebook-1">Facebook</title><g><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="0" class="at-icon-wrapper at-share-btn at-svc-twitter" style="background-color: rgb(29, 161, 242); border-radius: 0%;"><span class="at4-visually-hidden">Share to Twitter</span><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-twitter-2" class="at-icon at-icon-twitter" style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title id="at-svg-twitter-2">Twitter</title><g><path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336" fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="0" class="at-icon-wrapper at-share-btn at-svc-print" style="background-color: rgb(115, 138, 141); border-radius: 0%;"><span class="at4-visually-hidden">Share to Print</span><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-print-3" class="at-icon at-icon-print" style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title id="at-svg-print-3">Print</title><g><path d="M24.67 10.62h-2.86V7.49H10.82v3.12H7.95c-.5 0-.9.4-.9.9v7.66h3.77v1.31L15 24.66h6.81v-5.44h3.77v-7.7c-.01-.5-.41-.9-.91-.9zM11.88 8.56h8.86v2.06h-8.86V8.56zm10.98 9.18h-1.05v-2.1h-1.06v7.96H16.4c-1.58 0-.82-3.74-.82-3.74s-3.65.89-3.69-.78v-3.43h-1.06v2.06H9.77v-3.58h13.09v3.61zm.75-4.91c-.4 0-.72-.32-.72-.72s.32-.72.72-.72c.4 0 .72.32.72.72s-.32.72-.72.72zm-4.12 2.96h-6.1v1.06h6.1v-1.06zm-6.11 3.15h6.1v-1.06h-6.1v1.06z"></path></g></svg></span></a><a role="button" tabindex="0" class="at-icon-wrapper at-share-btn at-svc-compact" style="background-color: rgb(255, 101, 80); border-radius: 0%;"><span class="at4-visually-hidden">Share to More</span><span class="at-icon-wrapper" style="line-height: 32px; height: 32px; width: 32px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-addthis-4" class="at-icon at-icon-addthis" style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title id="at-svg-addthis-4">AddThis</title><g><path d="M18 14V8h-4v6H8v4h6v6h4v-6h6v-4h-6z" fill-rule="evenodd"></path></g></svg></span></a></div></div></div>
-							<table style="width: 100%; margin-bottom: 10px;text-align: center;">
-	<tbody><tr>
-		<td><a class="show-phone" href="#" onclick="javascript:mobileFacebookShare();return false;"> <img src="/utilsv2/images/fb_new.png"></a></td>
-		<td><a class="show-phone" href="#" onclick="javascript:mobileTwitterShare();return false;"><img src="/utilsv2/images/twi.png"></a></td>
-		<td><a class="show-phone" href="#" onclick="javascript:mobileGoogleShare(); return false;"><img src="/utilsv2/images/goo.png"></a></td>
-		<td><a class="show-phone" href="#" onclick="javascript:mobileMailShare(); return false;"><img width="40" src="/utilsv2/images/mail.png"></a></td>
-		<td><a class="show-phone whatsapp"><img src="/utilsv2/images/whatsapp.png"></a></td>
-	</tr>
-</tbody></table></td>
-						</tr>
-					</tbody></table>
+                
                     </div>
                     </div>
 <form name="add-blog-post-form" id="add-blog-post-form" method="post" action="{{url('result-form-submit')}}">
@@ -67,9 +45,9 @@
 						<div class="dropdown">
                         <select name="tournament" id="tournament" class="form-control" >
                                  		<option value=""> Select tournament(s)</option>
-                                         
-                                        <option value="{{ $tournament }}" >{{ $tournament }}</option>
-                                      
+                                        @foreach($tournament as $tournament_id => $tournament_name)
+                                    <option value="{{ $tournament_id }}">{{ $tournament_name }}</option>
+                                       @endforeach
 									</select>
 						</div>
                     </div>
@@ -123,10 +101,10 @@
             <div class="series-drop">
             	<div class="row">
 					<div class="col-sm-3 col-xs-4" title="From Date">
-                    	<input type="text" name="fromDate" autocomplete="off" placeholder="From Date" value="" align="top" class="calendarBox form-control hasDatepicker" id="fromDate">
+                    	<input type="text" name="created_at" autocomplete="off" placeholder="From Date" value="" align="top" class="calendarBox form-control hasDatepicker" id="created_at">
 					</div>
 					<div class="col-sm-3 col-xs-4" title="To Date">
-                    	<input type="text"  name="created_at" autocomplete="off" placeholder="To Date" value="" align="top" class="calendarBox form-control hasDatepicker" id="created_at">
+                    	<input type="text"  name="end_at" autocomplete="off" placeholder="To Date" value="" align="top" class="calendarBox form-control hasDatepicker" id="end_at">
 					</div>
 					<div class="col-sm-2 col-xs-4" title="Search Dates"> 
                     	<button class="btn btn-primary" id="datesSearch">Search Dates</button>
@@ -351,12 +329,15 @@ function unLockMatch(matchId,name){
 
 
 </script>
+
+
+
 @php
     if(count($results) > 0){
 @endphp
                          @foreach($results as $data)
 
-                       	
+                       	@if($data['running_inning'] == 3)
                        	
 <div class="month-all sp">
 <div class="month-all listView">
@@ -372,25 +353,26 @@ function unLockMatch(matchId,name){
                <div class="col-xs-9 col-sm-4 p-sm-0 mobile-b">
                    <div class="schedule-logo text-center h-90">
                    <ul class="list-inline">
-		                           <li class="lose"><span>74/9</span> <br> 
-		                           <p>10.0/10</p>
+		                           <li class="lose"><span>{{ $total_runs[$data->id][0] }}/{{ $total_wicket_fixture[$data->id][0] }}</span> <br> 
+		                           <p>{{ $total_run_fixture[$data->id][0] }}/{{$data['numberofover']}}</p>
 		                           </li>
 		                           <li><a href="/MississaugaCricketLeague/viewTeam.do?teamId=1067&amp;clubId=2565">
 		                           <img src="https://cricclubs.com/documentsRep/teamLogos/f5e11e68-50cb-4926-8cd8-711f991d9ea2.jpg" class="img-responsive img-circle" style="width: 70px;height: 70px;"></a></li>
 		                           <li><a href="/MississaugaCricketLeague/viewTeam.do?teamId=1046&amp;clubId=2565">
 		                           <img src="https://cricclubs.com/documentsRep/teamLogos/c13fab4c-3cbb-4805-9c9f-bcba623a5a39.jpg" class="img-responsive img-circle" style="width: 70px;height: 70px;"></a></li>
 		                          <li class="win">
-		                          		<span>76/3</span> <br> 
-		                          			<p>8.1/10</p>
+		                          		<span>{{ $total_runs[$data->id][1] }}/{{ $total_wicket_fixture[$data->id][1] }}</span> <br> 
+		                          			<p>{{ $total_run_fixture[$data->id][0] }}/{{$data['numberofover']}}
+											</p>
 				                           </li>
 	                      	 </ul>	
                          </div>
                </div>
              <div class="col-xs-12 col-sm-4">
                    <div class="schedule-text">
-                   <h4>2022 - Boom Boom T10</h4>
-                       <h3>Watan Warriors<span class="v"> v </span>  Melbourne Cricket Club</h3>
-                       <h4>Melbourne Cricket Club won by 7 Wkt(s)</h4>
+                   <h4>{{$tournament[$data['tournament_id']]}}</h4>
+                       <h3>{{ $teams[$data['team_id_a']]}}<span class="v"> v </span> {{ $teams[$data['team_id_b']]}}</h3>
+                       <h4>{{$data['match_result_description']}}</h4>
                         </div>
                </div>
                <div class="col-xs-12 col-sm-3 ball-score" style="padding-right: 22px;">
@@ -411,7 +393,7 @@ function unLockMatch(matchId,name){
                        <ul class="list-inline">
                            <li>
                           
-                           <a href="/MississaugaCricketLeague/viewScorecard.do?matchId=3257&amp;clubId=2565" class="btn btn-sc"><i class="fa fa-calendar-check-o"></i>Scorecard</a>
+                           <a  href="{{ url('fullScorecard/' . $data['id']) }}" class="btn btn-sc"><i class="fa fa-calendar-check-o"></i>Scorecard</a>
                        			
 								
 							</li>
@@ -424,6 +406,7 @@ function unLockMatch(matchId,name){
         
     
        </div>
+	   @endif
        							@endforeach
         
        <div class="month-all gridView" style="display: none;">
@@ -445,8 +428,8 @@ function unLockMatch(matchId,name){
 			<td id="rowCount" align="center">39</td>
 			<td align="center">Final</td>
 			<td align="center" style="text-align:center!important">10/10/2022</td>
-			<td align="center"><a href="/MississaugaCricketLeague/viewTeam.do?teamId=1067&amp;clubId=2565">Watan Warriors</a></td>
-			<td align="center"><a href="/MississaugaCricketLeague/viewTeam.do?teamId=1046&amp;clubId=2565">Melbourne Cricket Club</a></td>
+			<td align="center"><a href="/MississaugaCricketLeague/viewTeam.do?teamId=1067&amp;clubId=2565">Watan Warriors {{ $data['team_one'] }}</a></td>
+			<td align="center"><a href="/MississaugaCricketLeague/viewTeam.do?teamId=1046&amp;clubId=2565">Melbourne Cricket Club {{ $data['team_two'] }}</a></td>
 			<td align="center">Melbourne Cricket Club won by 7 Wkt(s)</td>
 			<td align="center">
 				<a href="/MississaugaCricketLeague/viewScorecard.do?matchId=3257&amp;clubId=2565">

@@ -178,10 +178,14 @@ color:#333;
 								<div class="tab-content">
 									<div class="tab-pane fade "
 										id="tab1default">
+										<div id="live-score">
+
+										
 										<center><br><br>There are no Live matches available now <br><br><br></center><div class="complete text-center">
 											<a
 												href="EOSCLCricketLeague/listMatches.do%3FclubId=2565.html">Complete
 												list</a>
+												</div>
 										</div>
 									</div>
 									<div class="tab-pane fade in active"
@@ -443,15 +447,7 @@ margin-right: 10px;
 
 <script>
 	$(document).ready(function() {
-		$("div [class='slick-list draggable'").last().css("width","95%")
-		debugger;
 		
-					var ajaxUrl92 = '/homePageLeagues.do?clubId='+2565+'&leagueId='+92;
-			    	$.ajax({url:ajaxUrl92,
-			    		success:function(result){	    		
-			    			$("#92").html(result);
-			    	}});
-			    	
     	
     	(function($){
     		  $.fn.extend({ 
@@ -489,22 +485,68 @@ margin-right: 10px;
 	 $(document).ready(function() {
 	 	console.log('sssssss')
             // Call the refreshData function every 5 seconds
-            setInterval(refreshData, 1000);
+            setInterval(get_live_score, 500);
         });
 	
-		function refreshData() {
-            $.ajax({
-            url: '/live_score',
-            type: 'GET',
-            dataType: 'json',
-            success: function(data) {
-            	console.log(data)
-            	console.log("lve match")
-                // Update the content of the page with the retrieved data
-                $('#data').html(JSON.stringify(data));
-            	}
-        	});
+		function get_live_score() {
+    $.ajax({
+        url: '/live_score',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            console.log(data);
+            console.log("live match");
+
+            const liveScoreDiv = document.getElementById('live-score');
+            liveScoreDiv.innerHTML = '';
+
+            data.forEach(function(item, index) {
+                liveScoreDiv.innerHTML += `
+                <div class="team-vs-team">
+                    <div class="row list-slign">
+                        <div class="col-sm-4 col-xs-4">
+                            <div class="vsteam-image">
+                                <ul class="list-inline">
+                                    <li><img
+                                        src="https://cricclubs.com/documentsRep/teamLogos/95c38746-679e-45d2-804d-2971933b0169.jpg"
+                                        class="img-responsive img-circle"
+                                        style="width: 40px; height: 40px;" /></li>
+                                    <li><img
+                                        src="https://cricclubs.com/documentsRep/teamLogos/a2530a09-334e-4d16-9206-1dfb63857ac8.jpg"
+                                        class="img-responsive img-circle"
+                                        style="width: 40px; height: 40px;" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 col-xs-8">
+                            <div class="vsteam-text">
+                                <h4>L:
+                                    <a
+                                        href="EOSCLCricketLeague/viewTeam.do%3FteamId=1092&amp;clubId=2565.html">
+                                        ${data.team_id_a}</a>
+
+                                    - vs -
+                                    <a
+                                        href="EOSCLCricketLeague/viewTeam.do%3FteamId=1075&amp;clubId=2565.html">
+                                        ${data.teamAName}</a>
+                                </h4>
+                                <h5>
+                                    <a
+                                        href="EOSCLCricketLeague/viewGround.do%3FgroundId=43&amp;clubId=2565.html"
+                                        target="_new"></a>
+										<span><i class="fa fa-clock-o">&nbsp; </i>Runs Firstinning ${data[index].inningnumber == 1 ? data[index].total_runs : 0}/${data[index].inningnumber == 1 ? data[index].total_wickets : 0} Overs ${data[index].inningnumber == 1 ? data[index].max_over : 0}</span>
+                                        <span><i class="fa fa-clock-o">&nbsp; </i>Runs Secondinning  ${data[index+1].inningnumber == 2 ? data[index+1].total_runs : 0}/${data[index+1].inningnumber == 2 ? data[index+1].total_wickets : 0} Overs ${data[index+1].inningnumber == 2 ? item.max_over : 0}</span>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
         }
+    });
+}
+
        
 </script><style >
 				.footer-bottom{
