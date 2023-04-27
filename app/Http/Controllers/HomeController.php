@@ -413,24 +413,28 @@ public function balltoballScorecard(int $id)
         $fixture_id = [176, 177, 178]; 
         
         $match_results = Fixture::query();
-        // $match_results->selectRaw("id");
-        $match_results->orwhere('running_inning', '=', 1);
-        $match_results->orwhere('running_inning', '=', 2);  // for inning 1 or 2 
+        $match_results->orWhere('running_inning', '=', 1);
+        $match_results->orWhere('running_inning', '=', 2);  // for inning 1 or 2 
+        // $match_results->whereDate('match_startdate', Carbon::today()->toDateString());
         $data = $match_results->take(5)->pluck('id')->all();
-        $teams = Team::query()->get()->pluck(
-          'name',
-          'id'
-        );
         
         $player_runs = FixtureScore::whereIn('fixture_id', $data)
-        ->selectRaw("fixture_id, inningnumber, sum(runs) as total_runs")
-        ->selectRaw("SUM(CASE WHEN balltype = 'Wicket' THEN 1 ELSE 0 END) as total_wickets")
-        ->groupBy('fixture_id', 'inningnumber')
-        ->selectRaw('inningnumber, max(overnumber) as max_over')
-        ->get();
-        
-    
+            ->selectRaw("fixture_id, inningnumber, sum(runs) as total_runs")
+            ->selectRaw("tournament.name as tournaments_name")
+            ->selectRaw("team_a.name as team_a_name, team_b.name as team_b_name")
+            ->selectRaw("team_id_a,team_id_b")
+            ->selectRaw("match_startdate")
+            ->selectRaw("numberofover")
+            ->selectRaw("SUM(CASE WHEN balltype = 'Wicket' THEN 1 ELSE 0 END) as total_wickets")
+            ->groupBy('fixture_id', 'inningnumber')
+            ->selectRaw('inningnumber, max(overnumber) as max_over')
+            ->join('fixtures', 'fixtures.id', '=', 'fixture_id')
+            ->Join('teams as team_a', 'team_a.id', '=', 'fixtures.team_id_a')
+            ->Join('teams as team_b', 'team_b.id', '=', 'fixtures.team_id_b')
+            ->Join('tournaments as tournament', 'tournament.id', '=', 'fixtures.tournament_id')
+            ->orderBy('fixture_id')->get();
+            
         return response()->json($player_runs);
-    } 
-
+    }
+    
  }

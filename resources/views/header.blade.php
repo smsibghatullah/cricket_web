@@ -525,9 +525,9 @@ navbarSlider.addEventListener("mouseout", function() {
                                             Matches Count</a></li>
                                 </ul>
                             </li>
-                            <li><a href="index.html#">Matches </a>
+                            <li><a href="{{ route('result')}}">Matches </a>
                                 <ul class="sub-menu">
-                                    <li><a href="MississaugaCricketLeague/listMatches.do%3FclubId=2565.html">Results</a>
+                                    <li><a href="{{ route('result')}}">Results</a>
                                     </li>
                                     <li><a href="MississaugaCricketLeague/fixtures.do%3FclubId=2565.html">Schedule</a>
                                     </li>

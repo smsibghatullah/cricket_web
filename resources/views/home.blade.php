@@ -81,20 +81,643 @@
 				<div class="all-tab-table all-row-holder">
 
 					<div id="parentHorizontalTab">
-							<ul class="resp-tabs-list hor_1 common__slider">
-								@foreach($tournament as $tour_name)
-
-								<li>{{$tour_name['name']}}</li>
-								 @endforeach
-								 
-
-							</ul>
+							
 									
 						<div class="resp-tabs-container hor_1">
 							<div class="about-player-all"
 											id="92">
 											<img alt="Leagues Summary" title="Leagues Summary" src="utilsv2/images/loading.gif" />
+											
+											<!-- satar table -->
+											<div class="all-tab-table all-row-holder">
+
+					<div id="parentHorizontalTab" style="display: block; width: 100%; margin: 0px;">
+							<ul class="resp-tabs-list hor_1 common__slider slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow slick-disabled" aria-label="Previous" role="button" aria-disabled="true" style="display: block;">Previous</button>
+										<div aria-live="polite" class="slick-list draggable" style="margin-right: 2em;"><div class="slick-track" role="listbox" style="opacity: 1; width: 20000px; transform: translate3d(0px, 0px, 0px);">
+										@foreach($tournament as $tour_name)
+										<li class="slick-slide slick-current slick-active resp-tab-item hor_1 resp-tab-active" data-slick-index="0" aria-hidden="false" tabindex="-1" role="tab" aria-describedby="slick-slide00" aria-controls="hor_1_tab_item-0" style="background-color: rgb(255, 255, 255); border-color: rgb(193, 193, 193);">{{$tour_name['name']}}</li>
+										@endforeach
+														
+														
+														
+														<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;" aria-disabled="false">Next</button></ul>
+									
+						<div class="resp-tabs-container hor_1" style="border-color: rgb(193, 193, 193);">
+							<h2 class="resp-accordion hor_1 resp-tab-active" role="tab" aria-controls="hor_1_tab_item-0" style="background: none; border-color: rgb(193, 193, 193);"><span class="resp-arrow"></span>
+							
+							
+							
+							</h2><div class="about-player-all resp-tab-content hor_1 resp-tab-content-active" id="92" aria-labelledby="hor_1_tab_item-0" style="display:block"><style>
+<!--
+.group-names li{
+    float: none!important;}
+.group-names{
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+-->
+</style>
+
+<div class="row">
+                                	<div class="col-sm-12 sp">
+                                    	<div class="panel with-nav-tabs panel-default">
+                                            <div class="panel-heading">
+	                                    	<div class="about-player">
+	                                            <div class="row">
+	                                                <div class="col-sm-4">
+	                                                    <div class="about-heading">
+	                                                        <h4>Points Table</h4>
+	                                                    </div>
+	                                                </div>
+	                                                <div class="col-sm-8">
+	                                                <div style="overflow-x: auto; overflow-y: hidden; text-align: -webkit-right;">
+                                                		<ul class="nav nav-tabs group-names" style="width: max-content;">
+	                                                            	<li><a href="#" data-toggle="tab" style="padding: 10px 5px;"><small>Group :</small></a></li>
+	                                                            	<li><a href="#92tabGroup1" data-toggle="tab"> All </a></li>
+																			</ul>
+	                                                            </div>
+															</div>
+	                                            </div>
+                                            </div>
+                                            </div>
+                                            <div class="panel-body">
+                                                <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="92tabGroup1">
+                                                    <div class="about-table sp1  table-responsive grp-list">
+                                                <table class="table"> 
+                                                    <thead> 
+                                                        <tr> 
+                                                        <th>#</th> 
+                                                        <th>Team</th>
+                                                        <th>Mat</th>
+                                                        <th>Won</th> 
+                                                        <th>Lost</th>
+                                                        <th>N/R</th>
+                                                        <th>Pts</th> 
+                                                        <th class="hidden-phone">Net RR</th>
+                                                        </tr> 
+                                                    </thead> 
+                                                    <tbody> 
+                                                    <tr> 
+                                                        <th>1</th> 
+                                                        <th><table>
+																<tbody><tr>
+																	<td><img src="https://cricclubs.com/documentsRep/teamLogos/624fee3a-e918-4e39-ab90-ff1b1c07e5d2.jpg" class="img-responsive img-circle" style="width: 20px; height: 20px;"></td>
+																	<td>&nbsp; <a href="/MississaugaCricketLeague/viewTeam.do?teamId=825&amp;clubId=2565">Mississauga Qalandars</a></td>
+																</tr>
+															</tbody></table>
+                                                       </th>
+                                                        <th><a href="/MississaugaCricketLeague/listMatches.do?teamId=825&amp;league=92&amp;clubId=2565">12</a></th>
+                                                        <th>10</th> 
+                                                        <th>2</th>
+                                                        <th>0</th>
+                                                        <th style="font-weight: bold;padding-right: 15px; text-align: left;"><a href="/MississaugaCricketLeague/listMatches.do?teamId=825&amp;league=92&amp;clubId=2565"><span title="">60</span></a></th> 
+                                                        
+                                                        <th class="hidden-phone">1.4241</th>
+                                                        </tr> 
+                                                     <tr> 
+                                                        <th>2</th> 
+                                                        <th><table>
+																<tbody><tr>
+																	<td><img src="https://cricclubs.com/documentsRep/teamLogos/6f5eb596-2586-4481-b2aa-9f1534df25da.jpg" class="img-responsive img-circle" style="width: 20px; height: 20px;"></td>
+																	<td>&nbsp; <a href="/MississaugaCricketLeague/viewTeam.do?teamId=828&amp;clubId=2565">Sunrise CC</a></td>
+																</tr>
+															</tbody></table>
+                                                       </th>
+                                                        <th><a href="/MississaugaCricketLeague/listMatches.do?teamId=828&amp;league=92&amp;clubId=2565">12</a></th>
+                                                        <th>7</th> 
+                                                        <th>3</th>
+                                                        <th>2</th>
+                                                        <th style="font-weight: bold;padding-right: 15px; text-align: left;"><a href="/MississaugaCricketLeague/listMatches.do?teamId=828&amp;league=92&amp;clubId=2565"><span title="">48</span></a></th> 
+                                                        
+                                                        <th class="hidden-phone">0.6638</th>
+                                                        </tr> 
+                                                     <tr> 
+                                                        <th>3</th> 
+                                                        <th><table>
+																<tbody><tr>
+																	<td><img src="https://cricclubs.com/documentsRep/teamLogos/61443e16-7f18-452a-a807-040ce00e712d.jpg" class="img-responsive img-circle" style="width: 20px; height: 20px;"></td>
+																	<td>&nbsp; <a href="/MississaugaCricketLeague/viewTeam.do?teamId=827&amp;clubId=2565">Royal Panthers Toronto</a></td>
+																</tr>
+															</tbody></table>
+                                                       </th>
+                                                        <th><a href="/MississaugaCricketLeague/listMatches.do?teamId=827&amp;league=92&amp;clubId=2565">12</a></th>
+                                                        <th>8</th> 
+                                                        <th>4</th>
+                                                        <th>0</th>
+                                                        <th style="font-weight: bold;padding-right: 15px; text-align: left;"><a href="/MississaugaCricketLeague/listMatches.do?teamId=827&amp;league=92&amp;clubId=2565"><span title="">48</span></a></th> 
+                                                        
+                                                        <th class="hidden-phone">0.4688</th>
+                                                        </tr> 
+                                                     <tr> 
+                                                        <th>4</th> 
+                                                        <th><table>
+																<tbody><tr>
+																	<td><img src="https://cricclubs.com/documentsRep/teamLogos/3771b13e-3281-4038-a063-75e2a277f1b0.jpg" class="img-responsive img-circle" style="width: 20px; height: 20px;"></td>
+																	<td>&nbsp; <a href="/MississaugaCricketLeague/viewTeam.do?teamId=826&amp;clubId=2565">RC 99</a></td>
+																</tr>
+															</tbody></table>
+                                                       </th>
+                                                        <th><a href="/MississaugaCricketLeague/listMatches.do?teamId=826&amp;league=92&amp;clubId=2565">12</a></th>
+                                                        <th>6</th> 
+                                                        <th>5</th>
+                                                        <th>1</th>
+                                                        <th style="font-weight: bold;padding-right: 15px; text-align: left;"><a href="/MississaugaCricketLeague/listMatches.do?teamId=826&amp;league=92&amp;clubId=2565"><span title="">39</span></a></th> 
+                                                        
+                                                        <th class="hidden-phone">0.6288</th>
+                                                        </tr> 
+                                                     <tr> 
+                                                        <th>5</th> 
+                                                        <th><table>
+																<tbody><tr>
+																	<td><img src="https://cricclubs.com/documentsRep/teamLogos/ec538eaf-185a-4acb-b96b-168e4370c27c.jpg" class="img-responsive img-circle" style="width: 20px; height: 20px;"></td>
+																	<td>&nbsp; <a href="/MississaugaCricketLeague/viewTeam.do?teamId=823&amp;clubId=2565">Leopards CC</a></td>
+																</tr>
+															</tbody></table>
+                                                       </th>
+                                                        <th><a href="/MississaugaCricketLeague/listMatches.do?teamId=823&amp;league=92&amp;clubId=2565">12</a></th>
+                                                        <th>6</th> 
+                                                        <th>6</th>
+                                                        <th>0</th>
+                                                        <th style="font-weight: bold;padding-right: 15px; text-align: left;"><a href="/MississaugaCricketLeague/listMatches.do?teamId=823&amp;league=92&amp;clubId=2565"><span title="">36</span></a></th> 
+                                                        
+                                                        <th class="hidden-phone">-0.0776</th>
+                                                        </tr> 
+                                                     <tr> 
+                                                        <th>6</th> 
+                                                        <th><table>
+																<tbody><tr>
+																	<td><img src="https://cricclubs.com/documentsRep/teamLogos/d6025e25-e830-459b-b5b6-100931bf703e.jpg" class="img-responsive img-circle" style="width: 20px; height: 20px;"></td>
+																	<td>&nbsp; <a href="/MississaugaCricketLeague/viewTeam.do?teamId=824&amp;clubId=2565">Ghaznavi CCC</a></td>
+																</tr>
+															</tbody></table>
+                                                       </th>
+                                                        <th><a href="/MississaugaCricketLeague/listMatches.do?teamId=824&amp;league=92&amp;clubId=2565">12</a></th>
+                                                        <th>2</th> 
+                                                        <th>9</th>
+                                                        <th>1</th>
+                                                        <th style="font-weight: bold;padding-right: 15px; text-align: left;"><a href="/MississaugaCricketLeague/listMatches.do?teamId=824&amp;league=92&amp;clubId=2565"><span title="">15</span></a></th> 
+                                                        
+                                                        <th class="hidden-phone">-1.6143</th>
+                                                        </tr> 
+                                                     <tr> 
+                                                        <th>7</th> 
+                                                        <th><table>
+																<tbody><tr>
+																	<td><img src="https://cricclubs.com/documentsRep/teamLogos/800ccf05-0be1-4b06-bd8e-db1cc1489ce2.jpg" class="img-responsive img-circle" style="width: 20px; height: 20px;"></td>
+																	<td>&nbsp; <a href="/MississaugaCricketLeague/viewTeam.do?teamId=829&amp;clubId=2565">Toronto Champs</a></td>
+																</tr>
+															</tbody></table>
+                                                       </th>
+                                                        <th><a href="/MississaugaCricketLeague/listMatches.do?teamId=829&amp;league=92&amp;clubId=2565">12</a></th>
+                                                        <th>1</th> 
+                                                        <th>11</th>
+                                                        <th>0</th>
+                                                        <th style="font-weight: bold;padding-right: 15px; text-align: left;"><a href="/MississaugaCricketLeague/listMatches.do?teamId=829&amp;league=92&amp;clubId=2565"><span title="">6</span></a></th> 
+                                                        
+                                                        <th class="hidden-phone">-2.2406</th>
+                                                        </tr> 
+                                                     <!-- Any remaining teams -->
+						</tbody>
+                                                </table>
+                                                <div class="about-complete text-center">
+                                                	<a href="/MississaugaCricketLeague/viewPointsTable.do?league=92&amp;clubId=2565">More Details</a>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            
+                                		</div>
+                                        <br>
+                                    </div>
+                                </div>
+                                <div class="row player-new-stat">
+                                	<div class="col-sm-4 sp">
+                                    	<div class="about-player">
+                                        	<div class="about-heading">
+                                            	<h4>Batting</h4>
+                                            </div>
+                                            <div class="about-table table-responsive">
+                                            	<table class="table"> 
+                                                    <thead> 
+                                                        <tr> 
+                                                        <th>Player</th> 
+                                                       <!--   <th>M</th>-->
+                                                        <th class="ls">Runs</th>
+                                                        </tr> 
+                                                    </thead> 
+                                                    <tbody> 
+                                                    <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+                                                        <img src="https://cricclubs.com/documentsRep/profilePics/206f3b84-ba02-4cf4-a10e-a98d4975e46b.jpg" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+                                                        </td>
+                                                        <td><a href="viewPlayer.do?playerId=1242838&amp;clubId=2565"> Abubaker Kalair (MQ)</a></td></tr></tbody></table></th> 
+                                                        <!-- th>12</th> -->
+                                                        <th class="ls"><a style="font-size: 17px;" class="linkStyle" href="/MississaugaCricketLeague/playerBattingRecords.do?playerId=1242838&amp;league=92&amp;clubId=2565">423</a></th>
+                                                     </tr> 
+                                                     <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+                                                        <img src="https://cricclubs.com/documentsRep/profilePics/2c42f3e9-437d-4233-b69b-e4832bbdf2e3.jpg" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+                                                        </td>
+                                                        <td><a href="viewPlayer.do?playerId=571631&amp;clubId=2565"> Vijay Subramanya (SCC)</a></td></tr></tbody></table></th> 
+                                                        <!-- th>12</th> -->
+                                                        <th class="ls"><a style="font-size: 17px;" class="linkStyle" href="/MississaugaCricketLeague/playerBattingRecords.do?playerId=571631&amp;league=92&amp;clubId=2565">365</a></th>
+                                                     </tr> 
+                                                     <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+                                                        <img src="https://cricclubs.com/documentsRep/profilePics/no_image.png" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+                                                        </td>
+                                                        <td><a href="viewPlayer.do?playerId=2195533&amp;clubId=2565"> Shayan Ahmed (MQ)</a></td></tr></tbody></table></th> 
+                                                        <!-- th>11</th> -->
+                                                        <th class="ls"><a style="font-size: 17px;" class="linkStyle" href="/MississaugaCricketLeague/playerBattingRecords.do?playerId=2195533&amp;league=92&amp;clubId=2565">344</a></th>
+                                                     </tr> 
+                                                     <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+                                                        <img src="https://cricclubs.com/documentsRep/profilePics/no_image.png" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+                                                        </td>
+                                                        <td><a href="viewPlayer.do?playerId=881387&amp;clubId=2565"> Jaskirat Singh (SCC)</a></td></tr></tbody></table></th> 
+                                                        <!-- th>13</th> -->
+                                                        <th class="ls"><a style="font-size: 17px;" class="linkStyle" href="/MississaugaCricketLeague/playerBattingRecords.do?playerId=881387&amp;league=92&amp;clubId=2565">333</a></th>
+                                                     </tr> 
+                                                     <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+                                                        <img src="https://cricclubs.com/documentsRep/profilePics/052853ab-cd4d-435a-aca7-7abd382346dd.png" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+                                                        </td>
+                                                        <td><a href="viewPlayer.do?playerId=1695379&amp;clubId=2565"> Varun Sehdev (RPT)</a></td></tr></tbody></table></th> 
+                                                        <!-- th>7</th> -->
+                                                        <th class="ls"><a style="font-size: 17px;" class="linkStyle" href="/MississaugaCricketLeague/playerBattingRecords.do?playerId=1695379&amp;league=92&amp;clubId=2565">318</a></th>
+                                                     </tr> 
+                                                     </tbody>
+                                                </table>
+                                                <div class="about-complete text-center">
+                                                	<a href="/MississaugaCricketLeague/battingRecords.do?league=92&amp;clubId=2565">Complete List</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 sp">
+                                    	<div class="about-player bowling-player">
+                                        	<div class="about-heading">
+                                            	<h4>Bowling</h4>
+                                            </div>
+                                            <div class="about-table  table-responsive">
+                                            	<table class="table"> 
+                                                    <thead> 
+                                                        <tr> 
+                                                        <th>Player</th> 
+                                                        <!--   <th>M</th>-->
+                                                        <th class="ls">Wkts</th>
+                                                        </tr> 
+                                                    </thead> 
+                                                    <tbody> 
+                                                  <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+														<img src="https://cricclubs.com/documentsRep/profilePics/daa17ece-3476-47d3-9fd9-d653ffdd357b.jpg" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+														</td>
+                                                        <td><a href="viewPlayer.do?playerId=1125372&amp;clubId=2565"> Yasir Abbasi (RC9)</a></td></tr></tbody></table></th> 
+                                                        <!-- <th>9</th> -->
+                                                        <th class="ls"><a style="font-size: 17px;" href="/MississaugaCricketLeague/playerBowlingRecords.do?playerId=1125372&amp;league=92&amp;clubId=2565">
+																24</a></th>
+                                                     </tr> 
+                                                     <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+														<img src="https://cricclubs.com/documentsRep/profilePics/2c42f3e9-437d-4233-b69b-e4832bbdf2e3.jpg" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+														</td>
+                                                        <td><a href="viewPlayer.do?playerId=571631&amp;clubId=2565"> Vijay Subramanya (SCC)</a></td></tr></tbody></table></th> 
+                                                        <!-- <th>12</th> -->
+                                                        <th class="ls"><a style="font-size: 17px;" href="/MississaugaCricketLeague/playerBowlingRecords.do?playerId=571631&amp;league=92&amp;clubId=2565">
+																23</a></th>
+                                                     </tr> 
+                                                     <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+														<img src="https://cricclubs.com/documentsRep/profilePics/1a0f1178-665f-4e84-994b-ef4717ab51dc.jpeg" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+														</td>
+                                                        <td><a href="viewPlayer.do?playerId=2687684&amp;clubId=2565"> Manik Sharma (LCC)</a></td></tr></tbody></table></th> 
+                                                        <!-- <th>10</th> -->
+                                                        <th class="ls"><a style="font-size: 17px;" href="/MississaugaCricketLeague/playerBowlingRecords.do?playerId=2687684&amp;league=92&amp;clubId=2565">
+																22</a></th>
+                                                     </tr> 
+                                                     <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+														<img src="https://cricclubs.com/documentsRep/profilePics/adaa2a47-032b-4a56-9207-3a9a9037214a.png" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+														</td>
+                                                        <td><a href="viewPlayer.do?playerId=1941554&amp;clubId=2565"> Kishore Gottuvedu.. (TCC)</a></td></tr></tbody></table></th> 
+                                                        <!-- <th>11</th> -->
+                                                        <th class="ls"><a style="font-size: 17px;" href="/MississaugaCricketLeague/playerBowlingRecords.do?playerId=1941554&amp;league=92&amp;clubId=2565">
+																19</a></th>
+                                                     </tr> 
+                                                     <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+														<img src="https://cricclubs.com/documentsRep/profilePics/de2657a3-d22a-4d25-9d3f-da4a00e6af76.png" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+														</td>
+                                                        <td><a href="viewPlayer.do?playerId=2684712&amp;clubId=2565"> Sunny Bhullar (SCC)</a></td></tr></tbody></table></th> 
+                                                        <!-- <th>11</th> -->
+                                                        <th class="ls"><a style="font-size: 17px;" href="/MississaugaCricketLeague/playerBowlingRecords.do?playerId=2684712&amp;league=92&amp;clubId=2565">
+																17</a></th>
+                                                     </tr> 
+                                                     </tbody>
+                                                </table>
+                                                <div class="about-complete text-center">
+                                                	<a href="/MississaugaCricketLeague/bowlingRecords.do?league=92&amp;clubId=2565">Complete List</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 sp">
+                                    	<div class="about-player">
+                                        	<div class="about-heading">
+                                            	<h4>Ranking</h4>
+                                            </div>
+                                            <div class="about-table table-responsive">
+                                            	<table class="table"> 
+                                                    <thead> 
+                                                        <tr> 
+                                                        <th>Player</th> 
+                                                       <!--   <th>M</th>-->
+                                                        <th class="ls">Points</th>
+                                                        </tr> 
+                                                    </thead> 
+                                                    <tbody> 
+                                                    <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+														<img src="https://cricclubs.com/documentsRep/profilePics/2c42f3e9-437d-4233-b69b-e4832bbdf2e3.jpg" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+														</td>
+                                                        <td><a href="viewPlayer.do?playerId=571631&amp;clubId=2565"> Vijay Subramanya (SCC)</a></td></tr></tbody></table></th> 
+                                                       <!--  <th>12</th>-->
+                                                        <th class="ls">2000</th>
+                                                     </tr> 
+                                                     <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+														<img src="https://cricclubs.com/documentsRep/profilePics/daa17ece-3476-47d3-9fd9-d653ffdd357b.jpg" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+														</td>
+                                                        <td><a href="viewPlayer.do?playerId=1125372&amp;clubId=2565"> Yasir Abbasi (RC9)</a></td></tr></tbody></table></th> 
+                                                       <!--  <th>9</th>-->
+                                                        <th class="ls">1903</th>
+                                                     </tr> 
+                                                     <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+														<img src="https://cricclubs.com/documentsRep/profilePics/052853ab-cd4d-435a-aca7-7abd382346dd.png" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+														</td>
+                                                        <td><a href="viewPlayer.do?playerId=1695379&amp;clubId=2565"> Varun Sehdev (RPT)</a></td></tr></tbody></table></th> 
+                                                       <!--  <th>7</th>-->
+                                                        <th class="ls">1879</th>
+                                                     </tr> 
+                                                     <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+														<img src="https://cricclubs.com/documentsRep/profilePics/1a0f1178-665f-4e84-994b-ef4717ab51dc.jpeg" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+														</td>
+                                                        <td><a href="viewPlayer.do?playerId=2687684&amp;clubId=2565"> Manik Sharma (LCC)</a></td></tr></tbody></table></th> 
+                                                       <!--  <th>10</th>-->
+                                                        <th class="ls">1671</th>
+                                                     </tr> 
+                                                     <tr> 
+                                                        <th><table><tbody><tr><td style="padding-right:5px;min-width:35px">
+														<img src="https://cricclubs.com/documentsRep/profilePics/206f3b84-ba02-4cf4-a10e-a98d4975e46b.jpg" class="img-responsive img-circle" style="width: 30px; height: 30px;">
+														</td>
+                                                        <td><a href="viewPlayer.do?playerId=1242838&amp;clubId=2565"> Abubaker Kalair (MQ)</a></td></tr></tbody></table></th> 
+                                                       <!--  <th>12</th>-->
+                                                        <th class="ls">1418</th>
+                                                     </tr> 
+                                                     </tbody>
+                                                </table>
+                                                <div class="about-complete text-center">
+                                                	<a href="/MississaugaCricketLeague/playerRankings.do?league=92&amp;clubId=2565">Complete List</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="runs-slide-details-all">
+                                	<div class="row">
+                                	<div class="col-sm-3 sp">
+                                    	 <div class="runs">
+                                            <div id="carousel-runs" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="item">
+                                                        <h4>Runs</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/battingRecords.do?league=92&amp;clubId=2565">12,070</a></h2>
+                                                    </div>
+                                                    <div class="item">
+                                                        <h4>Balls</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/bowlingRecords.do?league=92&amp;clubId=2565">17,338</a></h2>
+                                                    </div>
+                                                    <div class="item active">
+                                                        <h4>Wickets</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/bowlingRecords.do?league=92&amp;clubId=2565">628</a></h2>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-nav">
+                                                        <ol class="carousel-indicators">
+                                                        <li data-target="#carousel-runs" data-slide-to="0" class=""></li>
+                                                        <li data-target="#carousel-runs" data-slide-to="1" class=""></li>
+                                                        <li data-target="#carousel-runs" data-slide-to="2" class="active"></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 sp d-inline-block-count">
+                                    	<div class="fifty">
+                                            <div id="carousel-fifty" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="item">
+                                                        <h4>100's</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/battingRecords.do?league=92&amp;clubId=2565">8</a></h2>
+                                                    </div>
+                                                    <div class="item active left">
+                                                        <h4>50's</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/battingRecords.do?league=92&amp;clubId=2565">40</a></h2>
+                                                    </div>
+                                                    <div class="item next left">
+                                                        <h4>25's</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/battingRecords.do?league=92&amp;clubId=2565">114</a></h2>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-nav">
+                                                        <ol class="carousel-indicators">
+                                                        <li data-target="#carousel-fifty" data-slide-to="0" class=""></li>
+                                                        <li data-target="#carousel-fifty" data-slide-to="1" class=""></li>
+                                                        <li data-target="#carousel-fifty" data-slide-to="2" class="active"></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 sp d-inline-block-count">
+                                    	<div class="six">
+                                            <div id="carousel-six" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="item active left">
+                                                        <h4>5 Wickets</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/bowlingRecords.do?league=92&amp;clubId=2565">10</a></h2>
+                                                    </div>
+                                                    <div class="item next left">
+                                                        <h4>4 Wickets</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/bowlingRecords.do?league=92&amp;clubId=2565">20</a></h2>
+                                                    </div>
+                                                    <div class="item">
+                                                        <h4>Hat-trick</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/bowlingRecords.do?league=92&amp;clubId=2565">0</a></h2>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-nav">
+                                                        <ol class="carousel-indicators">
+                                                        <li data-target="#carousel-six" data-slide-to="0" class=""></li>
+                                                        <li data-target="#carousel-six" data-slide-to="1" class="active"></li>
+                                                         <li data-target="#carousel-six" data-slide-to="2" class=""></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  <div class="col-sm-3 sp d-inline-block-count">
+                                    	<div class="players">
+                                            <div id="carousel-players" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="item active">
+                                                        <h4>players</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/playerRankings.do?league=92&amp;clubId=2565">265</a></h2>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-nav">
+                                                        <ol class="carousel-indicators">
+                                                        <li data-target="#carousel-players" data-slide-to="0" class="active"></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                	<div class="col-sm-3 sp d-inline-block-count">
+                                    	<div class="maidens">
+                                            <div id="carousel-maidens" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="item active">
+                                                        <h4>Fours</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/battingRecords.do?league=92&amp;clubId=2565">982</a></h2>
+                                                    </div>
+                                                    <div class="item">
+                                                        <h4>Sixers</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/battingRecords.do?league=92&amp;clubId=2565">209</a></h2>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-nav">
+                                                        <ol class="carousel-indicators">
+                                                        <li data-target="#carousel-maidens" data-slide-to="0" class="active"></li>
+                                                        <li data-target="#carousel-maidens" data-slide-to="1" class=""></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 sp d-inline-block-count">
+                                    	<div class="fives">
+                                            <div id="carousel-fives" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="item">
+                                                        <h4>Catches</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/fieldingRecords.do?league=92&amp;clubId=2565">314</a></h2>
+                                                    </div>
+                                                    <div class="item active">
+                                                        <h4>Runouts</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/fieldingRecords.do?league=92&amp;clubId=2565">30</a></h2>
+                                                    </div>
+                                                    <div class="item">
+                                                        <h4>Ducks</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/battingRecords.do?league=92&amp;clubId=2565">96</a></h2>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-nav">
+                                                        <ol class="carousel-indicators">
+                                                        <li data-target="#carousel-fives" data-slide-to="0" class=""></li>
+                                                        <li data-target="#carousel-fives" data-slide-to="1" class="active"></li>
+                                                        <li data-target="#carousel-fives" data-slide-to="2" class=""></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 sp d-inline-block-count">
+                                    	<div class="no-balls">
+                                            <div id="carousel-no-balls" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="item">
+                                                        <h4>maidens</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/bowlingRecords.do?league=92&amp;clubId=2565">210</a></h2>
+                                                    </div>
+                                                    <div class="item active">
+                                                        <h4>wides</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/bowlingRecords.do?league=92&amp;clubId=2565">1,377</a></h2>
+                                                    </div>
+                                                    <div class="item">
+                                                        <h4>no-balls</h4>
+                                                        <h2><a style="color: white;" href="/MississaugaCricketLeague/bowlingRecords.do?league=92&amp;clubId=2565">94</a></h2>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-nav">
+                                                        <ol class="carousel-indicators">
+                                                        <li data-target="#carousel-no-balls" data-slide-to="0" class=""></li>
+                                                        <li data-target="#carousel-no-balls" data-slide-to="1" class="active"></li>
+                                                        <li data-target="#carousel-no-balls" data-slide-to="2" class=""></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 sp d-inline-block-count">
+                                    	<div class="players">
+                                            <div id="carousel-players" class="carousel slide" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <div class="item active" style="height: 86px;  display: flex; align-items: center;">
+                                                        
+                                                        <h4><a style="color: white;" href="/MississaugaCricketLeague/viewLeague.do?league=92&amp;clubId=2565">view More <i class="fa fa-arrow-circle-o-right"></i></a></h4>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            <div class="weekly-leader-board" style="margin:-15px;">
+                                        <div class="weekly-content">
+                                                <div class="border-heading">
+                                                    <h5>Weekly Leader Board </h5>
+                                                </div>
+                                                
+                                            	There are no matches played in the last week.
+                                            	</div>
+                                       
+                                        </div>
+                         
+                            </div>
+									<h2 class="resp-accordion hor_1" role="tab" aria-controls="hor_1_tab_item-1" style="background-color: rgb(245, 245, 245); border-color: rgb(193, 193, 193);"><span class="resp-arrow"></span>2022 MCLT20</h2><div class="about-player-all resp-tab-content hor_1" id="93" aria-labelledby="hor_1_tab_item-1" style="border-color: rgb(193, 193, 193);">
+											<img alt="Leagues Summary" title="Leagues Summary" src="/utilsv2/images/loading.gif">
 											<br>Loading league summary data...
+										</div>
+									<h2 class="resp-accordion hor_1" role="tab" aria-controls="hor_1_tab_item-2" style="background-color: rgb(245, 245, 245); border-color: rgb(193, 193, 193);"><span class="resp-arrow"></span>2022 MCL100 - Super 8</h2><div class="about-player-all resp-tab-content hor_1" id="91" aria-labelledby="hor_1_tab_item-2" style="border-color: rgb(193, 193, 193);">
+											<img alt="Leagues Summary" title="Leagues Summary" src="/utilsv2/images/loading.gif">
+											<br>Loading league summary data...
+										</div>
+									<h2 class="resp-accordion hor_1" role="tab" aria-controls="hor_1_tab_item-3" style="background-color: rgb(245, 245, 245); border-color: rgb(193, 193, 193);"><span class="resp-arrow"></span>2022 MCLT25</h2><div class="about-player-all resp-tab-content hor_1" id="100" aria-labelledby="hor_1_tab_item-3" style="border-color: rgb(193, 193, 193);">
+											<img alt="Leagues Summary" title="Leagues Summary" src="/utilsv2/images/loading.gif">
+											<br>Loading league summary data...
+										</div>
+									</div>
+					</div>
+
+				</div>
+
+
+
+
+
+
+
+											
 										</div>
 									<div class="about-player-all"
 											id="93">
@@ -485,7 +1108,7 @@ margin-right: 10px;
 	 $(document).ready(function() {
 	 	console.log('sssssss')
             // Call the refreshData function every 5 seconds
-            setInterval(get_live_score, 500);
+            setInterval(get_live_score, 5000);
         });
 	
 		function get_live_score() {
@@ -505,8 +1128,8 @@ margin-right: 10px;
                 <div class="team-vs-team">
                     <div class="row list-slign">
                         <div class="col-sm-4 col-xs-4">
-                            <div class="vsteam-image">
-                                <ul class="list-inline">
+                            <div class="vsteam-image" >
+                                <ul class="list-inline" >
                                     <li><img
                                         src="https://cricclubs.com/documentsRep/teamLogos/95c38746-679e-45d2-804d-2971933b0169.jpg"
                                         class="img-responsive img-circle"
@@ -519,23 +1142,26 @@ margin-right: 10px;
                             </div>
                         </div>
                         <div class="col-sm-8 col-xs-8">
-                            <div class="vsteam-text">
-                                <h4>L:
+                            <div class="vsteam-text ">
+							
+                                <h4>
+								<p><span style="color:red;font-weight:bold;float:right;padding-right:10px">Live</span>${item.tournaments_name}</P> <br/>
+								L:
                                     <a
                                         href="EOSCLCricketLeague/viewTeam.do%3FteamId=1092&amp;clubId=2565.html">
-                                        ${data.team_id_a}</a>
+                                        ${item.team_a_name}</a>
 
                                     - vs -
                                     <a
                                         href="EOSCLCricketLeague/viewTeam.do%3FteamId=1075&amp;clubId=2565.html">
-                                        ${data.teamAName}</a>
+                                        ${item.team_b_name}</a>
                                 </h4>
                                 <h5>
                                     <a
                                         href="EOSCLCricketLeague/viewGround.do%3FgroundId=43&amp;clubId=2565.html"
                                         target="_new"></a>
-										<span><i class="fa fa-clock-o">&nbsp; </i>Runs Firstinning ${data[index].inningnumber == 1 ? data[index].total_runs : 0}/${data[index].inningnumber == 1 ? data[index].total_wickets : 0} Overs ${data[index].inningnumber == 1 ? data[index].max_over : 0}</span>
-                                        <span><i class="fa fa-clock-o">&nbsp; </i>Runs Secondinning  ${data[index+1].inningnumber == 2 ? data[index+1].total_runs : 0}/${data[index+1].inningnumber == 2 ? data[index+1].total_wickets : 0} Overs ${data[index+1].inningnumber == 2 ? item.max_over : 0}</span>
+										<p><i class="fa fa-clock-o">&nbsp; </i>${item.team_a_name} <span style="float:right;font-weight:bold;padding-right:10px;font-size:15px"> ${data[index].inningnumber == 1 ? data[index].total_runs : 0}/${data[index].inningnumber == 1 ? data[index].total_wickets : 0} Overs ${data[index].inningnumber == 1 ? data[index].max_over : 0}/${item.numberofover}</span></p><br/>
+                                        <p><i class="fa fa-clock-o">&nbsp; </i>${item.team_b_name} <span style="float:right;font-weight:bold;padding-right:10px;font-size:15px"> ${data[index+1].inningnumber == 2 ? data[index+1].total_runs : 0}/${data[index+1].inningnumber == 2 ? data[index+1].total_wickets : 0} Overs ${data[index+1].inningnumber == 2 ? item.max_over : 0}/${item.numberofover}</span></p>
                                 </h5>
                             </div>
                         </div>
