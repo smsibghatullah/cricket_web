@@ -13,6 +13,7 @@ use App\Models\FixtureScore;
 use App\Models\Team;
 use App\Models\Ground;
 use App\Models\TeamPlayer;
+use App\Models\Plan;
 use Illuminate\Support\Facades\DB;
 
 
@@ -63,7 +64,17 @@ class HomeController extends Controller
             'id'
           );
 
-        return view('home',compact('tournament', 'match_results','teams','upcoming_match','ground'));
+          $plan = Plan::query()->get()->pluck(
+            'name',
+            'id'
+          )->first();
+  
+          session()->put('plan', $plan);
+          $plan = session('plan');
+      
+          return view('home',compact('tournament', 'match_results','teams','upcoming_match','ground' , 'plan'));
+
+        
     }
 
 
