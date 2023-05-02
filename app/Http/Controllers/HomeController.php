@@ -14,6 +14,7 @@ use App\Models\Team;
 use App\Models\Ground;
 use App\Models\TeamPlayer;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon; 
 
 
 
@@ -408,33 +409,38 @@ public function balltoballScorecard(int $id)
         return view('result', compact('results', 'teams', 'match_results', 'years', 'tournament','total_run_fixture','total_runs', 'total_wicket_fixture'));
     }
     
-    public function live_score(Request $request)
-    {
-        $fixture_id = [176, 177, 178]; 
-        
-        $match_results = Fixture::query();
-        $match_results->orWhere('running_inning', '=', 1);
-        $match_results->orWhere('running_inning', '=', 2);  // for inning 1 or 2 
-        // $match_results->whereDate('match_startdate', Carbon::today()->toDateString());
-        $data = $match_results->take(5)->pluck('id')->all();
-        
-        $player_runs = FixtureScore::whereIn('fixture_id', $data)
-            ->selectRaw("fixture_id, inningnumber, sum(runs) as total_runs")
-            ->selectRaw("tournament.name as tournaments_name")
-            ->selectRaw("team_a.name as team_a_name, team_b.name as team_b_name")
-            ->selectRaw("team_id_a,team_id_b")
-            ->selectRaw("match_startdate")
-            ->selectRaw("numberofover")
-            ->selectRaw("SUM(CASE WHEN balltype = 'Wicket' THEN 1 ELSE 0 END) as total_wickets")
-            ->groupBy('fixture_id', 'inningnumber')
-            ->selectRaw('inningnumber, max(overnumber) as max_over')
-            ->join('fixtures', 'fixtures.id', '=', 'fixture_id')
-            ->Join('teams as team_a', 'team_a.id', '=', 'fixtures.team_id_a')
-            ->Join('teams as team_b', 'team_b.id', '=', 'fixtures.team_id_b')
-            ->Join('tournaments as tournament', 'tournament.id', '=', 'fixtures.tournament_id')
-            ->orderBy('fixture_id')->get();
-            
-        return response()->json($player_runs);
+  
+    
+    public function team_view(int $id){
+      $ground = Ground::query();
+      $ground = $ground->orderBy('id')->get();
+      $ground = Ground::query()->get()->pluck(
+        'name',
+        'id'
+      );
+      $match_results = Fixture::query();
+      $match_results->where('id','=',$id);
+      $match_results = $match_results->orderBy('id')->get();
+      $teams = Team::query()->get()->pluck(
+        'name',
+        'id'
+      );
+      $player = Player::query()->get()->pluck(
+          'fullname',
+          'id'
+        );
+      $team=Team::query();
+      $team->where('id','=',$id);
+      $team = $team->orderBy('id')->get();
+      $team_data = $team->find($id); 
+// dd($team);
+      $teamData =Team::Where('id','=',$id)
+              ->selectRaw("name")
+              ->get();
+              
+              // dd($teamData);
+      return view('team_view', compact('teamData','match_results','teams','player','ground'));
     }
+    
     
  }

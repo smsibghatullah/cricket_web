@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +31,7 @@ Route::get('fullScorecard/{id}', [HomeController::class, 'fullScorecard'])->name
 Route::get('fullScorecard_overbyover/{id}',[HomeController::class,'fullScorecard_overbyover'])->name('fullScorecard_overbyover');
 Route::get('result', [HomeController::class, 'result'])->name('result');
 Route::post('result-form-submit',[HomeController::class,'result_form_submit']);
-Route::get('live_score',[HomeController::class,'live_score']);
+Route::get('live_score',[ApiController::class,'live_score']);
+Route::get('team-view/{id}',[HomeController::class,'team_view'])->name('team_view');
+
+Route::get('get_point_table/{id}',[ApiController::class,'get_point_table'])->name('get_point_table');
