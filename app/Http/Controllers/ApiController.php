@@ -115,17 +115,17 @@ class ApiController extends Controller
             ->get()->pluck('COUNT(id)', 'lossing_team_id');
 
 
-            $match_get_players = Fixture::where('tournament_id', '=', $id)
-            ->selectRaw("COUNT(team_players.id) as player_count")
-            ->selectRaw("team_name.name as team_name")
-            ->selectRaw("team_name.id as team_id")
-            ->selectRaw("players.name as player_name")
-            ->join('team_players', 'team_players.team_id', '=', 'fixtures.lossing_team_id')
-            ->join('players', 'players.id', '=', 'team_players.player_id')
-            ->join('teams as team_name', 'team_name.id', '=', 'team_players.team_id')
-            ->where('team_players.team_id', '=', $team_id)
-            ->groupBy('team_name.id')
-            ->get();
+            // $match_get_players = Fixture::where('tournament_id', '=', $id)
+            // ->selectRaw("COUNT(team_players.id) as player_count")
+            // ->selectRaw("team_name.name as team_name")
+            // ->selectRaw("team_name.id as team_id")
+            // ->selectRaw("players.name as player_name")
+            // ->join('team_players', 'team_players.team_id', '=', 'fixtures.lossing_team_id')
+            // ->join('players', 'players.id', '=', 'team_players.player_id')
+            // ->join('teams as team_name', 'team_name.id', '=', 'team_players.team_id')
+            // ->where('team_players.team_id', '=', $team_id)
+            // ->groupBy('team_name.id')
+            // ->get();
     
         $result = array();
         foreach ($get_point_table_data as $team_id => $team_name) {

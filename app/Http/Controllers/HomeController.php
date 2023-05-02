@@ -13,8 +13,10 @@ use App\Models\FixtureScore;
 use App\Models\Team;
 use App\Models\Ground;
 use App\Models\TeamPlayer;
+use App\Models\TournamentGroup;
 use Illuminate\Support\Facades\DB;
-use Carbon\Carbon; 
+use Carbon\Carbon;
+
 
 
 
@@ -411,35 +413,21 @@ public function balltoballScorecard(int $id)
     
   
     
-    public function team_view(int $id){
-      $ground = Ground::query();
-      $ground = $ground->orderBy('id')->get();
-      $ground = Ground::query()->get()->pluck(
-        'name',
-        'id'
-      );
-      $match_results = Fixture::query();
-      $match_results->where('id','=',$id);
-      $match_results = $match_results->orderBy('id')->get();
-      $teams = Team::query()->get()->pluck(
-        'name',
-        'id'
-      );
-      $player = Player::query()->get()->pluck(
-          'fullname',
-          'id'
-        );
-      $team=Team::query();
-      $team->where('id','=',$id);
-      $team = $team->orderBy('id')->get();
-      $team_data = $team->find($id); 
-// dd($team);
-      $teamData =Team::Where('id','=',$id)
-              ->selectRaw("name")
-              ->get();
-              
-              // dd($teamData);
-      return view('team_view', compact('teamData','match_results','teams','player','ground'));
+    public function team_view(int $id)
+    {
+        $ground = Ground::orderBy('id')->get();
+        $ground = $ground->pluck('name', 'id');
+        $tournament = Tournament::pluck('name', 'id');
+        $match_results = Fixture::where('id', '=', $id)->orderBy('id')->get();
+        $teams = Team::pluck('name', 'id');
+        $player = Player::pluck('fullname', 'id');
+        $team = Team::where('id', '=', $id)->orderBy('id')->get();
+        $tournamentData = TournamentGroup::where('team_id', $id)->value('tournament_id');
+        $teamCaptain = TeamPlayer::where('team_id', $id)->where('iscaptain', 1)->first();
+        $playerCount = TeamPlayer::where('team_id', $id)->count();
+        $teamData = Team::where('id', '=', $id)->selectRaw("name")->get();
+    
+        return view('team_view', compact('teamData', 'match_results', 'teams', 'player', 'ground', 'tournamentData', 'tournament','teamCaptain','playerCount'));
     }
     
     

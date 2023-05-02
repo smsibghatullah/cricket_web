@@ -23,18 +23,18 @@
 									<div class="col-sm-10">
 										<div class="team-text-in text-left">
 											<h4 style="margin-top: 0px;">{{$teamData[0]->name}}
-												(<a href="/MississaugaCricketLeague/viewLeague.do?league=114&amp;clubId=2565">2022 MCLT12 Winter League</a>)
+												(<a href="/MississaugaCricketLeague/viewLeague.do?league=114&amp;clubId=2565">{{$tournament[$tournamentData]}}</a>)
 												Kitchener Bulls Cricket Club</h4>
 											<!--  <p><span>Team Code </span>      :   <span style="text-transform: uppercase">kbu</span></p>-->
 											<p>
 												<span>Captain </span> :
-												Sahilpreet Dhiman</p>
+												{{$player[$teamCaptain -> player_id]}}</p>
 											<p>
 												<span>Vice Captain</span> :
 												Gurpreet Singh</p>
 											<p>
 												<span>Player Count</span> :
-												26</p>
+												{{$playerCount}}</p>
 											<p>
 												<span>Home Ground</span> : <b><a href="/MississaugaCricketLeague/viewGround.do?groundId=43&amp;clubId=2565">Wet n Wild</a></b>
 											</p>
