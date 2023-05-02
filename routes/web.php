@@ -33,5 +33,6 @@ Route::get('result', [HomeController::class, 'result'])->name('result');
 Route::post('result-form-submit',[HomeController::class,'result_form_submit']);
 Route::get('live_score',[ApiController::class,'live_score']);
 Route::get('team-view/{id}',[HomeController::class,'team_view'])->name('team_view');
-
+Route::get('team_result/{id}',[HomeController::class,'team_result'])->name('team_result');
 Route::get('get_point_table/{id}',[ApiController::class,'get_point_table'])->name('get_point_table');
+Route::get('team_schedule/{id}',[HomeController::class,'team_schedule'])->name('team_schedule');

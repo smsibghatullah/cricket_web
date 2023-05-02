@@ -415,6 +415,7 @@ public function balltoballScorecard(int $id)
     
     public function team_view(int $id)
     {
+       $team_id_data=$id;
         $ground = Ground::orderBy('id')->get();
         $ground = $ground->pluck('name', 'id');
         $tournament = Tournament::pluck('name', 'id');
@@ -425,10 +426,136 @@ public function balltoballScorecard(int $id)
         $tournamentData = TournamentGroup::where('team_id', $id)->value('tournament_id');
         $teamCaptain = TeamPlayer::where('team_id', $id)->where('iscaptain', 1)->first();
         $playerCount = TeamPlayer::where('team_id', $id)->count();
+        $teamPlayers = TeamPlayer::where('team_id', $id)->get();
         $teamData = Team::where('id', '=', $id)->selectRaw("name")->get();
-    
-        return view('team_view', compact('teamData', 'match_results', 'teams', 'player', 'ground', 'tournamentData', 'tournament','teamCaptain','playerCount'));
+        $team_resultData = Fixture::where(function($query) use($id) {
+          $query->where('team_id_a', $id)
+                ->orWhere('team_id_b', $id);
+      })
+      ->where('running_inning', 3)
+      ->selectRaw('id')
+      ->selectRaw('created_at')
+      ->selectRaw('team_id_a')
+      ->selectRaw('tournament_id')
+      ->selectRaw('team_id_b')
+      ->selectRaw('running_inning')
+      ->selectRaw("numberofover")
+      ->selectRaw('match_result_description')
+      ->orderBy('id')
+      ->get();
+ 
+        return view('team_view', compact('team_id_data','team_resultData','teamData', 'match_results', 'teams', 'player', 'ground', 'tournamentData', 'tournament','teamCaptain','playerCount','teamPlayers'));
     }
+
+    public function team_result(int $id){
+      $team_id_data=$id;
+      $player = Player::pluck('fullname', 'id');
+      $tournamentData = TournamentGroup::where('team_id', $id)->value('tournament_id');
+      $teamCaptain = TeamPlayer::where('team_id', $id)->where('iscaptain', 1)->first();
+      $playerCount = TeamPlayer::where('team_id', $id)->count();
+      $teamPlayers = TeamPlayer::where('team_id', $id)->get();
+      $teamData = Team::where('id', '=', $id)->selectRaw("name")->get();
+      $team_resultData = Fixture::where(function($query) use($id) {
+        $query->where('team_id_a', $id)
+              ->orWhere('team_id_b', $id);
+    })
+    ->where('running_inning', 3)
+    ->selectRaw('id')
+    ->selectRaw('created_at')
+    ->selectRaw('team_id_a')
+    ->selectRaw('tournament_id')
+    ->selectRaw('team_id_b')
+    ->selectRaw('running_inning')
+    ->selectRaw("numberofover")
+    ->selectRaw('match_result_description')
+    ->orderBy('id')
+    ->get();
+      $match_results = Fixture::where('id', '=', $id)->orderBy('id')->get();
+      $teams = Team::pluck('name', 'id');
+      $tournament = Tournament::pluck('name', 'id');
+      $data = Fixture::query();
+      $results = $data->get();
+      
+      $team_resultData = Fixture::where(function($query) use($id) {
+          $query->where('team_id_a', $id)
+                ->orWhere('team_id_b', $id);
+      })
+      ->where('running_inning', 3)
+      ->selectRaw('id')
+      ->selectRaw('created_at')
+      ->selectRaw('team_id_a')
+      ->selectRaw('tournament_id')
+      ->selectRaw('team_id_b')
+      ->selectRaw('running_inning')
+      ->selectRaw("numberofover")
+      ->selectRaw('match_result_description')
+      ->orderBy('id')
+      ->get();
+      $total_runs = [];
+      $total_wicket_fixture = [];
+      $total_run_fixture = [];
+      foreach ($results as $result) {
+       $match_summary = FixtureScore::where('fixture_id', '=', $result->id)
+       ->selectRaw("SUM(CASE WHEN balltype = 'Wicket' THEN 1 ELSE 0 END) as total_wickets")
+       ->selectRaw('inningnumber, max(overnumber) as max_over')
+       ->selectRaw('SUM(runs) as total_runs')
+       ->selectRaw("inningnumber")
+       ->groupBy('inningnumber')
+       ->get();
+   
+       if(count($match_summary)== 2)
+       {
+           $total_wicket_fixture[$result->id] = [$match_summary[0]['total_wickets'], $match_summary[1]['total_wickets']];
+           $total_run_fixture[$result->id] = [$match_summary[0]['max_over'], $match_summary[1]['max_over'] ] ;
+           $total_runs[$result->id] = [$match_summary[0]['total_runs'], $match_summary[1]['total_runs']];
+
+          }  
+        }
+              
+      return view('team_result', compact('tournamentData', 'player','teamCaptain','playerCount','teamPlayers','team_resultData','teamData','match_results', 'teams', 'team_resultData','tournament','total_run_fixture','total_runs', 'total_wicket_fixture','team_id_data'));
+  }
+
+
+  public function team_schedule(int $id)
+{
+    $team_id_data = $id;
+    $tournament = Tournament::pluck('name', 'id');
+    $ground = Ground::orderBy('id')->get();
+    $player = Player::pluck('fullname', 'id');
+    $tournamentData = TournamentGroup::where('team_id', $id)->value('tournament_id');
+    $teamCaptain = TeamPlayer::where('team_id', $id)->where('iscaptain', 1)->first();
+    $playerCount = TeamPlayer::where('team_id', $id)->count();
+    $teamPlayers = TeamPlayer::where('team_id', $id)->get();
+    $teamData = Team::where('id', '=', $id)->selectRaw("name")->get();
+    $today = Carbon::now()->toDateString(); 
+    $match_results = Fixture::where('team_id_a', $id)
+        ->orWhere('team_id_b', $id)
+        ->orderBy('match_startdate')
+        ->get();
+    $teams = Team::pluck('name', 'id');
+    $team_scheduleData = Fixture::where(function ($query) use ($id, $today) {
+        $query->where('match_startdate', '>', $today)
+            ->orWhere('team_id_b', $id)
+            ->orWhere('team_id_a', $id);
+    })
+    ->where('running_inning','=', 0)
+    ->selectRaw('id')
+    ->selectRaw('team_id_a')
+    ->selectRaw('tournament_id')
+    ->selectRaw('team_id_b')
+    ->selectRaw('running_inning')
+    ->selectRaw('numberofover')
+    ->selectRaw('match_startdate')
+    ->selectRaw('match_result_description')
+    ->orderBy('match_startdate')
+    ->get()
+    ->filter(function ($fixture) use ($today) {
+        return Carbon::parse($fixture->match_startdate)->greaterThanOrEqualTo($today);
+    });
+
+    return view('team_schedule', compact( 'teamData', 'match_results', 'teams', 'player', 'ground', 'tournamentData', 'tournament', 'teamCaptain', 'playerCount', 'teamPlayers', 'team_id_data', 'team_scheduleData'));
+}
+
     
     
  }

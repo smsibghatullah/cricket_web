@@ -136,21 +136,21 @@
 										 style="background-color: rgb(255, 255, 255); border-color: rgb(193, 193, 193);">{{$tour_name['name']}}</li>
 										@endforeach
 
-                 	<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;" aria-disabled="false">Next</button></ul>
+                 	<button type="button" data-role="none" class=" slick-next slick-arrow" aria-label="Next" role="button" style="display: block;" aria-disabled="false">Next</button></ul>
 									
 						<div class="resp-tabs-container hor_1" style="border-color: rgb(193, 193, 193);">
 							<h2 class="resp-accordion hor_1 resp-tab-active" role="tab" aria-controls="hor_1_tab_item-0" style="background: none; border-color: rgb(193, 193, 193);"><span class="resp-arrow"></span></h2>
-		<div class="about-player-all resp-tab-content hor_1 resp-tab-content-active" id="92" aria-labelledby="hor_1_tab_item-0" style="display:block"><style>
+	       	<div class="about-player-all resp-tab-content hor_1 resp-tab-content-active" id="92" aria-labelledby="hor_1_tab_item-0" style="display:block"><style>
 
-.group-names li{
-    float: none!important;}
-.group-names{
-    text-align: right;
-    display: flex;
-    justify-content: flex-end;
-}
+									.group-names li{
+										float: none!important;}
+									.group-names{
+										text-align: right;
+										display: flex;
+										justify-content: flex-end;
+									}
 
-</style>
+                      </style>
 
 <div class="row">
                                 	<div class="col-sm-12 sp">
@@ -757,7 +757,7 @@ color:#333;
 													<div class="vsteam-text">
 														<h4>
 															<a class="list-score" style="color: inherit;"
-																href="{{ url('fullScorecard/' . $match_result->id) }}">L:
+																href="{{ url('fullScorecard/' . $match_result->team_id_a) }}">L:
 																{{$teams[$match_result->team_id_a]}} - vs - {{$teams[$match_result->team_id_b]}}</a>
 															<img alt="Ball by Ball" title="Ball by Ball" style="float: right;
 margin-right: 10px;
@@ -816,12 +816,12 @@ margin-right: 10px;
 													<div class="vsteam-text">
 														<h4>L:
 															<a
-																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1092&amp;clubId=2565.html">
+															href="{{ url('team-view/' . $upcoming_match->team_id_a) }}">
 																{{$teams[$upcoming_match->team_id_a]}}</a>
 															
 															- vs -
 															<a
-																href="EOSCLCricketLeague/viewTeam.do%3FteamId=1075&amp;clubId=2565.html">
+															href="{{ url('team-view/' . $upcoming_match->team_id_b) }}">
 																{{$teams[$upcoming_match->team_id_b]}}</a>
 															</h4>
 														<h5>
@@ -1103,12 +1103,12 @@ margin-right: 10px;
 								<p><span style="color:red;font-weight:bold;float:right;padding-right:10px">Live</span>${item[0].tournaments_name}&nbsp;at&nbsp;${item[0].ground_name}</P> <br/>
 								L:
                                     <a
-									href="{{ url('fullScorecard/${item[0].fixture_id}') }}">
+									href="{{ url('team-view/${item[0].team_id_a}') }}">
                                         ${item[0].team_a_name}</a>
 
                                     - vs -
                                     <a
-									href="{{ url('fullScorecard/${item[0].fixture_id}') }}">
+									href="{{ url('team-view/${item[0].team_id_b}') }}">
                                         ${item[0].team_b_name}</a>
                                 </h4>
                                 <h5>
@@ -1156,7 +1156,7 @@ function get_point_table(id) {
 			<tbody>
 				<tr>
 					<td><img src="https://cricclubs.com/documentsRep/teamLogos/624fee3a-e918-4e39-ab90-ff1b1c07e5d2.jpg" class="img-responsive img-circle" style="width: 20px; height: 20px;"></td>
-					<td>&nbsp; <a href="/MississaugaCricketLeague/viewTeam.do?teamId=825&amp;clubId=2565">${item.team_name}</a></td>
+					<td>&nbsp; <a href="{{ url('team-view/${item.team_id}') }}">${item.team_name}</a></td>
 				</tr>
 			</tbody>
 			</table>
